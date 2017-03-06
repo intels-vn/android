@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ITS</string>
+
+    <!-- Welcome Screen -->
+    <string name="button_play_welcome_screen">Vào Chơi</string>
+    <string name="button_join_welcome_screen">Đăng Kí</string>
+    <!-- End -->
+
+    <!-- Login Screen -->
+    <string name="edit_text_username_login">Nhập Tên Tài Khoản</string>
+    <string name="edit_text_password_login">Nhập Password</string>
+    <string name="text_view_forgot_password_login"><u>Không Nhớ Password?</u></string>
+    <string name="button_play_now_login">Bắt Đầu</string>
+    <!-- End -->
+
+    <!-- Register Screen -->
+    <string name="edit_text_username_register">Nhập Tên Tài Khoản</string>
+    <string name="edit_text_password_register">Nhập Password</string>
+    <string name="edit_text_retype_password_register">Nhập Lại Password</string>
+    <string name="edit_text_phone_register">Nhập Số Điện Thoại</string>
+    <string name="edit_text_email_register">Nhập Email</string>
+    <string name="button_join_now_register">Tham Gia</string>
+    <!-- End -->
+
+    <!-- Main Screen -->
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="text_view_navigation_header">I want to ...</string>
+
+    <string name="navigation_menu_item_deposit"><b>Deposit</b></string>
+    <string name="navigation_menu_item_withdraw"><b>Withdraw</b></string>
+    <string name="navigation_menu_item_view_staistics"><b>View Statistics</b></string>
+    <string name="navigation_menu_item_edit_profile"><b>Edit profile</b></string>
+    <string name="navigation_menu_item_log_out"><b>Log Out</b></string>
+
+    <string name="action_settings">Settings</string>
+    <!-- End -->
+</resources>

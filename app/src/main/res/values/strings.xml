@@ -1,12 +1,21 @@
 <resources>
     <string name="app_name">ITS</string>
-
+    <!-- Welcome Screen -->
     <string name="button_play_welcome_screen">Play</string>
     <string name="button_join_welcome_screen">Join</string>
+    <!-- End -->
+
+    <!-- Login Screen -->
+    <string name="edit_text_username_login">Enter Username</string>
+    <string name="edit_text_password_login">Enter Password</string>
+    <!-- End -->
+
+    <!-- Main Screen -->
     <string name="title_activity_main">MainActivity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <!-- End -->
 </resources>

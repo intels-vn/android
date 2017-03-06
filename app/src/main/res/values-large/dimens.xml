@@ -6,13 +6,18 @@
     <dimen name="image_slider_height_welcome_screen_land">225dp</dimen>
     <dimen name="button_width_welcome_screen_land">375dp</dimen>
     <dimen name="button_margin_top_welcome_screen_land">22.5dp</dimen>
+    <dimen name="button_text_size_welcome_screen_land">30sp</dimen>
 
     <!--Welcome_screen_portrait-->
     <dimen name="image_slider_width_welcome_screen_portrait">300dp</dimen>
-    <dimen name="image_slider_height_welcome_screen_portrait">397.5dp</dimen>
-    <dimen name="button_width_welcome_screen_portrait">2547.5dp</dimen>
+    <dimen name="image_slider_height_welcome_screen_portrait">400dp</dimen>
+    <dimen name="button_width_welcome_screen_portrait">250dp</dimen>
     <dimen name="linearLayout_margin_welcome_screene_portrait">90dp</dimen>
-    <dimen name="button_margin_top_welcome_screen_portrait">82.5dp</dimen>
-    <dimen name="button_textSize_welcome_screen_portrait">37.5dp</dimen>
+    <dimen name="button_margin_top_welcome_screen_portrait">55dp</dimen>
 
+    <!--Login_screen_portrait-->
+    <!-- Login screen land -->
+    <dimen name="edit_text_width_username_land">600dp</dimen>
+    <dimen name="edit_text_width_password_land">600dp</dimen>
+    <dimen name="edit_text_password_margin_top">15dp</dimen>
 </resources>

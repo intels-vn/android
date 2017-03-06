@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_horizontal"
+    android:background="@color/background_app"
+    android:gravity="center"
     android:orientation="vertical">
 
     <ScrollView
@@ -13,7 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
+            android:gravity="center"
             android:orientation="vertical">
 
             <LinearLayout
@@ -36,14 +38,24 @@
                 android:layout_width="@dimen/button_width_welcome_screen_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/button_margin_top_welcome_screen_land"
-                android:text="@string/button_play_welcome_screen" />
+                android:background="@color/button_play_background_welcome_screen"
+                android:text="@string/button_play_welcome_screen"
+                android:textAllCaps="false"
+                android:textColor="@color/button_play_text_welcome_screen"
+                android:textSize="@dimen/button_text_size_welcome_screen_land"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btnJoin_Land"
                 android:layout_width="@dimen/button_width_welcome_screen_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/button_margin_top_welcome_screen_land"
-                android:text="@string/button_join_welcome_screen" />
+                android:background="@color/button_join_background_welcome_screen"
+                android:text="@string/button_join_welcome_screen"
+                android:textAllCaps="false"
+                android:textColor="@color/button_join_text_welcome_screen"
+                android:textSize="@dimen/button_text_size_welcome_screen_land"
+                android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
 

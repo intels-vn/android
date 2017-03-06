@@ -14,4 +14,7 @@
     <dimen name="linearLayout_margin_welcome_screene_portrait">60dp</dimen>
     <dimen name="button_margin_top_welcome_screen_portrait">55dp</dimen>
     <dimen name="button_textSize_welcome_screen_portrait">25dp</dimen>
+
+    <!--Login_screen_portrait-->
+    <dimen name="button"></dimen>
 </resources>

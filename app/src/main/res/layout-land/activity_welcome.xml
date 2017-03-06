@@ -32,18 +32,18 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btnPlay_Land"
                 android:layout_width="@dimen/button_width_welcome_screen_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/button_margin_top_welcome_screen_land"
-                android:text="Button" />
+                android:text="@string/button_play_welcome_screen" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/btnJoin_Land"
                 android:layout_width="@dimen/button_width_welcome_screen_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/button_margin_top_welcome_screen_land"
-                android:text="Button" />
+                android:text="@string/button_join_welcome_screen" />
         </LinearLayout>
     </ScrollView>
 

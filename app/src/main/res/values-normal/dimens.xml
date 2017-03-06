@@ -15,8 +15,9 @@
     <dimen name="image_slider_width_welcome_screen_portrait">200dp</dimen>
     <dimen name="image_slider_height_welcome_screen_portrait">265dp</dimen>
 
-    <dimen name="linearLayout_margin_welcome_screene_portrait">60dp</dimen>
-
+    <dimen name="linearLayout_margin_welcome_screen_portrait">80dp</dimen>
+    <dimen name="linearLayout_height_welcome_screen_portrait">500dp</dimen>
+    
     <dimen name="button_width_welcome_screen_portrait">165dp</dimen>
     <dimen name="button_margin_top_welcome_screen_portrait">55dp</dimen>
     <dimen name="button_text_size_welcome_screen_portrait">25dp</dimen>
@@ -39,6 +40,29 @@
     <dimen name="button_margin_top_login_land">20dp</dimen>
     <dimen name="button_text_size_login_land">20sp</dimen>
     <dimen name="button_width_login_land">300dp</dimen>
+    <!-- End -->
+
+    <!-- Login screen portrait -->
+    <dimen name="linearLayout_width_login_portrait">450dp</dimen>
+    <dimen name="linearLayout_margin_login_portrait">90dp</dimen>
+
+    <dimen name="drawable_padding_left_login_portrait">40sp</dimen>
+
+    <dimen name="edit_text_username_width_login_portrait">450dp</dimen>
+    <dimen name="edit_text_username_margin_top_login_portrait">100dp</dimen>
+    <dimen name="edit_text_username_text_size_login_portrait">25sp</dimen>
+
+    <dimen name="edit_text_password_width_login_portrait">450dp</dimen>
+    <dimen name="edit_text_password_margin_top_login_portrait">60dp</dimen>
+    <dimen name="edit_text_password_text_size_login_portrait">25sp</dimen>
+
+    <dimen name="text_view_margin_top_login_portrait">60dp</dimen>
+    <dimen name="text_view_width_login_portrait">300dp</dimen>
+    <dimen name="text_view_text_size_forgot_password_login_portrait">25sp</dimen>
+
+    <dimen name="button_margin_top_login_portrait">60dp</dimen>
+    <dimen name="button_text_size_login_portrait">20sp</dimen>
+    <dimen name="button_width_login_portrait">300dp</dimen>
     <!-- End -->
 
     <!-- Register screen land -->

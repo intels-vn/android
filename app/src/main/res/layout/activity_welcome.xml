@@ -3,44 +3,49 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@color/background_app"
     android:layout_height="match_parent"
     tools:context="com.its.its.view.WelcomeActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/linearLayout_margin_welcome_screene_portrait"
+        android:layout_height="@dimen/linearLayout_height_welcome_screen_portrait"
+        android:layout_margin="@dimen/linearLayout_margin_welcome_screen_portrait"
         android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="@dimen/image_slider_height_welcome_screen_portrait"
-        android:layout_height="@dimen/image_slider_width_welcome_screen_portrait"
-        android:background="@android:color/black"
-        android:layout_gravity="center"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="126dp" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/image_slider_width_welcome_screen_portrait"
+            android:layout_height="@dimen/image_slider_height_welcome_screen_portrait"
+            android:layout_gravity="center"
+            android:background="@android:color/black"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="126dp" />
 
-    <Button
-        android:id="@+id/btnPlay_por"
-        android:layout_width="@dimen/button_width_welcome_screen_portrait"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/button_play_welcome_screen"
-        android:textSize="@dimen/button_text_size_welcome_screen_portrait"
-        android:layout_margin="@dimen/button_margin_top_welcome_screen_portrait"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="550dp" />
+        <Button
+            android:id="@+id/btnPlay_Portrait"
+            android:layout_width="@dimen/button_width_welcome_screen_portrait"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/button_margin_top_welcome_screen_portrait"
+            android:background="@color/button_play_background_welcome_screen"
+            android:text="@string/button_play_welcome_screen"
+            android:textColor="@color/button_play_text_welcome_screen"
+            android:textSize="@dimen/button_text_size_welcome_screen_portrait"
+            tools:layout_editor_absoluteX="175dp"
+            tools:layout_editor_absoluteY="550dp" />
 
-    <Button
-        android:id="@+id/btnJoin_por"
-        android:layout_width="@dimen/button_width_welcome_screen_portrait"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/button_join_welcome_screen"
-        android:textSize="@dimen/button_text_size_welcome_screen_portrait"
-        tools:layout_editor_absoluteX="175dp"
-        tools:layout_editor_absoluteY="668dp" />
+        <Button
+            android:id="@+id/btnJoin_Portrait"
+            android:layout_width="@dimen/button_width_welcome_screen_portrait"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/button_join_background_welcome_screen"
+            android:text="@string/button_join_welcome_screen"
+            android:textColor="@color/button_join_text_welcome_screen"
+            android:textSize="@dimen/button_text_size_welcome_screen_portrait"
+            tools:layout_editor_absoluteX="175dp"
+            tools:layout_editor_absoluteY="668dp" />
 
     </LinearLayout>
 </LinearLayout>

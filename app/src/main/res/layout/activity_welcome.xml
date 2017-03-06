@@ -26,7 +26,7 @@
         android:layout_width="@dimen/button_width_welcome_screen_portrait"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/button_login_welcome_screen"
+        android:text="@string/button_play_welcome_screen"
         android:textSize="@dimen/button_textSize_welcome_screen_portrait"
         android:layout_margin="@dimen/button_margin_top_welcome_screen_portrait"
         tools:layout_editor_absoluteX="175dp"
@@ -37,7 +37,7 @@
         android:layout_width="@dimen/button_width_welcome_screen_portrait"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/button_signup_welcome_screen"
+        android:text="@string/button_join_welcome_screen"
         android:textSize="@dimen/button_textSize_welcome_screen_portrait"
         tools:layout_editor_absoluteX="175dp"
         tools:layout_editor_absoluteY="668dp" />

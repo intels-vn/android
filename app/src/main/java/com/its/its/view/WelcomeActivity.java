@@ -1,7 +1,9 @@
 package com.its.its.view;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.its.its.R;
@@ -21,7 +23,13 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void addEvent() {
-
+        btnPlay_Land.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initView() {

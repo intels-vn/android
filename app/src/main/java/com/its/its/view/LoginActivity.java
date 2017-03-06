@@ -9,10 +9,10 @@ import com.its.its.R;
  * Created by Chinh Bui on 3/6/2017.
  */
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
     }
 }

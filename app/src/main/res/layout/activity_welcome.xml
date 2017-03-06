@@ -6,4 +6,29 @@
     android:layout_height="match_parent"
     tools:context="com.its.its.view.WelcomeActivity">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/image_slider_height_welcome_screen_portrait"
+        android:layout_height="@dimen/image_slider_width_welcome_screen_portrait"
+        android:background="@android:color/black"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="126dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="@dimen/button_width_welcome_screen_portrait"
+        android:layout_height="wrap_content"
+        android:text="@string/button_login_welcome_screen"
+        android:textSize="@dimen/button_textSize_welcome_screen_portrait"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="550dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="@dimen/button_width_welcome_screen_portrait"
+        android:layout_height="wrap_content"
+        android:text="@string/button_signup_welcome_screen"
+        android:textSize="@dimen/button_textSize_welcome_screen_portrait"
+        tools:layout_editor_absoluteX="175dp"
+        tools:layout_editor_absoluteY="668dp" />
 </android.support.constraint.ConstraintLayout>

@@ -1,2 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <dimen name="linearlayout_margin_top_welcome_screen_land">30dp</dimen>
+    <dimen name="image_slider_width_welcome_screen_land">450dp</dimen>
+    <dimen name="image_slider_height_welcome_screen_land">225dp</dimen>
+    <dimen name="button_width_welcome_screen_land">375dp</dimen>
+    <dimen name="button_margin_top_welcome_screen_land">22.5dp</dimen>
+</resources>

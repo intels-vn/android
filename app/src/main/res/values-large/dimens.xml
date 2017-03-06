@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <!--Welcome_screen_land-->
     <dimen name="linearlayout_margin_top_welcome_screen_land">30dp</dimen>
     <dimen name="image_slider_width_welcome_screen_land">450dp</dimen>
     <dimen name="image_slider_height_welcome_screen_land">225dp</dimen>
     <dimen name="button_width_welcome_screen_land">375dp</dimen>
     <dimen name="button_margin_top_welcome_screen_land">22.5dp</dimen>
 
+    <!--Welcome_screen_portrait-->
     <dimen name="image_slider_width_welcome_screen_portrait">300dp</dimen>
     <dimen name="image_slider_height_welcome_screen_portrait">400dp</dimen>
     <dimen name="button_width_welcome_screen_portrait">250dp</dimen>
     <dimen name="linearLayout_margin_welcome_screene_portrait">90dp</dimen>
     <dimen name="button_margin_top_welcome_screen_portrait">55dp</dimen>
+    
+    <!--Login_screen_portrait-->
+    <dimen name="button"></dimen>
 </resources>

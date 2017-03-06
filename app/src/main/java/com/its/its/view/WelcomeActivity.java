@@ -10,7 +10,7 @@ import com.its.its.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    Button btnPlay_Register_Land, btnJoin_Welcome_Land;
+    Button btnPlay_Welcome_Land, btnJoin_Welcome_Land;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +23,24 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void addEvent() {
-        btnPlay_Register_Land.setOnClickListener(new View.OnClickListener() {
+        btnPlay_Welcome_Land.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WelcomeActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnJoin_Welcome_Land.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
     }
 
     private void initView() {
-        btnPlay_Register_Land = (Button) findViewById(R.id.btnPlay_Land);
+        btnPlay_Welcome_Land = (Button) findViewById(R.id.btnPlay_Welcome_Land);
         btnJoin_Welcome_Land = (Button) findViewById(R.id.btnJoin_Welcome_Land);
     }
 }

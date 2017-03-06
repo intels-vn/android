@@ -51,5 +51,16 @@
     <dimen name="button_width_register_land">300dp</dimen>
     <dimen name="button_margin_top_register_land">20dp</dimen>
     <dimen name="button_text_size_register_land">18sp</dimen>
+    <dimen name="button_margin_bottom_register_land">20dp</dimen>
+    <!-- End -->
+    
+    <!-- Main screen land-->
+    <dimen name="image_width_navigation_header_main_land">100dp</dimen>
+    <dimen name="image_height_navigation_header_main_land">100dp</dimen>
+
+    <dimen name="text_view_margin_top_navigation_header_main_land">10dp</dimen>
+    <dimen name="text_view_margin_bottom_navigation_header_main_land">10dp</dimen>
+    <dimen name="text_view_text_size_navigation_header_main_land">20sp</dimen>
+
     <!-- End -->
 </resources>

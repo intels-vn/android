@@ -36,5 +36,6 @@
     <dimen name="button_margin_top_login_land">30dp</dimen>
     <dimen name="button_text_size_login_land">30sp</dimen>
     <dimen name="button_width_login_land">450dp</dimen>
+    <dimen name="button_margin_bottom_register_land">30dp</dimen>
     <!-- End -->
 </resources>

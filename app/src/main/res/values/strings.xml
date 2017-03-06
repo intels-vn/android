@@ -8,6 +8,17 @@
     <!-- Login Screen -->
     <string name="edit_text_username_login">Enter Username</string>
     <string name="edit_text_password_login">Enter Password</string>
+    <string name="text_view_forgot_password_login"><u>Forgot your password ?</u></string>
+    <string name="button_play_now_login">Play now</string>
+    <!-- End -->
+
+    <!-- Register Screen -->
+    <string name="edit_text_username_register">Enter your username</string>
+    <string name="edit_text_password_register">Enter your password</string>
+    <string name="edit_text_retype_password_register">Retype password</string>
+    <string name="edit_text_phone_register">Enter your phone</string>
+    <string name="edit_text_email_register">Enter your email</string>
+    <string name="button_join_now_register">Join now</string>
     <!-- End -->
 
     <!-- Main Screen -->

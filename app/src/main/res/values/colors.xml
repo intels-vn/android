@@ -8,5 +8,6 @@
     <color name="button_join_background_welcome_screen">#FFFF00</color>
     <color name="button_play_text_welcome_screen">#FFFFFF</color>
     <color name="button_join_text_welcome_screen">#000000</color>
+    <color name="text_view_forgot_password">#FFFFFF</color>
     <color name="background_app">#003300</color>
 </resources>

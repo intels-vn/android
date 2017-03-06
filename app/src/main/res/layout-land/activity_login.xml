@@ -2,23 +2,56 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_app"
     android:gravity="center"
     android:orientation="vertical">
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="@dimen/edit_text_width_username_land"
+        android:layout_width="@dimen/edit_text_width_username_login_land"
         android:layout_height="wrap_content"
+        android:background="@color/button_play_text_welcome_screen"
+        android:drawableLeft="@drawable/username"
+        android:drawablePadding="@dimen/edit_text_drawable_padding_left_login_land"
         android:ems="10"
         android:hint="@string/edit_text_username_login"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textSize="@dimen/edit_text_text_size_username_login_land" />
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="@dimen/edit_text_width_password_land"
+        android:layout_width="@dimen/edit_text_width_password_login_land"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/edit_text_password_margin_top"
+        android:layout_marginTop="@dimen/edit_text_password_margin_login_top"
+        android:background="@color/button_play_text_welcome_screen"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="@dimen/edit_text_drawable_padding_left_login_land"
         android:ems="10"
         android:hint="@string/edit_text_password_login"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textSize="@dimen/edit_text_text_size_password_login_land" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="@dimen/text_view_width_forgot_password_login_land"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/text_view_margin_top_login_land"
+        android:gravity="center"
+        android:text="@string/text_view_forgot_password_login"
+        android:textColor="@color/text_view_forgot_password"
+        android:textDirection="inherit"
+        android:textSize="@dimen/text_view_text_size_forgot_password_login_land"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnPlay_Land"
+        android:layout_width="@dimen/button_width_login_land"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin_top_login_land"
+        android:background="@color/button_play_background_welcome_screen"
+        android:text="@string/button_play_now_login"
+        android:textAllCaps="false"
+        android:textColor="@color/button_play_text_welcome_screen"
+        android:textSize="@dimen/button_text_size_login_land"
+        android:textStyle="bold" />
 </LinearLayout>

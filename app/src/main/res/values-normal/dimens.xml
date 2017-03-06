@@ -2,8 +2,10 @@
 <resources>
     <!--Welcome_screen_land-->
     <dimen name="linearlayout_margin_top_welcome_screen_land">20dp</dimen>
+
     <dimen name="image_slider_width_welcome_screen_land">300dp</dimen>
     <dimen name="image_slider_height_welcome_screen_land">150dp</dimen>
+
     <dimen name="button_width_welcome_screen_land">250dp</dimen>
     <dimen name="button_margin_top_welcome_screen_land">15dp</dimen>
     <dimen name="button_text_size_welcome_screen_land">20sp</dimen>
@@ -12,15 +14,42 @@
     <!--Welcome_screen_portrait-->
     <dimen name="image_slider_width_welcome_screen_portrait">200dp</dimen>
     <dimen name="image_slider_height_welcome_screen_portrait">265dp</dimen>
-    <dimen name="button_width_welcome_screen_portrait">165dp</dimen>
+
     <dimen name="linearLayout_margin_welcome_screene_portrait">60dp</dimen>
+
+    <dimen name="button_width_welcome_screen_portrait">165dp</dimen>
     <dimen name="button_margin_top_welcome_screen_portrait">55dp</dimen>
-    <dimen name="button_textSize_welcome_screen_portrait">25dp</dimen>
+    <dimen name="button_text_size_welcome_screen_portrait">25dp</dimen>
     <!-- End -->
 
     <!-- Login screen land -->
-    <dimen name="edit_text_width_username_land">400dp</dimen>
-    <dimen name="edit_text_width_password_land">400dp</dimen>
-    <dimen name="edit_text_password_margin_top">10dp</dimen>
+    <dimen name="edit_text_width_username_login_land">400dp</dimen>
+    <dimen name="edit_text_text_size_username_login_land">20sp</dimen>
+
+    <dimen name="edit_text_drawable_padding_left_login_land">20dp</dimen>
+
+    <dimen name="edit_text_width_password_login_land">400dp</dimen>
+    <dimen name="edit_text_password_margin_login_top">20dp</dimen>
+    <dimen name="edit_text_text_size_password_login_land">20sp</dimen>
+
+    <dimen name="text_view_margin_top_login_land">20dp</dimen>
+    <dimen name="text_view_text_size_forgot_password_login_land">20sp</dimen>
+    <dimen name="text_view_width_forgot_password_login_land">400dp</dimen>
+
+    <dimen name="button_margin_top_login_land">20dp</dimen>
+    <dimen name="button_text_size_login_land">20sp</dimen>
+    <dimen name="button_width_login_land">300dp</dimen>
+    <!-- End -->
+
+    <!-- Register screen land -->
+    <dimen name="edit_text_width_register_land">400dp</dimen>
+    <dimen name="edit_text_margin_top_register_land">20dp</dimen>
+    <dimen name="edit_text_text_size_register_land">18sp</dimen>
+
+    <dimen name="edit_text_drawable_padding_left_register_land">20dp</dimen>
+
+    <dimen name="button_width_register_land">300dp</dimen>
+    <dimen name="button_margin_top_register_land">20dp</dimen>
+    <dimen name="button_text_size_register_land">18sp</dimen>
     <!-- End -->
 </resources>

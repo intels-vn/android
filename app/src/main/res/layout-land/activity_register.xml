@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_app"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="@dimen/edit_text_width_register_land"
+        android:layout_height="wrap_content"
+        android:background="@color/button_play_text_welcome_screen"
+        android:drawableLeft="@drawable/username"
+        android:drawablePadding="@dimen/edit_text_drawable_padding_left_register_land"
+        android:ems="10"
+        android:hint="@string/edit_text_username_register"
+        android:inputType="textPersonName"
+        android:textSize="@dimen/edit_text_text_size_register_land" />
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="@dimen/edit_text_width_register_land"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_text_margin_top_register_land"
+        android:background="@color/button_play_text_welcome_screen"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="@dimen/edit_text_drawable_padding_left_register_land"
+        android:ems="10"
+        android:hint="@string/edit_text_password_register"
+        android:inputType="textPassword"
+        android:textSize="@dimen/edit_text_text_size_register_land" />
+
+    <EditText
+        android:id="@+id/editText8"
+        android:layout_width="@dimen/edit_text_width_register_land"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_text_margin_top_register_land"
+        android:background="@color/button_play_text_welcome_screen"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="@dimen/edit_text_drawable_padding_left_register_land"
+        android:ems="10"
+        android:hint="@string/edit_text_retype_password_register"
+        android:inputType="textPassword"
+        android:textSize="@dimen/edit_text_text_size_register_land" />
+
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="@dimen/edit_text_width_register_land"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_text_margin_top_register_land"
+        android:background="@color/button_play_text_welcome_screen"
+        android:drawableLeft="@drawable/phone"
+        android:drawablePadding="@dimen/edit_text_drawable_padding_left_register_land"
+        android:ems="10"
+        android:hint="@string/edit_text_phone_register"
+        android:inputType="phone"
+        android:textSize="@dimen/edit_text_text_size_register_land" />
+
+    <EditText
+        android:id="@+id/editText10"
+        android:layout_width="@dimen/edit_text_width_register_land"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_text_margin_top_register_land"
+        android:background="@color/button_play_text_welcome_screen"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="@dimen/edit_text_drawable_padding_left_register_land"
+        android:ems="10"
+        android:hint="@string/edit_text_email_register"
+        android:inputType="textEmailAddress"
+        android:textSize="@dimen/edit_text_text_size_register_land" />
+
+    <Button
+        android:id="@+id/btnJoin_Register_Land"
+        android:layout_width="@dimen/button_width_register_land"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin_top_register_land"
+        android:background="@color/button_join_background_welcome_screen"
+        android:text="@string/button_join_now_register"
+        android:textAllCaps="false"
+        android:textColor="@color/button_join_text_welcome_screen"
+        android:textSize="@dimen/button_text_size_register_land"
+        android:textStyle="bold" />
+</LinearLayout>

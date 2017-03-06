@@ -34,7 +34,7 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btnPlay_Land"
+                android:id="@+id/btnPlay_Register_Land"
                 android:layout_width="@dimen/button_width_welcome_screen_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/button_margin_top_welcome_screen_land"
@@ -46,7 +46,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btnJoin_Land"
+                android:id="@+id/btnJoin_Welcome_Land"
                 android:layout_width="@dimen/button_width_welcome_screen_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/button_margin_top_welcome_screen_land"

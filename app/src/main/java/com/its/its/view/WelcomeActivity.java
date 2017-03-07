@@ -10,8 +10,7 @@ import com.its.its.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    Button btnPlay_Welcome_Land, btnJoin_Welcome_Land;
-    Button btnPlay_Welcome_Portrait, btnJoin_Welcome_Portrait;
+    Button btnPlay_Welcome, btnJoin_Welcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,30 +22,25 @@ public class WelcomeActivity extends AppCompatActivity {
         addEvent();
     }
 
+    private void initView() {
+        btnPlay_Welcome = (Button) findViewById(R.id.btnPlay_Welcome);
+        btnJoin_Welcome = (Button) findViewById(R.id.btnJoin_Welcome);
+    }
+
     private void addEvent() {
-        btnPlay_Welcome_Portrait.setOnClickListener(new View.OnClickListener() {
+        btnPlay_Welcome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WelcomeActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });
-        btnJoin_Welcome_Portrait.setOnClickListener(new View.OnClickListener() {
+        btnJoin_Welcome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WelcomeActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
-    }
-
-    private void initView() {
-        //Portrait
-        btnPlay_Welcome_Portrait = (Button) findViewById(R.id.btnPlay_Welcome_Portrait);
-        btnJoin_Welcome_Portrait = (Button) findViewById(R.id.btnJoin_Welcome_Portrait);
-
-        //Land
-        btnPlay_Welcome_Land = (Button) findViewById(R.id.btnPlay_Welcome_Land);
-        btnJoin_Welcome_Land = (Button) findViewById(R.id.btnJoin_Welcome_Land);
     }
 }

@@ -23,7 +23,7 @@
             tools:layout_editor_absoluteY="126dp" />
 
         <Button
-            android:id="@+id/btnPlay_Portrait"
+            android:id="@+id/btnPlay_Welcome_Portrait"
             android:layout_width="@dimen/button_width_welcome_screen_portrait"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -36,7 +36,7 @@
             tools:layout_editor_absoluteY="550dp" />
 
         <Button
-            android:id="@+id/btnJoin_Portrait"
+            android:id="@+id/btnJoin_Welcome_Portrait"
             android:layout_width="@dimen/button_width_welcome_screen_portrait"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

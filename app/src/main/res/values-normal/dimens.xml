@@ -43,10 +43,7 @@
     <!-- End -->
 
     <!-- Login screen portrait -->
-    <dimen name="linearLayout_width_login_portrait">300dp</dimen>
-    <dimen name="linearLayout_margin_login_portrait">90dp</dimen>
-
-    <dimen name="drawable_padding_left_login_portrait">30sp</dimen>
+    <dimen name="drawable_padding_left_login_portrait">20sp</dimen>
 
     <dimen name="edit_text_username_width_login_portrait">250dp</dimen>
     <dimen name="edit_text_username_text_size_login_portrait">20sp</dimen>
@@ -76,7 +73,19 @@
     <dimen name="button_text_size_register_land">18sp</dimen>
     <dimen name="button_margin_bottom_register_land">20dp</dimen>
     <!-- End -->
-    
+
+    <!-- Register screen portrait -->
+    <dimen name="edit_text_drawable_padding_left_register_portrait">20sp</dimen>
+
+    <dimen name="edit_text_width_register_portrait">250dp</dimen>
+    <dimen name="edit_text_margin_top_register_portrait">20dp</dimen>
+    <dimen name="edit_text_text_size_register_portrait">15sp</dimen>
+
+    <dimen name="button_margin_top_register_portrait">40dp</dimen>
+    <dimen name="button_text_size_register_portrait">20sp</dimen>
+    <dimen name="button_width_register_portrait">250dp</dimen>
+    <!-- End -->
+
     <!-- Main screen land-->
     <dimen name="image_width_navigation_header_main_land">100dp</dimen>
     <dimen name="image_height_navigation_header_main_land">100dp</dimen>

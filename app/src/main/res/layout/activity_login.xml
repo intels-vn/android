@@ -11,7 +11,7 @@
     tools:context="com.its.its.view.LoginActivity">
 
     <EditText
-        android:id="@+id/editUserName_Login_Portrait"
+        android:id="@+id/editUserName_Login"
         android:layout_width="@dimen/edit_text_username_width_login_portrait"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -24,7 +24,7 @@
         android:textSize="@dimen/edit_text_username_text_size_login_portrait" />
 
     <EditText
-        android:id="@+id/editPassword_Login_Portrait"
+        android:id="@+id/editPassword_Login"
         android:layout_width="@dimen/edit_text_password_width_login_portrait"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -38,7 +38,7 @@
         android:textSize="@dimen/edit_text_password_text_size_login_portrait" />
 
     <TextView
-        android:id="@+id/tvForgotPass_Login_Portrait"
+        android:id="@+id/tvForgotPass_Login"
         android:layout_width="@dimen/text_view_width_login_portrait"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -48,7 +48,7 @@
         android:textSize="@dimen/text_view_text_size_forgot_password_login_portrait" />
 
     <Button
-        android:id="@+id/btnPlay_Login_Portrait"
+        android:id="@+id/btnPlay_Login"
         android:layout_width="@dimen/button_width_login_portrait"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

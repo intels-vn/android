@@ -49,12 +49,13 @@
 
     <Button
         android:id="@+id/btnPlay_Login_Portrait"
-        android:layout_width="@dimen/button_width_login_land"
+        android:layout_width="@dimen/button_width_login_portrait"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/button_margin_top_login_land"
         android:background="@color/button_play_background_welcome_screen"
         android:text="@string/button_play_now_login"
+        android:textAllCaps="false"
         android:textColor="@color/button_play_text_welcome_screen"
         android:textSize="@dimen/button_text_size_login_land" />
 

@@ -2,17 +2,20 @@
 <resources>
     <!--Welcome_screen_land-->
     <dimen name="linearlayout_margin_top_welcome_screen_land">30dp</dimen>
+
     <dimen name="image_slider_width_welcome_screen_land">450dp</dimen>
     <dimen name="image_slider_height_welcome_screen_land">225dp</dimen>
+
     <dimen name="button_width_welcome_screen_land">375dp</dimen>
     <dimen name="button_margin_top_welcome_screen_land">22.5dp</dimen>
     <dimen name="button_text_size_welcome_screen_land">30sp</dimen>
+    <!-- End -->
 
     <!--Welcome_screen_portrait-->
-    <dimen name="image_slider_width_welcome_screen_portrait">375dp</dimen>
+    <dimen name="image_slider_width_welcome_screen_portrait">450dp</dimen>
     <dimen name="image_slider_height_welcome_screen_portrait">397.5dp</dimen>
 
-    <dimen name="linearLayout_margin_welcome_screen_portrait">120dp</dimen>
+    <dimen name="linearLayout_margin_welcome_screen_portrait">75dp</dimen>
     <dimen name="linearLayout_height_welcome_screen_portrait">750dp</dimen>
 
     <dimen name="button_width_welcome_screen_portrait">247.5dp</dimen>
@@ -38,5 +41,24 @@
     <dimen name="button_text_size_login_land">30sp</dimen>
     <dimen name="button_width_login_land">450dp</dimen>
     <dimen name="button_margin_bottom_register_land">30dp</dimen>
+    <!-- End -->
+
+    <!-- Login screen portrait -->
+    <dimen name="drawable_padding_left_login_portrait">30sp</dimen>
+
+    <dimen name="edit_text_username_width_login_portrait">375dp</dimen>
+    <dimen name="edit_text_username_text_size_login_portrait">30sp</dimen>
+
+    <dimen name="edit_text_password_width_login_portrait">375dp</dimen>
+    <dimen name="edit_text_password_margin_top_login_portrait">90dp</dimen>
+    <dimen name="edit_text_password_text_size_login_portrait">30sp</dimen>
+
+    <dimen name="text_view_margin_top_login_portrait">75dp</dimen>
+    <dimen name="text_view_width_login_portrait">300dp</dimen>
+    <dimen name="text_view_text_size_forgot_password_login_portrait">22.5sp</dimen>
+
+    <dimen name="button_margin_top_login_portrait">90dp</dimen>
+    <dimen name="button_text_size_login_portrait">30sp</dimen>
+    <dimen name="button_width_login_portrait">375dp</dimen>
     <!-- End -->
 </resources>

@@ -73,6 +73,6 @@ public class CommonRequest {
         inputStream.close();
         result = builder.toString();
 
-        return  result;
+        return result;
     }
 }

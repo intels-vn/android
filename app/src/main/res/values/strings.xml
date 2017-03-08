@@ -37,7 +37,9 @@
 
     <string name="action_settings">Settings</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button_a_win_main">A Win</string>
+    <string name="button_b_win_main">B Win</string>
+    <string name="button_draw_main">Draw</string>
+    <string name="button_bet_now_main">Bet Now</string>
     <!-- End -->
 </resources>

@@ -88,12 +88,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/button_margin_bottom_register_land"
                 android:layout_marginTop="@dimen/button_margin_top_register_land"
-                android:background="@color/button_join_background_welcome_screen"
                 android:text="@string/button_join_now_register"
                 android:textAllCaps="false"
                 android:textColor="@color/button_join_text_welcome_screen"
                 android:textSize="@dimen/button_text_size_register_land"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+
+                android:background="@drawable/button_join_shape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5" />
         </LinearLayout>
 
     </ScrollView>

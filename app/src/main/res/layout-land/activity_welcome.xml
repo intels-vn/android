@@ -38,7 +38,13 @@
                 android:layout_width="@dimen/button_width_welcome_screen_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/button_margin_top_welcome_screen_land"
-                android:background="@color/button_play_background_welcome_screen"
+
+                android:background="@drawable/button_play_shape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5"
+
                 android:text="@string/button_play_welcome_screen"
                 android:textAllCaps="false"
                 android:textColor="@color/button_play_text_welcome_screen"
@@ -50,12 +56,17 @@
                 android:layout_width="@dimen/button_width_welcome_screen_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/button_margin_top_welcome_screen_land"
-                android:background="@color/button_join_background_welcome_screen"
                 android:text="@string/button_join_welcome_screen"
                 android:textAllCaps="false"
                 android:textColor="@color/button_join_text_welcome_screen"
                 android:textSize="@dimen/button_text_size_welcome_screen_land"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+
+                android:background="@drawable/button_join_shape"
+                android:shadowColor="#A8A8A8"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="5" />
         </LinearLayout>
     </ScrollView>
 

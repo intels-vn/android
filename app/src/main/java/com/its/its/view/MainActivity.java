@@ -1,8 +1,12 @@
 package com.its.its.view;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -32,6 +36,16 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT){
+//            Toast.makeText(MainActivity.this, "Portrait", Toast.LENGTH_SHORT).show();
+            callFragment(new MainFragment(), R.id.llContentMainPortrait);
+        }
+        if(this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE){
+//            Toast.makeText(MainActivity.this, "Landscape", Toast.LENGTH_SHORT).show();
+            callFragment(new MainFragment(), R.id.frame1);
+            callFragment(new MainFragment(), R.id.frame2);
+        }
     }
 
     @Override
@@ -87,5 +101,13 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void callFragment(Fragment fragment, int id) {
+        FragmentManager manager = getSupportFragmentManager();
+        FragmentTransaction transaction = manager.beginTransaction();
+        //Khi được goi, fragment truyền vào sẽ thay thế vào vị trí FrameLayout trong Activity chính
+        transaction.replace(id, fragment);
+        transaction.commit();
     }
 }

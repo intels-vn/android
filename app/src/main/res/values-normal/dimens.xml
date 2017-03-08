@@ -94,5 +94,21 @@
     <dimen name="text_view_margin_bottom_navigation_header_main_land">10dp</dimen>
     <dimen name="text_view_text_size_navigation_header_main_land">20sp</dimen>
 
+
+    <!-- End -->
+
+    <!-- Fragment main screen -->
+    <dimen name="video_view_height_content_main">200dp</dimen>
+    <dimen name="video_view_margin_main">10dp</dimen>
+
+    <dimen name="button_bet_at_margin_main">20dp</dimen>
+    <dimen name="button_bet_value_margin_main">5dp</dimen>
+    <dimen name="button_bet_value_width_main">50dp</dimen>
+
+    <dimen name="hsv_channel_margin_main">10dp</dimen>
+    <dimen name="button_channel_margin_right_main">10dp</dimen>
+    
+    <dimen name="hsv_bet_value_margin_main">20dp</dimen>
+    <dimen name="button_bet_now_margin_main">20dp</dimen>
     <!-- End -->
 </resources>

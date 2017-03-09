@@ -92,7 +92,8 @@
                         android:layout_weight="1"
                         android:background="@color/button_channel_background"
                         android:text="5"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:visibility="gone" />
 
                     <Button
                         android:id="@+id/btnChannel6"
@@ -103,7 +104,8 @@
                         android:layout_weight="1"
                         android:background="@color/button_channel_background"
                         android:text="6"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:visibility="gone" />
 
                     <Button
                         android:id="@+id/btnChannel7"
@@ -114,7 +116,8 @@
                         android:layout_weight="1"
                         android:background="@color/button_channel_background"
                         android:text="7"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:visibility="gone" />
 
                     <Button
                         android:id="@+id/btnChannel8"
@@ -125,7 +128,8 @@
                         android:layout_weight="1"
                         android:background="@color/button_channel_background"
                         android:text="8"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:visibility="gone" />
                 </LinearLayout>
             </HorizontalScrollView>
         </LinearLayout>
@@ -201,7 +205,7 @@
 
                 <Button
                     android:id="@+id/btn100"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/button_bet_value_width_main"
                     android:layout_height="@dimen/button_bet_at_height_main"
                     android:layout_margin="@dimen/button_bet_value_margin_main"
                     android:layout_weight="1"
@@ -216,7 +220,7 @@
 
                 <Button
                     android:id="@+id/btn200"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/button_bet_value_width_main"
                     android:layout_height="@dimen/button_bet_at_height_main"
                     android:layout_margin="@dimen/button_bet_value_margin_main"
                     android:layout_weight="1"
@@ -231,7 +235,7 @@
 
                 <Button
                     android:id="@+id/btn300"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/button_bet_value_width_main"
                     android:layout_height="@dimen/button_bet_at_height_main"
                     android:layout_margin="@dimen/button_bet_value_margin_main"
                     android:layout_weight="1"
@@ -246,7 +250,7 @@
 
                 <Button
                     android:id="@+id/btn400"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/button_bet_value_width_main"
                     android:layout_height="@dimen/button_bet_at_height_main"
                     android:layout_margin="@dimen/button_bet_value_margin_main"
                     android:layout_weight="1"
@@ -261,7 +265,7 @@
 
                 <Button
                     android:id="@+id/btn500"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/button_bet_value_width_main"
                     android:layout_height="@dimen/button_bet_at_height_main"
                     android:layout_margin="@dimen/button_bet_value_margin_main"
                     android:layout_weight="1"
@@ -276,7 +280,7 @@
 
                 <Button
                     android:id="@+id/btn600"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/button_bet_value_width_main"
                     android:layout_height="@dimen/button_bet_at_height_main"
                     android:layout_margin="@dimen/button_bet_value_margin_main"
                     android:layout_weight="1"
@@ -291,7 +295,7 @@
 
                 <Button
                     android:id="@+id/btn700"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/button_bet_value_width_main"
                     android:layout_height="@dimen/button_bet_at_height_main"
                     android:layout_margin="@dimen/button_bet_value_margin_main"
                     android:layout_weight="1"
@@ -306,7 +310,7 @@
 
                 <Button
                     android:id="@+id/btn800"
-                    android:layout_width="wrap_content"
+                    android:layout_width="@dimen/button_bet_value_width_main"
                     android:layout_height="@dimen/button_bet_at_height_main"
                     android:layout_margin="@dimen/button_bet_value_margin_main"
                     android:layout_weight="1"

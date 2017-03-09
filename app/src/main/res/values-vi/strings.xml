@@ -10,14 +10,14 @@
     <!-- Login Screen -->
     <string name="edit_text_username_login">Nhập Tên Tài Khoản</string>
     <string name="edit_text_password_login">Nhập Password</string>
-    <string name="text_view_forgot_password_login"><u>Không Nhớ Password?</u></string>
+    <string name="text_view_forgot_password_login"><u>Quên mật khẩu?</u></string>
     <string name="button_play_now_login">Bắt Đầu</string>
     <!-- End -->
 
     <!-- Register Screen -->
     <string name="edit_text_username_register">Nhập Tên Tài Khoản</string>
-    <string name="edit_text_password_register">Nhập Password</string>
-    <string name="edit_text_retype_password_register">Nhập Lại Password</string>
+    <string name="edit_text_password_register">Nhập Mật Khẩu</string>
+    <string name="edit_text_retype_password_register">Nhập Lại Mật Khẩu</string>
     <string name="edit_text_phone_register">Nhập Số Điện Thoại</string>
     <string name="edit_text_email_register">Nhập Email</string>
     <string name="button_join_now_register">Tham Gia</string>
@@ -28,14 +28,19 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="text_view_navigation_header">I want to ...</string>
+    <string name="text_view_navigation_header">Tôi muốn ...</string>
 
-    <string name="navigation_menu_item_deposit"><b>Deposit</b></string>
-    <string name="navigation_menu_item_withdraw"><b>Withdraw</b></string>
-    <string name="navigation_menu_item_view_staistics"><b>View Statistics</b></string>
-    <string name="navigation_menu_item_edit_profile"><b>Edit profile</b></string>
-    <string name="navigation_menu_item_log_out"><b>Log Out</b></string>
+    <string name="navigation_menu_item_deposit"><b>Nạp tiền</b></string>
+    <string name="navigation_menu_item_withdraw"><b>Rút tiền</b></string>
+    <string name="navigation_menu_item_view_staistics"><b>Xem thống kê</b></string>
+    <string name="navigation_menu_item_edit_profile"><b>Thay đổi thông tin</b></string>
+    <string name="navigation_menu_item_log_out"><b>Đăng xuất</b></string>
 
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Cài đặt</string>
+
+    <string name="button_a_win_main">A Chiến thắng</string>
+    <string name="button_b_win_main">B Chiến thắng</string>
+    <string name="button_draw_main">Hòa</string>
+    <string name="button_bet_now_main">Cược ngay</string>
     <!-- End -->
 </resources>

@@ -3,15 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
         <FrameLayout
             android:id="@+id/frame1"
             android:layout_width="290dp"
             android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:layout_marginRight="15dp">
 
         </FrameLayout>
@@ -19,9 +20,11 @@
         <FrameLayout
             android:id="@+id/frame2"
             android:layout_width="290dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true">
 
         </FrameLayout>
-    </LinearLayout>
+    </RelativeLayout>
 </ScrollView>
 

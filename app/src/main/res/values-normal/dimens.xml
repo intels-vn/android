@@ -107,8 +107,15 @@
 
     <dimen name="hsv_channel_margin_main">10dp</dimen>
     <dimen name="button_channel_margin_right_main">10dp</dimen>
+    <dimen name="button_channel_margin_left_main">10dp</dimen>
+    <dimen name="button_channel_margin_bottom_main">5dp</dimen>
     
     <dimen name="hsv_bet_value_margin_main">20dp</dimen>
     <dimen name="button_bet_now_margin_main">20dp</dimen>
+    <dimen name="button_bet_at_height_main">30dp</dimen>
+    <dimen name="button_bet_value_height_main">30dp</dimen>
+
+    <dimen name="button_channel_width_main">50dp</dimen>
+    <dimen name="button_channel_height_main">30dp</dimen>
     <!-- End -->
 </resources>

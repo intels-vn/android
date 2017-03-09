@@ -13,7 +13,8 @@
             android:layout_height="match_parent"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
-            android:layout_marginRight="15dp">
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="40dp">
 
         </FrameLayout>
 
@@ -22,7 +23,8 @@
             android:layout_width="290dp"
             android:layout_height="match_parent"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true">
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp">
 
         </FrameLayout>
     </RelativeLayout>

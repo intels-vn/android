@@ -13,13 +13,13 @@
         android:id="@+id/edtUsername_Register"
         android:layout_width="@dimen/edit_text_width_register_portrait"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:textSize="@dimen/edit_text_text_size_register_portrait"
+        android:background="@color/button_play_text_welcome_screen"
         android:drawableLeft="@drawable/username"
         android:drawablePadding="@dimen/edit_text_drawable_padding_left_register_portrait"
+        android:ems="10"
         android:hint="@string/edit_text_username_register"
-        android:background="@color/button_play_text_welcome_screen"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textSize="@dimen/edit_text_text_size_register_portrait" />
 
     <EditText
         android:id="@+id/edtPassword_Register"

@@ -41,5 +41,7 @@
     <string name="button_b_win_main">B Win</string>
     <string name="button_draw_main">Draw</string>
     <string name="button_bet_now_main">Bet Now</string>
+
+    <string name="money">$ 1,234,567.00</string>
     <!-- End -->
 </resources>

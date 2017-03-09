@@ -2,6 +2,7 @@ package com.its.its.view;
 
 import android.content.res.Configuration;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -19,11 +20,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
+
 import com.its.its.R;
 
 @SuppressWarnings("ResourceAsColor")
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    static final int txtMoneyId = 5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,35 +68,21 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+    @SuppressWarnings("ResourceType")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        TextView tv = new TextView(this);
+        tv.setId(txtMoneyId);
+        tv.setText("$ 1,234,567");
+        tv.setTextColor(Color.YELLOW);
+        tv.setPadding(5, 0, 20, 0);
+
+        tv.setTypeface(null, Typeface.BOLD);
+        tv.setTextSize(14);
+        menu.add(0, txtMoneyId, 1, getResources().getString(R.string.money)).setActionView(tv).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+
         return true;
-    }
-
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        MenuItem settingsMenuItem = menu.findItem(R.id.money);
-        SpannableString s = new SpannableString(settingsMenuItem.getTitle());
-        s.setSpan(new ForegroundColorSpan(Color.YELLOW), 0, s.length(), 0);
-        settingsMenuItem.setTitle(s);
-        return super.onPrepareOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.money) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")

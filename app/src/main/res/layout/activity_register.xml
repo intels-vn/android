@@ -79,6 +79,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_margin_top_register_portrait"
         android:textSize="@dimen/button_text_size_register_portrait"
-        android:background="@color/button_join_background_welcome_screen"
+        android:background="@drawable/button_join_shape"
         android:text="@string/button_join_now_register" />
 </LinearLayout>

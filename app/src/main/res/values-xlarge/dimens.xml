@@ -12,7 +12,7 @@
     <!-- End -->
 
     <!--Welcome_screen_portrait-->
-    <dimen name="image_slider_width_welcome_screen_portrait">500dp</dimen>
+    <dimen name="image_slider_width_welcome_screen_portrait">600dp</dimen>
     <dimen name="image_slider_height_welcome_screen_portrait">530dp</dimen>
 
     <dimen name="linearLayout_margin_welcome_screen_portrait">100dp</dimen>
@@ -40,7 +40,6 @@
     <dimen name="button_margin_top_login_land">40dp</dimen>
     <dimen name="button_text_size_login_land">40sp</dimen>
     <dimen name="button_width_login_land">600dp</dimen>
-    <dimen name="button_margin_bottom_register_land">40dp</dimen>
     <!-- End -->
 
     <!-- Login screen portrait -->
@@ -60,5 +59,64 @@
     <dimen name="button_margin_top_login_portrait">120dp</dimen>
     <dimen name="button_text_size_login_portrait">40sp</dimen>
     <dimen name="button_width_login_portrait">500dp</dimen>
+    <!-- End -->
+
+    <!-- Register screen land -->
+    <dimen name="edit_text_width_register_land">800dp</dimen>
+    <dimen name="edit_text_margin_top_register_land">40dp</dimen>
+    <dimen name="edit_text_text_size_register_land">36sp</dimen>
+
+    <dimen name="edit_text_drawable_padding_left_register_land">40dp</dimen>
+
+    <dimen name="button_width_register_land">600dp</dimen>
+    <dimen name="button_margin_top_register_land">40dp</dimen>
+    <dimen name="button_text_size_register_land">36sp</dimen>
+    <dimen name="button_margin_bottom_register_land">40dp</dimen>
+    <!-- End -->
+
+    <!-- Register screen portrait -->
+    <dimen name="edit_text_drawable_padding_left_register_portrait">40sp</dimen>
+
+    <dimen name="edit_text_width_register_portrait">500dp</dimen>
+    <dimen name="edit_text_margin_top_register_portrait">40dp</dimen>
+    <dimen name="edit_text_text_size_register_portrait">30sp</dimen>
+
+    <dimen name="button_margin_top_register_portrait">80dp</dimen>
+    <dimen name="button_text_size_register_portrait">40sp</dimen>
+    <dimen name="button_width_register_portrait">500dp</dimen>
+    <!-- End -->
+
+    <!-- Main screen land-->
+    <dimen name="image_width_navigation_header_main_land">200dp</dimen>
+    <dimen name="image_height_navigation_header_main_land">200dp</dimen>
+
+    <dimen name="text_view_margin_top_navigation_header_main_land">20dp</dimen>
+    <dimen name="text_view_margin_bottom_navigation_header_main_land">20dp</dimen>
+    <dimen name="text_view_text_size_navigation_header_main_land">40sp</dimen>
+
+
+    <!-- End -->
+
+    <!-- Fragment main screen -->
+    <dimen name="video_view_height_content_main">400dp</dimen>
+    <dimen name="video_view_margin_main">20dp</dimen>
+
+    <dimen name="button_bet_at_margin_main">40dp</dimen>
+    <dimen name="button_bet_at_height_main">60dp</dimen>
+
+    <dimen name="hsv_channel_margin_main">20dp</dimen>
+    <dimen name="button_channel_margin_right_main">20dp</dimen>
+    <dimen name="button_channel_margin_left_main">20dp</dimen>
+    <dimen name="button_channel_margin_bottom_main">10dp</dimen>
+    <dimen name="button_channel_width_main">100dp</dimen>
+    <dimen name="button_channel_height_main">60dp</dimen>
+
+    <dimen name="hsv_bet_value_margin_main">40dp</dimen>
+    <dimen name="button_bet_now_margin_main">40dp</dimen>
+
+    <dimen name="button_bet_value_height_main">60dp</dimen>
+    <dimen name="button_bet_value_margin_main">10dp</dimen>
+    <dimen name="button_bet_value_width_main">140dp</dimen>
+
     <!-- End -->
 </resources>

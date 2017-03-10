@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editUserName_Login"
         android:layout_width="@dimen/edit_text_width_username_login_land"
         android:layout_height="wrap_content"
         android:background="@color/button_play_text_welcome_screen"
@@ -19,7 +19,7 @@
         android:textSize="@dimen/edit_text_text_size_username_login_land" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editPassword_Login"
         android:layout_width="@dimen/edit_text_width_password_login_land"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/edit_text_password_margin_login_top"
@@ -32,7 +32,7 @@
         android:textSize="@dimen/edit_text_text_size_password_login_land" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/tvForgotPass_Login"
         android:layout_width="@dimen/text_view_width_forgot_password_login_land"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_view_margin_top_login_land"
@@ -44,7 +44,7 @@
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/btnPlay_Land"
+        android:id="@+id/btnPlay_Login"
         android:layout_width="@dimen/button_width_login_land"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_margin_top_login_land"

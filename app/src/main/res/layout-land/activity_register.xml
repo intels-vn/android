@@ -18,7 +18,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editText3"
+                android:id="@+id/edtUsername_Register"
                 android:layout_width="@dimen/edit_text_width_register_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/edit_text_margin_top_register_land"
@@ -31,7 +31,7 @@
                 android:textSize="@dimen/edit_text_text_size_register_land" />
 
             <EditText
-                android:id="@+id/editText7"
+                android:id="@+id/edtPassword_Register"
                 android:layout_width="@dimen/edit_text_width_register_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/edit_text_margin_top_register_land"
@@ -44,7 +44,7 @@
                 android:textSize="@dimen/edit_text_text_size_register_land" />
 
             <EditText
-                android:id="@+id/editText8"
+                android:id="@+id/edtRetypePass_Register"
                 android:layout_width="@dimen/edit_text_width_register_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/edit_text_margin_top_register_land"
@@ -57,7 +57,7 @@
                 android:textSize="@dimen/edit_text_text_size_register_land" />
 
             <EditText
-                android:id="@+id/editText9"
+                android:id="@+id/edtPhone_Register"
                 android:layout_width="@dimen/edit_text_width_register_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/edit_text_margin_top_register_land"
@@ -70,7 +70,7 @@
                 android:textSize="@dimen/edit_text_text_size_register_land" />
 
             <EditText
-                android:id="@+id/editText10"
+                android:id="@+id/edtEmail_Register"
                 android:layout_width="@dimen/edit_text_width_register_land"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/edit_text_margin_top_register_land"
@@ -83,7 +83,7 @@
                 android:textSize="@dimen/edit_text_text_size_register_land" />
 
             <Button
-                android:id="@+id/btnJoin_Register_Land"
+                android:id="@+id/btnJoin_Register"
                 android:layout_width="@dimen/button_width_register_land"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/button_margin_bottom_register_land"

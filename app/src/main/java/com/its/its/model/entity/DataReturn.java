@@ -5,21 +5,25 @@ package com.its.its.model.entity;
  */
 
 public class DataReturn {
-    private String data;
+    private Object data;
     private String message;
     private String status;
 
-    public DataReturn(String data, String message, String status) {
+    public DataReturn(Object data, String message, String status) {
         this.data = data;
         this.message = message;
         this.status = status;
     }
 
-    public String getData() {
+    public Object getData() {
         return data;
     }
 
-    public void setData(String data) {
+    public DataReturn(Object data) {
+        this.data = data;
+    }
+
+    public void setData(Object data) {
         this.data = data;
     }
 

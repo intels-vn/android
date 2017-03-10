@@ -20,6 +20,12 @@ import java.util.Map;
  */
 
 public class CommonRequest {
+
+    public static final String GET = "GET";
+    public static final String POST = "POST";
+    public static final String PUT = "PUT";
+    public static final String DELETE = "DELETE";
+
     public static HttpURLConnection sendRequest(String method, String api, Map<String, String> headers,
                                                 Map<String, String> bodies) throws IOException {
         HttpURLConnection connection = null;
@@ -72,23 +78,13 @@ public class CommonRequest {
         return connection;
     }
 
-    public static  String receiveResponse(String method, String api, HashMap<String, String> headers,
+    public static InputStreamReader receiveResponse(String method, String api, HashMap<String, String> headers,
                                           HashMap<String, String> bodies) throws IOException {
-        String result = "";
         HttpURLConnection connection = sendRequest(method, api, headers, bodies);
-//        if(connection.getResponseCode() == 200){
-            InputStream inputStream = connection.getInputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
-            StringBuilder builder = new StringBuilder();
-            String line = null;
-            while((line = reader.readLine()) != null){
-                builder.append(line);
-            }
 
-            reader.close();
-            inputStream.close();
-            result = builder.toString();
-//        }
+        InputStream inputStream = connection.getInputStream();
+
+        InputStreamReader result = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
 
         return result;
     }

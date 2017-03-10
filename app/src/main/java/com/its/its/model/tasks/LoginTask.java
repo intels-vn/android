@@ -5,6 +5,8 @@ import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.its.its.model.entity.DataReturn;
 import com.its.its.model.entity.User;
 import com.its.its.model.http.CommonRequest;
 
@@ -65,11 +67,13 @@ public class LoginTask extends AsyncTask<String, Void, String>{
             HashMap<String, String> headers = new HashMap<String, String>();
             headers.put("Localization", "vi");
 
-            HashMap<String, String> bodies = new HashMap<String, String>();
-            bodies.put("username", username);
-            bodies.put("password", password);
+            InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.POST, api, headers, null);
 
-            result = CommonRequest.receiveResponse("POST", api, headers, bodies);
+            DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
+
+            if(dataReturn.getStatus().equals("200")){
+
+            }
 
         } catch (IOException e) {
             e.printStackTrace();

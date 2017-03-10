@@ -80,11 +80,20 @@ public class CommonRequest {
 
     public static InputStreamReader receiveResponse(String method, String api, HashMap<String, String> headers,
                                           HashMap<String, String> bodies) throws IOException {
+        InputStreamReader result = null;
         HttpURLConnection connection = sendRequest(method, api, headers, bodies);
 
-        InputStream inputStream = connection.getInputStream();
+        int responseCode = connection.getResponseCode();
+        switch (responseCode){
+            case 200:
+                InputStream inputStream = connection.getInputStream();
+                result = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
+                break;
 
-        InputStreamReader result = new InputStreamReader(inputStream, Charset.forName("UTF-8"));
+            default:
+                break;
+        }
+
 
         return result;
     }

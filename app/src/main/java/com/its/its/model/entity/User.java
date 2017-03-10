@@ -1,10 +1,12 @@
 package com.its.its.model.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by BiLac on 3/9/2017.
  */
 
-public class User {
+public class User implements Serializable {
     private String id;
     private String useraccount;
     private String phonenumber;

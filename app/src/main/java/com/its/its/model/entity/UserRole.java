@@ -1,10 +1,12 @@
 package com.its.its.model.entity;
 
+import java.io.Serializable;
+
 /**
  * Created by BiLac on 3/10/2017.
  */
 
-public class UserRole {
+public class UserRole implements Serializable {
     private String id;
 
     public String getId() {

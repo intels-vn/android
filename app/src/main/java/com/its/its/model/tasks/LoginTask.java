@@ -1,27 +1,19 @@
 package com.its.its.model.tasks;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.its.its.model.entity.DataReturn;
-import com.its.its.model.entity.User;
+import com.its.its.model.entity.TestDuLieu;
 import com.its.its.model.http.CommonRequest;
+import com.its.its.view.MainActivity;
 
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.nio.charset.Charset;
 import java.util.HashMap;
 
 /**
@@ -44,8 +36,8 @@ public class LoginTask extends AsyncTask<String, Void, String>{
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
-        Toast.makeText(activity, s, Toast.LENGTH_LONG).show();
-        Log.d("DATA: ", s);
+        Intent intent = new Intent(activity, MainActivity.class);
+        activity.startActivity(intent);
     }
 
     @Override
@@ -72,7 +64,9 @@ public class LoginTask extends AsyncTask<String, Void, String>{
             DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
 
             if(dataReturn.getStatus().equals("200")){
-
+                String data = dataReturn.getData().toString();
+                TestDuLieu test = new Gson().fromJson(data, TestDuLieu.class);
+                result = test.getId();
             }
 
         } catch (IOException e) {

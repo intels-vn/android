@@ -8,6 +8,7 @@ import android.widget.EditText;
 import com.its.its.R;
 
 public class RegisterActivity extends AppCompatActivity {
+
     EditText edtUsername_Register, edtPassword_Register, edtRetypePass_Register, edtPhone_Register, edtEmail_Register;
     Button btnJoin_Register;
 

@@ -8,19 +8,33 @@ public class User {
     private String id;
     private String useraccount;
     private String phonenumber;
+    private String phone_received_exchange;
     private String fullname;
     private String password;
     private String email;
 
-    public User(String id, String useraccount, String phonenumber, String fullname, String password, String email) {
+    public User(String id, String useraccount, String phonenumber, String phone_received_exchange, String fullname, String password, String email) {
         this.id = id;
         this.useraccount = useraccount;
         this.phonenumber = phonenumber;
+        this.phone_received_exchange = phone_received_exchange;
         this.fullname = fullname;
         this.password = password;
         this.email = email;
     }
 
+    public User() {
+
+    }
+
+    public String getPhone_received_exchange() {
+
+        return phone_received_exchange;
+    }
+
+    public void setPhone_received_exchange(String phone_received_exchange) {
+        this.phone_received_exchange = phone_received_exchange;
+    }
     public String getId() {
         return id;
     }

@@ -13,14 +13,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by BiLac on 3/8/2017.
  */
 
 public class CommonRequest {
-    public static HttpURLConnection sendRequest(String method, String api, HashMap<String, String> headers,
-                                                HashMap<String, String> bodies) throws IOException {
+    public static HttpURLConnection sendRequest(String method, String api, Map<String, String> headers,
+                                                Map<String, String> bodies) throws IOException {
         HttpURLConnection connection = null;
 
         try {
@@ -28,12 +29,26 @@ public class CommonRequest {
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod(method);
 
-            //CHECK HEADER, IF NULL NO NEED TO CHECK
-            if(!headers.equals(null)) {
-                connection.setRequestProperty("Content-Type", headers.get("Content-Type"));
-                connection.setRequestProperty("Accept", headers.get("Accept"));
-                connection.setRequestProperty("Authorization", headers.get("Authorization"));
-                connection.setRequestProperty("Localization", headers.get("Localization"));
+            for(String key : headers.keySet()){
+                if(key.equals("Content-Type")){
+                    connection.setRequestProperty("Content-Type", headers.get("Content-Type"));
+                }
+
+                if(key.equals("Accept")){
+                    connection.setRequestProperty("Accept", headers.get("Accept"));
+                }
+
+                if(key.equals("Authorization")){
+                    connection.setRequestProperty("Authorization", headers.get("Authorization"));
+                }
+
+                if(key.equals("Localization")){
+                    connection.setRequestProperty("Localization", headers.get("Localization"));
+                }
+
+                if(key.equals("DeviceId")) {
+                    connection.setRequestProperty("DeviceId", headers.get("DeviceId"));
+                }
             }
 
             if(!method.equals("GET")){
@@ -61,17 +76,19 @@ public class CommonRequest {
                                           HashMap<String, String> bodies) throws IOException {
         String result = "";
         HttpURLConnection connection = sendRequest(method, api, headers, bodies);
-        InputStream inputStream = connection.getInputStream();
-        BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
-        StringBuilder builder = new StringBuilder();
-        String line = null;
-        while((line = reader.readLine()) != null){
-            builder.append(line);
-        }
+//        if(connection.getResponseCode() == 200){
+            InputStream inputStream = connection.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream, Charset.forName("UTF-8")));
+            StringBuilder builder = new StringBuilder();
+            String line = null;
+            while((line = reader.readLine()) != null){
+                builder.append(line);
+            }
 
-        reader.close();
-        inputStream.close();
-        result = builder.toString();
+            reader.close();
+            inputStream.close();
+            result = builder.toString();
+//        }
 
         return result;
     }

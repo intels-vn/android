@@ -2,6 +2,8 @@
     <string name="app_name">ITS</string>
     <string name="khoa">thebestsecretkey</string>
 
+    <string name="localization">en</string>
+
     <!-- Welcome Screen -->
     <string name="button_play_welcome_screen">Play</string>
     <string name="button_join_welcome_screen">Join</string>
@@ -50,6 +52,7 @@
     <string name="validate_username">Please enter your desired username</string>
     <string name="validate_password">Please enter the password</string>
     <string name="validate_retype_password">Please retype the password</string>
+    <string name="validate_match_password">Password is unmatched</string>
     <string name="validate_phone">Please enter your phone number</string>
     <string name="validate_email">Please enter your email</string>
     <string name="validate_invalid_email">Invalid email</string>

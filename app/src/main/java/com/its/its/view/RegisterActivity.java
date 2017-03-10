@@ -48,7 +48,9 @@ public class RegisterActivity extends AppCompatActivity {
                 email_reg = edtEmail_Register.getText().toString();
 
                 if(validation()){
-                    RegisterTask registerTask = new RegisterTask();
+                    new RegisterTask(RegisterActivity.this){
+
+                    };
                 }else{
                     Toast.makeText(RegisterActivity.this, getResources().getString(R.string.validate_empty_form), Toast.LENGTH_SHORT).show();
                 }
@@ -63,30 +65,42 @@ public class RegisterActivity extends AppCompatActivity {
             edtUsername_Register.setError(getResources().getString(R.string.validate_username));
             valid = false;
         }
+
         if(password_reg.isEmpty()){
             edtPassword_Register.setError(getResources().getString(R.string.validate_password));
             valid = false;
         }
+
         if(retypePass_reg.isEmpty()){
             edtRetypePass_Register.setError(getResources().getString(R.string.validate_retype_password));
             valid = false;
         }
+
+        if(!retypePass_reg.equals(password_reg)){
+            edtRetypePass_Register.setError(getResources().getString(R.string.validate_match_password));
+            valid = false;
+        }
+
         if(phone_reg.isEmpty()){
             edtPhone_Register.setError(getResources().getString(R.string.validate_phone));
             valid = false;
         }
+
         if(!Patterns.PHONE.matcher(phone_reg).matches()){
             edtPhone_Register.setError(getResources().getString(R.string.validate_invalid_phone));
             valid = false;
         }
+
         if(email_reg.isEmpty()){
             edtEmail_Register.setError(getResources().getString(R.string.validate_email));
             valid = false;
         }
+
         if(!Patterns.EMAIL_ADDRESS.matcher(email_reg).matches()){
             edtEmail_Register.setError(getResources().getString(R.string.validate_invalid_email));
             valid = false;
         }
+
         return valid;
     }
 }

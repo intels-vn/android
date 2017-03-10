@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">ITS</string>
 
+    <string name="localization">vi</string>
+
     <!-- Welcome Screen -->
     <string name="button_play_welcome_screen">Vào Chơi</string>
     <string name="button_join_welcome_screen">Đăng Kí</string>
@@ -48,6 +50,7 @@
     <string name="validate_username">Nhập vào tên tài khoản bạn muốn</string>
     <string name="validate_password">Nhập vào password</string>
     <string name="validate_retype_password">Nhập lại password</string>
+    <string name="validate_match_password">Password không đúng</string>
     <string name="validate_phone">Nhập vào số điện thoại của bạn</string>
     <string name="validate_email">Nhập vào email của bạn</string>
     <string name="validate_invalid_email">Email không hợp lệ</string>

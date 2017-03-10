@@ -10,19 +10,15 @@ public class User {
     private String phonenumber;
     private String fullname;
     private String password;
-    private Integer password_expired;
     private String email;
-    private String is_active;
 
-    public User(String id, String useraccount, String phonenumber, String fullname, String password, Integer password_expired, String email, String is_active) {
+    public User(String id, String useraccount, String phonenumber, String fullname, String password, String email) {
         this.id = id;
         this.useraccount = useraccount;
         this.phonenumber = phonenumber;
         this.fullname = fullname;
         this.password = password;
-        this.password_expired = password_expired;
         this.email = email;
-        this.is_active = is_active;
     }
 
     public String getId() {
@@ -65,14 +61,6 @@ public class User {
         this.password = password;
     }
 
-    public Integer getPassword_expired() {
-        return password_expired;
-    }
-
-    public void setPassword_expired(Integer password_expired) {
-        this.password_expired = password_expired;
-    }
-
     public String getEmail() {
         return email;
     }
@@ -81,11 +69,4 @@ public class User {
         this.email = email;
     }
 
-    public String getIs_active() {
-        return is_active;
-    }
-
-    public void setIs_active(String is_active) {
-        this.is_active = is_active;
-    }
 }

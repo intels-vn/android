@@ -22,6 +22,8 @@
     <string name="edit_text_retype_password_register">Nhập Lại Mật Khẩu</string>
     <string name="edit_text_phone_register">Nhập Số Điện Thoại</string>
     <string name="edit_text_email_register">Nhập Email</string>
+    <string name="edit_text_fullname_register">Nhập tên họ đầy đủ</string>
+    <string name="edit_text_phone_received_change_register">Nhập số điện thoại dùng để lấy tiền</string>
     <string name="button_join_now_register">Tham Gia</string>
     <!-- End -->
 
@@ -55,6 +57,8 @@
     <string name="validate_email">Nhập vào email của bạn</string>
     <string name="validate_invalid_email">Email không hợp lệ</string>
     <string name="validate_invalid_phone">Số điện thoại không hợp lệ</string>
+    <string name="validate_fullname">Nhập tên đầy đủ</string>
+    <string name="validate_phone_received">Nhập vào số điện thoại</string>
     <string name="validate_empty_form">Nhập vào các thông tin chi tiết</string>
     <!-- End -->
 </resources>

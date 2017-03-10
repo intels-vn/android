@@ -13,7 +13,7 @@
         <item
             android:id="@+id/nav_viewStatistics"
             android:icon="@color/item_navigation_background"
-            android:title="@string/navigation_menu_item_view_staistics" />
+            android:title="@string/navigation_menu_item_view_statistics" />
         <item
             android:id="@+id/nav_editProfile"
             android:icon="@color/item_navigation_background"

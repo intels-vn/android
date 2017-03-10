@@ -43,4 +43,15 @@
     <string name="button_draw_main">Hòa</string>
     <string name="button_bet_now_main">Cược ngay</string>
     <!-- End -->
+
+    <!-- Validation -->
+    <string name="validate_username">Nhập vào tên tài khoản bạn muốn</string>
+    <string name="validate_password">Nhập vào password</string>
+    <string name="validate_retype_password">Nhập lại password</string>
+    <string name="validate_phone">Nhập vào số điện thoại của bạn</string>
+    <string name="validate_email">Nhập vào email của bạn</string>
+    <string name="validate_invalid_email">Email không hợp lệ</string>
+    <string name="validate_invalid_phone">Số điện thoại không hợp lệ</string>
+    <string name="validate_empty_form">Nhập vào các thông tin chi tiết</string>
+    <!-- End -->
 </resources>

@@ -32,7 +32,7 @@
 
     <string name="navigation_menu_item_deposit"><b>Deposit</b></string>
     <string name="navigation_menu_item_withdraw"><b>Withdraw</b></string>
-    <string name="navigation_menu_item_view_staistics"><b>View Statistics</b></string>
+    <string name="navigation_menu_item_view_statistics"><b>View Statistics</b></string>
     <string name="navigation_menu_item_edit_profile"><b>Edit profile</b></string>
     <string name="navigation_menu_item_log_out"><b>Log Out</b></string>
 
@@ -44,5 +44,16 @@
     <string name="button_bet_now_main">Bet Now</string>
 
     <string name="money">$ 1,234,567.00</string>
+    <!-- End -->
+
+    <!-- Validation -->
+    <string name="validate_username">Please enter your desired username</string>
+    <string name="validate_password">Please enter the password</string>
+    <string name="validate_retype_password">Please retype the password</string>
+    <string name="validate_phone">Please enter your phone number</string>
+    <string name="validate_email">Please enter your email</string>
+    <string name="validate_invalid_email">Invalid email</string>
+    <string name="validate_invalid_phone">Invalid phone number</string>
+    <string name="validate_empty_form">Please fill in the form</string>
     <!-- End -->
 </resources>

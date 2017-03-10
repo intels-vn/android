@@ -22,6 +22,8 @@
     <string name="edit_text_retype_password_register">Retype password</string>
     <string name="edit_text_phone_register">Enter your phone</string>
     <string name="edit_text_email_register">Enter your email</string>
+    <string name="edit_text_fullname_register">Enter your fullname</string>
+    <string name="edit_text_phone_received_change_register">The number used to get money</string>
     <string name="button_join_now_register">Join now</string>
     <!-- End -->
 
@@ -57,6 +59,8 @@
     <string name="validate_email">Please enter your email</string>
     <string name="validate_invalid_email">Invalid email</string>
     <string name="validate_invalid_phone">Invalid phone number</string>
+    <string name="validate_fullname">Please enter your fullname</string>
+    <string name="validate_phone_received">Please enter the number</string>
     <string name="validate_empty_form">Please fill in the form</string>
     <!-- End -->
 </resources>

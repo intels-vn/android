@@ -10,6 +10,7 @@ import com.its.its.R;
 import com.its.its.model.entity.DataReturn;
 import com.its.its.model.http.CommonRequest;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
@@ -55,9 +56,13 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
             bodies.put("phonenumber", phone);
             bodies.put("emai;", email);
 
-            InputStreamReader reader = CommonRequest.receiveResponse(CommonRequest.POST, api, headers, bodies);
+            InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.POST, api, headers, bodies);
 
-            DataReturn dataReturn = new Gson().fromJson(reader, DataReturn.class);
+            DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
+
+            if(dataReturn.getStatus().equals("200")){
+
+            }
         } catch (IOException e) {
             e.printStackTrace();
             Log.e("Error  ", e.getMessage());

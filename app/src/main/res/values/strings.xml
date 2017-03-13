@@ -63,4 +63,7 @@
     <string name="validate_phone_received">Please enter the number</string>
     <string name="validate_empty_form">Please fill in the form</string>
     <!-- End -->
+
+    <string name="login_error"></string>
+    <string name="server_error"></string>
 </resources>

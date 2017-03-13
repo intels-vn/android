@@ -61,4 +61,7 @@
     <string name="validate_phone_received">Nhập vào số điện thoại</string>
     <string name="validate_empty_form">Nhập vào các thông tin chi tiết</string>
     <!-- End -->
+
+    <string name="login_error">Đăng nhập sai. Vui lòng kiểm tra lại !</string>
+    <string name="server_error">Lỗi hệ thống. Vui lòng thử lại trong giây lát !</string>
 </resources>

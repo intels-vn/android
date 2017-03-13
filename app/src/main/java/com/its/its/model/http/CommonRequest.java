@@ -71,8 +71,6 @@ public class CommonRequest {
 
         } catch (Exception e){
             e.printStackTrace();
-        } finally {
-            connection.connect();
         }
 
         return connection;
@@ -82,7 +80,7 @@ public class CommonRequest {
                                           HashMap<String, String> bodies) throws IOException {
         InputStreamReader result = null;
         HttpURLConnection connection = sendRequest(method, api, headers, bodies);
-
+        connection.connect();
         int responseCode = connection.getResponseCode();
         switch (responseCode){
             case 200:

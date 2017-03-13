@@ -1,26 +1,24 @@
 package com.its.its.model.entity;
 
-
-import java.io.Serializable;
-
 /**
- * Created by Chinh Bui on 3/10/2017.
+ * Created by Chinh Bui on 3/13/2017.
  */
 
-public class TestDuLieu implements Serializable {
+public class RegisterAndLogin {
     private String id;
-    private Token token;
+    private String token;
 
-    public TestDuLieu() {
+    public RegisterAndLogin() {
     }
 
-    public TestDuLieu(String id, Token token) {
+    public RegisterAndLogin(String id, String token) {
 
         this.id = id;
         this.token = token;
     }
 
     public String getId() {
+
         return id;
     }
 
@@ -28,11 +26,11 @@ public class TestDuLieu implements Serializable {
         this.id = id;
     }
 
-    public Token getToken() {
+    public String getToken() {
         return token;
     }
 
-    public void setToken(Token token) {
+    public void setToken(String token) {
         this.token = token;
     }
 }

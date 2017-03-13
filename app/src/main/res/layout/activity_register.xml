@@ -86,19 +86,6 @@
         android:background="@color/button_play_text_welcome_screen"
         android:inputType="text" />
 
-    <EditText
-        android:id="@+id/edtPhoneReceived_Register"
-        android:layout_width="@dimen/edit_text_width_register_portrait"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/edit_text_margin_top_register_portrait"
-        android:ems="10"
-        android:textSize="@dimen/edit_text_text_size_register_portrait"
-        android:drawableLeft="@drawable/phone"
-        android:drawablePadding="@dimen/edit_text_drawable_padding_left_register_portrait"
-        android:hint="@string/edit_text_phone_received_change_register"
-        android:background="@color/button_play_text_welcome_screen"
-        android:inputType="textPhonetic" />
-
     <Button
         android:id="@+id/btnJoin_Register"
         android:layout_width="@dimen/button_width_register_portrait"

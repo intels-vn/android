@@ -16,9 +16,9 @@ import com.its.its.presenter.security.EncryptDecrypt;
 public class RegisterActivity extends AppCompatActivity {
 
     EditText edtUsername_Register, edtPassword_Register, edtRetypePass_Register,
-            edtPhone_Register, edtEmail_Register, edtFullname_Register, edtPhoneReceived_Register;
+            edtPhone_Register, edtEmail_Register, edtFullname_Register;
     Button btnJoin_Register;
-    private String username_reg, password_reg, retypePass_reg, phone_reg, email_reg, fullname_reg, phoneReceived_reg;
+    private String username_reg, password_reg, retypePass_reg, phone_reg, email_reg, fullname_reg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,6 @@ public class RegisterActivity extends AppCompatActivity {
         edtPhone_Register = (EditText) findViewById(R.id.edtPhone_Register);
         edtEmail_Register = (EditText) findViewById(R.id.edtEmail_Register);
         edtFullname_Register = (EditText) findViewById(R.id.edtFullname_Register);
-        edtPhoneReceived_Register = (EditText) findViewById(R.id.edtPhoneReceived_Register);
         btnJoin_Register = (Button) findViewById(R.id.btnJoin_Register);
     }
 
@@ -50,7 +49,6 @@ public class RegisterActivity extends AppCompatActivity {
                 phone_reg = edtPhone_Register.getText().toString();
                 email_reg = edtEmail_Register.getText().toString();
                 fullname_reg = edtFullname_Register.getText().toString();
-                phoneReceived_reg = edtPhoneReceived_Register.getText().toString();
 
                 if(validation()){
                     new RegisterTask(RegisterActivity.this)
@@ -60,8 +58,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     EncryptDecrypt.encrypt(password_reg, getResources().getString(R.string.khoa)),
                                     EncryptDecrypt.encrypt(phone_reg, getResources().getString(R.string.khoa)),
                                     EncryptDecrypt.encrypt(email_reg, getResources().getString(R.string.khoa)),
-                                    EncryptDecrypt.encrypt(fullname_reg, getResources().getString(R.string.khoa)),
-                                    EncryptDecrypt.encrypt(phoneReceived_reg, getResources().getString(R.string.khoa))
+                                    EncryptDecrypt.encrypt(fullname_reg, getResources().getString(R.string.khoa))
                             );
                 }else{
                     Toast.makeText(RegisterActivity.this, getResources().getString(R.string.validate_empty_form), Toast.LENGTH_SHORT).show();
@@ -115,11 +112,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         if(fullname_reg.isEmpty()){
             edtFullname_Register.setError(getResources().getString(R.string.validate_fullname));
-            valid = false;
-        }
-
-        if(phoneReceived_reg.isEmpty()){
-            edtPhoneReceived_Register.setError(getResources().getString(R.string.validate_phone_received));
             valid = false;
         }
 

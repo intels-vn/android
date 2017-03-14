@@ -14,10 +14,11 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/text_view_text_size_update_profile_portrait"
-        android:textColor="@color/RED"
         android:gravity="center"
-        android:text="Update Profile" />
+        android:text="Update Profile"
+        android:textColor="@color/RED"
+        android:textSize="@dimen/text_view_text_size_update_profile_portrait"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/editText3"

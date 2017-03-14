@@ -6,7 +6,7 @@ import java.io.Serializable;
  * Created by BiLac on 3/10/2017.
  */
 
-public class DataReturn<T> {
+public class DataReturn {
     private Object data;
     private String message;
     private String status;

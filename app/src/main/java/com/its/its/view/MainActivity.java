@@ -1,5 +1,6 @@
 package com.its.its.view;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Color;
 import android.graphics.Typeface;
@@ -98,7 +99,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_viewStatistics) {
 
         } else if (id == R.id.nav_editProfile) {
-
+            Intent intent = new Intent(MainActivity.this, UpdateProfileActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_logOut) {
 
         }

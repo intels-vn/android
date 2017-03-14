@@ -66,4 +66,7 @@
 
     <string name="login_error">Error. Please check again</string>
     <string name="server_error">There has been an error within the server. Please check again in a few more minutes</string>
+
+    <string name="update_profile">Update Profile</string>
+    <string name="apply_change">Apply Change</string>
 </resources>

@@ -117,6 +117,21 @@
     <dimen name="button_bet_value_height_main">30dp</dimen>
     <dimen name="button_bet_value_margin_main">5dp</dimen>
     <dimen name="button_bet_value_width_main">70dp</dimen>
+    <!-- End -->
+
+    <!-- Update Profile Land -->
+    <dimen name="edit_text_width_update_profile_land">400dp</dimen>
+    <dimen name="edit_text_margin_top_update_profile_land">20dp</dimen>
+    <dimen name="edit_text_padding_drawable_update_profile_land">20dp</dimen>
+    <dimen name="edit_text_text_size_update_profile_land">20sp</dimen>
+
+    <dimen name="text_view_text_size_update_profile_land">35sp</dimen>
+    <dimen name="text_view_margin_bottom_update_profile_land">20dp</dimen>
+    <dimen name="text_view_margin_top_update_profile_land">10dp</dimen>
+
+    <dimen name="button_width_update_profile_land">300dp</dimen>
+    <dimen name="button_margin_top_update_profile_land">20dp</dimen>
+    <dimen name="button_text_size_update_profile_land">20sp</dimen>
 
     <!-- End -->
 </resources>

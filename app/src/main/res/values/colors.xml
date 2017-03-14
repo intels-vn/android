@@ -3,6 +3,11 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="WHITE">#FFFFFF</color>
+    <color name="BLACK">#000000</color>
+    <color name="YELLOW">#FFFF00</color>
+    <color name="RED">#FF0000</color>
     
     <color name="button_play_background_welcome_screen">#FF0000</color>
     <color name="button_join_background_welcome_screen">#FFFF00</color>

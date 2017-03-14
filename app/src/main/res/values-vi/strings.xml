@@ -23,7 +23,6 @@
     <string name="edit_text_phone_register">Nhập Số Điện Thoại</string>
     <string name="edit_text_email_register">Nhập Email</string>
     <string name="edit_text_fullname_register">Nhập tên họ đầy đủ</string>
-    <string name="edit_text_phone_received_change_register">Nhập số điện thoại dùng để lấy tiền</string>
     <string name="button_join_now_register">Tham Gia</string>
     <!-- End -->
 
@@ -64,4 +63,22 @@
 
     <string name="login_error">Đăng nhập sai. Vui lòng kiểm tra lại !</string>
     <string name="server_error">Lỗi hệ thống. Vui lòng thử lại trong giây lát !</string>
+
+    <!-- Update Profile Screen -->
+    <string name="update_profile">Cập nhật tài khoản</string>
+    <string name="apply_change">Cập nhật</string>
+    <string name="change_password">Thay password</string>
+    <!-- End -->
+
+    <!-- Verify Withdraw Screen -->
+    <string name="verify_withdraw">Xác nhận rút tiền</string>
+    <string name="verify">Xác nhận</string>
+    <string name="edit_text_phone_receive_exchange">Nhập số điện thoại dùng cho rút tiền</string>
+    <!-- End -->
+
+    <!-- Change Password Screen -->
+    <string name="old_password">Nhập vào password cũ</string>
+    <string name="new_password">Nhập vào password mới</string>
+    <string name="retype_new_password">Nhập lại password mới</string>
+    <!-- End -->
 </resources>

@@ -23,10 +23,10 @@ import java.util.HashMap;
  */
 
 public class RegisterTask extends AsyncTask<String, Void, String>{
-    private Activity register;
+    private Activity activity;
 
     public RegisterTask(Activity register) {
-        this.register = register;
+        this.activity = activity;
     }
 
     @Override
@@ -44,13 +44,13 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
         String phone = params[3];
         String email = params[4];
 
-        String deviceId = Settings.Secure.getString(register.getContentResolver(), Settings.Secure.ANDROID_ID);
+        String deviceId = Settings.Secure.getString(activity.getContentResolver(), Settings.Secure.ANDROID_ID);
         Log.d("ANDROID ID   ", deviceId);
 
         try {
             HashMap<String, String> headers = new HashMap<String, String>();
             headers.put("Accept", "application/json;charset=UTF-8");
-            headers.put("Localization", register.getResources().getString(R.string.localization));
+            headers.put("Localization", activity.getResources().getString(R.string.localization));
             headers.put("DeviceId", deviceId);
 
             HashMap<String, String> bodies = new HashMap<String, String >();
@@ -68,10 +68,10 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
                 case "200":
                     String data = dataReturn.getData().toString();
                     RegisterAndLogin registerAndLogin = new Gson().fromJson(data, RegisterAndLogin.class);
-                    Intent intent = new Intent(register, MainActivity.class);
+                    Intent intent = new Intent(activity, MainActivity.class);
                     intent.putExtra("REG_TOKEN", registerAndLogin.getToken());
 
-                    register.startActivity(intent);
+                    activity.startActivity(intent);
                     break;
                 case "404":
                     break;

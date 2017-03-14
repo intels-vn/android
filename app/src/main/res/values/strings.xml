@@ -69,7 +69,6 @@
     <!-- Update Profile Screen -->
     <string name="update_profile">Update Profile</string>
     <string name="apply_change">Apply Change</string>
-    <string name="change_password">Change password</string>
     <!-- End -->
 
     <!-- Verify Withdraw Screen -->
@@ -79,6 +78,7 @@
     <!-- End -->
 
     <!-- Change Password Screen -->
+    <string name="change_password">Change password</string>
     <string name="old_password">Enter old password</string>
     <string name="new_password">Enter new password</string>
     <string name="retype_new_password">Retype new password</string>

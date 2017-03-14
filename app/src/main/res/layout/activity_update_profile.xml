@@ -20,7 +20,7 @@
         android:text="@string/update_profile" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edtFullname_Update"
         android:layout_width="@dimen/edit_text_width_update_profile_portrait"
         android:layout_height="wrap_content"
         android:background="@color/button_channel_background"
@@ -29,7 +29,7 @@
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edtPhone_Update"
         android:layout_width="@dimen/edit_text_width_update_profile_portrait"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/edit_text_margin_top_update_profile_portrait"
@@ -39,7 +39,7 @@
         android:inputType="phone" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edtEmail_Update"
         android:layout_width="@dimen/edit_text_width_update_profile_portrait"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/edit_text_margin_top_update_profile_portrait"
@@ -49,7 +49,7 @@
         android:inputType="textEmailAddress" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnUpdate"
         android:layout_width="@dimen/button_width_update_profile_portrait"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_margin_top_update_profile_portrait"

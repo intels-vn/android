@@ -67,7 +67,6 @@
     <!-- Update Profile Screen -->
     <string name="update_profile">Cập nhật tài khoản</string>
     <string name="apply_change">Cập nhật</string>
-    <string name="change_password">Thay password</string>
     <!-- End -->
 
     <!-- Verify Withdraw Screen -->
@@ -77,6 +76,7 @@
     <!-- End -->
 
     <!-- Change Password Screen -->
+    <string name="change_password">Thay password</string>
     <string name="old_password">Nhập vào password cũ</string>
     <string name="new_password">Nhập vào password mới</string>
     <string name="retype_new_password">Nhập lại password mới</string>

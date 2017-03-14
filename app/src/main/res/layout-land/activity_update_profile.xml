@@ -24,7 +24,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/edtFullname_Update"
             android:layout_width="@dimen/edit_text_width_update_profile_land"
             android:layout_height="wrap_content"
             android:background="@color/WHITE"
@@ -35,7 +35,7 @@
             android:textSize="@dimen/edit_text_text_size_update_profile_land" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/edtPhone_Update"
             android:layout_width="@dimen/edit_text_width_update_profile_land"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/edit_text_margin_top_update_profile_land"
@@ -47,7 +47,7 @@
             android:textSize="@dimen/edit_text_text_size_update_profile_land" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/edtEmail_Update"
             android:layout_width="@dimen/edit_text_width_update_profile_land"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/edit_text_margin_top_update_profile_land"
@@ -59,7 +59,7 @@
             android:textSize="@dimen/edit_text_text_size_update_profile_land" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnUpdate"
             android:layout_width="@dimen/button_width_update_profile_land"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/button_margin_top_update_profile_land"

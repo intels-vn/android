@@ -27,6 +27,17 @@
             android:id="@+id/editText"
             android:layout_width="@dimen/edit_text_width_update_profile_land"
             android:layout_height="wrap_content"
+            android:background="@color/WHITE"
+            android:drawableLeft="@drawable/username"
+            android:drawablePadding="@dimen/edit_text_padding_drawable_update_profile_land"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/edit_text_text_size_update_profile_land" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="@dimen/edit_text_width_update_profile_land"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/edit_text_margin_top_update_profile_land"
             android:background="@color/WHITE"
             android:drawableLeft="@drawable/phone"

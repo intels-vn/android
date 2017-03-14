@@ -24,6 +24,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.its.its.R;
+import com.its.its.model.tasks.LogoutTask;
 
 @SuppressWarnings("ResourceAsColor")
 public class MainActivity extends AppCompatActivity
@@ -93,7 +94,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_deposit) {
-            // Handle the camera action
+
         } else if (id == R.id.nav_withdraw) {
 
         } else if (id == R.id.nav_viewStatistics) {
@@ -102,7 +103,9 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(MainActivity.this, UpdateProfileActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_logOut) {
-
+            new LogoutTask(MainActivity.this).execute(
+                    "http://192.168.100.7:8080/Demo/user/" + getIntent().getStringExtra("ID"),
+                    getIntent().getStringExtra("TOKEN"));
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

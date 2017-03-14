@@ -15,7 +15,13 @@
         <activity
             android:name=".view.LoginActivity"
             android:label="Main Activity"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".view.WelcomeActivity"
             android:theme="@style/WelcomeTheme" />
@@ -27,11 +33,7 @@
         </activity>
         <activity android:name=".view.RegisterActivity" />
         <activity android:name=".view.UpdateProfileActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".view.ChangePasswordActivity" >
 

@@ -57,7 +57,7 @@ public class CommonRequest {
                 }
             }
 
-            if(!method.equals("GET")){
+            if(!method.equals("GET") && bodies != null){
                 connection.setDoOutput(true);
 
                 JSONObject object = new JSONObject(bodies);

@@ -58,7 +58,7 @@ public class LoginTask extends AsyncTask<String, Void, String>{
 
         try {
             HashMap<String, String> headers = new HashMap<String, String>();
-            headers.put("Localization", "vi");
+            headers.put("Localization", activity.getResources().getString(R.string.localization));
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.POST, api, headers, null);
 

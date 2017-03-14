@@ -68,5 +68,10 @@
     <string name="server_error">There has been an error within the server. Please check again in a few more minutes</string>
 
     <string name="update_profile">Update Profile</string>
-    <string name="apply_change">Apply Change</string>
+    <string name="apply_change">Apply Changes</string>
+    <string name="change_password">Change password</string>
+
+    <string name="old_password">Enter your old password</string>
+    <string name="new_password">Enter new password</string>
+    <string name="retype_new_password">Retype new password</string>
 </resources>

@@ -64,6 +64,6 @@
     <string name="validate_empty_form">Please fill in the form</string>
     <!-- End -->
 
-    <string name="login_error"></string>
-    <string name="server_error"></string>
+    <string name="login_error">Error. Please check again</string>
+    <string name="server_error">There has been an error within the server. Please check again in a few more minutes</string>
 </resources>

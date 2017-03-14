@@ -1,6 +1,7 @@
 package com.its.its.model.tasks;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.provider.Settings;
 import android.util.Log;
@@ -8,7 +9,9 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.its.its.R;
 import com.its.its.model.entity.DataReturn;
+import com.its.its.model.entity.RegisterAndLogin;
 import com.its.its.model.http.CommonRequest;
+import com.its.its.view.MainActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +23,7 @@ import java.util.HashMap;
  */
 
 public class RegisterTask extends AsyncTask<String, Void, String>{
-    Activity register;
+    private Activity register;
 
     public RegisterTask(Activity register) {
         this.register = register;
@@ -59,10 +62,25 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.POST, api, headers, bodies);
 
             DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
+            String status = dataReturn.getStatus();
 
-            if(dataReturn.getStatus().equals("200")){
+            switch (status){
+                case "200":
+                    String data = dataReturn.getData().toString();
+                    RegisterAndLogin registerAndLogin = new Gson().fromJson(data, RegisterAndLogin.class);
+                    Intent intent = new Intent(register, MainActivity.class);
+                    intent.putExtra("REG_TOKEN", registerAndLogin.getToken());
 
+                    register.startActivity(intent);
+                    break;
+                case "404":
+                    break;
+                case "500":
+                    break;
+                default:
+                    break;
             }
+
         } catch (IOException e) {
             e.printStackTrace();
             Log.e("Error  ", e.getMessage());

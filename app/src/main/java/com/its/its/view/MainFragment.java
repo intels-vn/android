@@ -16,12 +16,10 @@ import com.its.its.R;
 
 public class MainFragment extends Fragment {
 
-    VideoView videoView;
+    io.vov.vitamio.widget.VideoView videoView;
     Button btnChannel1, btnChannel2, btnChannel3, btnChannel4, btnChannel5;
     Button btn100, btn200, btn300, btn400, btn500, btn600, btn700, btn800;
     Button btnBetNow;
-
-    Button selectedButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,7 +32,7 @@ public class MainFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main, container, false);
 
-        videoView = (VideoView) view.findViewById(R.id.videoView);
+        videoView = (io.vov.vitamio.widget.VideoView) view.findViewById(R.id.videoView);
 
         btnChannel1 = (Button) view.findViewById(R.id.btnChannel1);
         btnChannel2 = (Button) view.findViewById(R.id.btnChannel2);

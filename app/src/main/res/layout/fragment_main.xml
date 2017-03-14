@@ -16,7 +16,7 @@
             android:background="@color/video_view_background"
             android:orientation="vertical">
 
-            <VideoView
+            <io.vov.vitamio.widget.VideoView
                 android:id="@+id/videoView"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/video_view_height_content_main"

@@ -9,7 +9,6 @@
     android:background="@color/background_app"
     tools:context="com.its.its.view.UpdateProfileActivity">
 
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -17,23 +16,23 @@
         android:textSize="@dimen/text_view_text_size_update_profile_portrait"
         android:textColor="@color/RED"
         android:gravity="center"
-        android:text="Update Profile" />
+        android:text="@string/update_profile" />
 
     <EditText
         android:id="@+id/editText3"
         android:layout_width="@dimen/edit_text_width_update_profile_portrait"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/button_margin_top_update_profile_portrait"
+        android:layout_marginTop="@dimen/edit_text_margin_top_update_profile_portrait"
         android:background="@color/button_channel_background"
         android:drawableLeft="@drawable/username"
         android:ems="10"
-        android:inputType="phone" />
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/editText2"
         android:layout_width="@dimen/edit_text_width_update_profile_portrait"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/button_margin_top_update_profile_portrait"
+        android:layout_marginTop="@dimen/edit_text_margin_top_update_profile_portrait"
         android:background="@color/button_channel_background"
         android:drawableLeft="@drawable/phone"
         android:ems="10"
@@ -43,7 +42,7 @@
         android:id="@+id/editText"
         android:layout_width="@dimen/edit_text_width_update_profile_portrait"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/button_margin_top_update_profile_portrait"
+        android:layout_marginTop="@dimen/edit_text_margin_top_update_profile_portrait"
         android:background="@color/button_channel_background"
         android:drawableLeft="@drawable/email"
         android:ems="10"
@@ -56,6 +55,6 @@
         android:layout_marginTop="@dimen/button_margin_top_update_profile_portrait"
         android:textSize="@dimen/button_text_size_update_profile_portrait"
         android:background="@drawable/button_play_shape"
-        android:text="Apply Change"
+        android:text="@string/apply_change"
         android:textColor="@color/WHITE" />
 </LinearLayout>

@@ -134,4 +134,16 @@
     <dimen name="button_text_size_update_profile_land">20sp</dimen>
 
     <!-- End -->
+    
+    <!-- Update Profile Portrait -->
+    <dimen name="edit_text_drawable_padding_left_user_profile_portrait">20sp</dimen>
+
+    <dimen name="edit_text_width_user_profile_portrait">250dp</dimen>
+    <dimen name="edit_text_margin_top_user_profile_portrait">20dp</dimen>
+    <dimen name="edit_text_text_size_user_profile_portrait">15sp</dimen>
+
+    <dimen name="button_margin_top_user_profile_portrait">40dp</dimen>
+    <dimen name="button_text_size_user_profile_portrait">20sp</dimen>
+    <dimen name="button_width_user_profile_portrait">250dp</dimen>
+    <!-- End -->
 </resources>

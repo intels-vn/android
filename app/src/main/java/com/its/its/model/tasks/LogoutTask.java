@@ -43,7 +43,6 @@ public class LogoutTask extends AsyncTask<String, Void, Void>{
             if(dataReturn.getStatus().equals("200")){
                 Intent intent = new Intent(activity, LoginActivity.class);
                 activity.startActivity(intent);
-//                Toast.makeText(activity, "Đăng xuất thành công", Toast.LENGTH_SHORT).show();
             }
 
         } catch (IOException e) {

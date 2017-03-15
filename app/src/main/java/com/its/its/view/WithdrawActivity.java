@@ -5,11 +5,11 @@ import android.os.Bundle;
 
 import com.its.its.R;
 
-public class VerifyWithdrawActivity extends AppCompatActivity {
+public class WithdrawActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_verify_withdraw);
+        setContentView(R.layout.activity_withdraw);
     }
 }

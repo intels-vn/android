@@ -180,33 +180,24 @@
 
     <!-- End -->
 
-    <!-- Verify Withdraw Land -->
-    <dimen name="edit_text_width_verify_withdraw_land">400dp</dimen>
-    <dimen name="edit_text_margin_top_verify_withdraw_land">20dp</dimen>
-    <dimen name="edit_text_padding_drawable_verify_withdraw_land">20dp</dimen>
-    <dimen name="edit_text_text_size_verify_withdraw_land">20sp</dimen>
+    <!-- Withdraw Screen Land -->
 
-    <dimen name="text_view_text_size_verify_withdraw_land">35sp</dimen>
-    <dimen name="text_view_margin_bottom_verify_withdraw_land">20dp</dimen>
-    <dimen name="text_view_margin_top_verify_withdraw_land">10dp</dimen>
+    <dimen name="edit_text_width_withdraw_land">400dp</dimen>
+    <dimen name="edit_text_margin_top_withdraw_land">20dp</dimen>
+    <dimen name="edit_text_padding_drawable_withdraw_land">20dp</dimen>
+    <dimen name="edit_text_text_size_withdraw_land">20sp</dimen>
 
-    <dimen name="button_width_verify_withdraw_land">300dp</dimen>
-    <dimen name="button_margin_top_verify_withdraw_land">20dp</dimen>
-    <dimen name="button_text_size_verify_withdraw_land">20sp</dimen>
+    <dimen name="text_view_text_size_withdraw_land">35sp</dimen>
+    <dimen name="text_view_margin_bottom_withdraw_land">20dp</dimen>
+    <dimen name="text_view_margin_top_withdraw_land">10dp</dimen>
 
-    <!-- End -->
+    <dimen name="button_width_withdraw_land">300dp</dimen>
+    <dimen name="button_margin_top_withdraw_land">20dp</dimen>
+    <dimen name="button_text_size_withdraw_land">20sp</dimen>
 
-    <!-- Verify Withdraw Portrait -->
-    <dimen name="edit_text_drawable_padding_left_verify_withdraw_portrait">20sp</dimen>
+    <dimen name="spinner_width_withdraw_land">400dp</dimen>
+    <dimen name="spinner_margin_top_withdraw_land">20dp</dimen>
+    <dimen name="spinner_text_size_withdraw_land">20sp</dimen>
 
-    <dimen name="text_view_text_size_verify_withdraw_portrait">30sp</dimen>
-
-    <dimen name="edit_text_width_verify_withdraw_portrait">250dp</dimen>
-    <dimen name="edit_text_margin_top_verify_withdraw_portrait">30dp</dimen>
-    <dimen name="edit_text_text_size_verify_withdraw_portrait">11sp</dimen>
-
-    <dimen name="button_margin_top_verify_withdraw_portrait">40dp</dimen>
-    <dimen name="button_text_size_verify_withdraw_portrait">20sp</dimen>
-    <dimen name="button_width_verify_withdraw_portrait">250dp</dimen>
     <!-- End -->
 </resources>

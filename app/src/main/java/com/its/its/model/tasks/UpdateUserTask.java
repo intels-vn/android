@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.provider.Settings;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.its.its.R;
@@ -42,6 +43,8 @@ public class UpdateUserTask extends AsyncTask<String, Void, String>{
         String fullname = params[2];
         String email = params[3];
         String phone = params[4];
+        String oldPass = params[5];
+        String newPass = params[6];
 
         try {
             HashMap<String, String> headers = new HashMap<String, String>();
@@ -54,8 +57,23 @@ public class UpdateUserTask extends AsyncTask<String, Void, String>{
             bodies.put("fullname", fullname);
             bodies.put("email", email);
             bodies.put("phone", phone);
+            bodies.put("password", newPass);
+            bodies.put("oldpassword", oldPass);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.PUT, api, headers, bodies);
+
+            DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
+            String status = dataReturn.getStatus();
+
+            switch (status){
+                case "200":
+                    Toast.makeText(activity, "Updated profile successfully", Toast.LENGTH_SHORT).show();
+                    break;
+                case "400":
+                    break;
+                default:
+                    break;
+            }
 
         } catch (IOException e) {
             e.printStackTrace();

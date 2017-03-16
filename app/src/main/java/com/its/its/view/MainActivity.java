@@ -100,7 +100,10 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_deposit) {
 
         } else if (id == R.id.nav_withdraw) {
-
+            Intent intent = new Intent(MainActivity.this, WithdrawActivity.class);
+            intent.putExtra("ID", userID);
+            intent.putExtra("TOKEN", token);
+            startActivity(intent);
         } else if (id == R.id.nav_viewStatistics) {
 
         } else if (id == R.id.nav_editProfile) {

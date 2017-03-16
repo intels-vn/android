@@ -78,11 +78,11 @@ public class LoginTask extends AsyncTask<String, Void, String>{
                     break;
 
                 case "404":
-                    Toast.makeText(activity, activity.getResources().getString(R.string.login_error), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(activity, activity.getResources().getString(R.string.login_error), Toast.LENGTH_SHORT).show();
                     break;
 
                 case "500":
-                    Toast.makeText(activity, activity.getResources().getString(R.string.server_error), Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(activity, activity.getResources().getString(R.string.server_error), Toast.LENGTH_SHORT).show();
                     break;
 
                 default:

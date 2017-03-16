@@ -25,9 +25,9 @@
         android:layout_width="@dimen/edit_text_width_withdraw_portrait"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/edit_text_margin_top_withdraw_portrait"
+        android:background="@color/WHITE"
         android:drawableLeft="@drawable/phone"
         android:drawablePadding="@dimen/edit_text_drawable_padding_left_withdraw_portrait"
-        android:background="@color/WHITE"
         android:ems="10"
         android:inputType="phone" />
 
@@ -38,19 +38,19 @@
         android:layout_marginTop="@dimen/spinner_margin_top_withdraw_portrait">
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/spAmount"
             android:layout_width="match_parent"
             android:layout_height="@dimen/spinner_height_withdraw_portrait"
-            android:spinnerMode="dropdown"/>
+            android:spinnerMode="dropdown" />
     </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnWithdraw"
         android:layout_width="@dimen/button_width_withdraw_portrait"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/button_margin_top_withdraw_portrait"
         android:background="@drawable/button_play_shape"
+        android:text="@string/done"
         android:textColor="@color/WHITE"
-        android:textSize="@dimen/button_text_size_withdraw_portrait"
-        android:text="@string/done" />
+        android:textSize="@dimen/button_text_size_withdraw_portrait" />
 </LinearLayout>

@@ -15,19 +15,17 @@
         <activity
             android:name=".view.LoginActivity"
             android:label="Main Activity"
-            android:theme="@style/AppTheme">
-
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".view.WelcomeActivity"
             android:theme="@style/WelcomeTheme" />
         <activity
             android:name=".view.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.RegisterActivity" />
-        <activity android:name=".view.UpdateProfileActivity"></activity>
-        <activity android:name=".view.ChangePasswordActivity"></activity>
+        <activity android:name=".view.UpdateProfileActivity" />
+        <activity android:name=".view.ChangePasswordActivity" />
         <activity android:name=".view.WithdrawActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -217,4 +217,17 @@
     <dimen name="button_text_size_withdraw_portrait">20sp</dimen>
     <dimen name="button_width_withdraw_portrait">250dp</dimen>
     <!-- End -->
+
+    <!-- Verify Password -->
+    <dimen name="layout_paddding_verify_password">20dp</dimen>
+
+    <dimen name="text_view_text_size_verify_password">30sp</dimen>
+    <dimen name="text_view_margin_bottom_verify_password">30dp</dimen>
+
+    <dimen name="edit_text_padding_drawable_left_verify_password">20dp</dimen>
+    <dimen name="edit_text_width_verify_password">300dp</dimen>
+    <dimen name="edit_text_margin_bottom_verify_password">30dp</dimen>
+
+    <dimen name="button_width_verify_password">300dp</dimen>
+    <!-- End -->
 </resources>

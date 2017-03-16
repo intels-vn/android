@@ -73,10 +73,11 @@
 
     <!-- Verify Withdraw Screen -->
     <string name="withdraw">Withdraw</string>
-    <string name="verify_withdraw">Verify Withdraw</string>
+    <string name="verify_password">Verify Password</string>
     <string name="done">Done</string>
     <string name="verify">Verify</string>
     <string name="edit_text_phone_receive_exchange">Enter the number to withdraw money</string>
+    <string name="amount">Choose amount to withdraw</string>
     <!-- End -->
 
     <!-- Change Password Screen -->

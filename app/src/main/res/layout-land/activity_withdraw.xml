@@ -33,6 +33,7 @@
             android:drawableLeft="@drawable/phone"
             android:drawablePadding="@dimen/edit_text_padding_drawable_withdraw_land"
             android:ems="10"
+            android:hint="@string/edit_text_phone_receive_exchange"
             android:inputType="textEmailAddress"
             android:textSize="@dimen/edit_text_text_size_withdraw_land" />
 
@@ -47,8 +48,9 @@
                 android:id="@+id/spAmount"
                 style="@style/Widget.AppCompat.Spinner.DropDown"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingLeft="30dp" />
         </LinearLayout>
 
         <Button

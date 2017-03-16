@@ -219,7 +219,7 @@
     <!-- End -->
 
     <!-- Verify Password -->
-    <dimen name="layout_paddding_verify_password">20dp</dimen>
+    <dimen name="layout_paddding_verify_password">30dp</dimen>
 
     <dimen name="text_view_text_size_verify_password">30sp</dimen>
     <dimen name="text_view_margin_bottom_verify_password">30dp</dimen>

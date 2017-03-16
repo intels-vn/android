@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -38,7 +39,6 @@ public class WithdrawActivity extends AppCompatActivity {
                 btnVerify.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                        Toast.makeText(WithdrawActivity.this, "Done", Toast.LENGTH_SHORT).show();
                         EditText txtPassword = (EditText) dialog.findViewById(R.id.txtPassword);
                         Toast.makeText(WithdrawActivity.this, txtPassword.getText().toString(), Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
@@ -51,6 +51,12 @@ public class WithdrawActivity extends AppCompatActivity {
 
     private void initView() {
         spAmount = (Spinner) findViewById(R.id.spAmount);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+                WithdrawActivity.this, android.R.layout.simple_spinner_dropdown_item, amoutValues);
+        adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
+        spAmount.setAdapter(adapter);
+
         btnWithdraw = (Button) findViewById(R.id.btnWithdraw);
     }
 }

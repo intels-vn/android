@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--Welcome_screen_land-->
+    <!--Welcome_Screen_Land-->
     <dimen name="linearlayout_margin_top_welcome_screen_land">20dp</dimen>
 
     <dimen name="image_slider_width_welcome_screen_land">300dp</dimen>
@@ -11,7 +11,7 @@
     <dimen name="button_text_size_welcome_screen_land">20sp</dimen>
     <!-- End -->
 
-    <!--Welcome_screen_portrait-->
+    <!--Welcome_Screen_Portrait-->
     <dimen name="image_slider_width_welcome_screen_portrait">300dp</dimen>
     <dimen name="image_slider_height_welcome_screen_portrait">265dp</dimen>
 
@@ -23,7 +23,7 @@
     <dimen name="button_text_size_welcome_screen_portrait">25dp</dimen>
     <!-- End -->
 
-    <!-- Login screen land -->
+    <!-- Login Screen Land -->
     <dimen name="edit_text_width_username_login_land">400dp</dimen>
     <dimen name="edit_text_text_size_username_login_land">20sp</dimen>
 
@@ -42,7 +42,7 @@
     <dimen name="button_width_login_land">300dp</dimen>
     <!-- End -->
 
-    <!-- Login screen portrait -->
+    <!-- Login Screen Portrait -->
     <dimen name="drawable_padding_left_login_portrait">20sp</dimen>
 
     <dimen name="edit_text_username_width_login_portrait">250dp</dimen>
@@ -61,7 +61,7 @@
     <dimen name="button_width_login_portrait">250dp</dimen>
     <!-- End -->
 
-    <!-- Register screen land -->
+    <!-- Register Screen Land -->
     <dimen name="edit_text_width_register_land">400dp</dimen>
     <dimen name="edit_text_margin_top_register_land">20dp</dimen>
     <dimen name="edit_text_text_size_register_land">18sp</dimen>
@@ -74,7 +74,7 @@
     <dimen name="button_margin_bottom_register_land">20dp</dimen>
     <!-- End -->
 
-    <!-- Register screen portrait -->
+    <!-- Register Screen Portrait -->
     <dimen name="edit_text_drawable_padding_left_register_portrait">20sp</dimen>
 
     <dimen name="edit_text_width_register_portrait">250dp</dimen>
@@ -86,15 +86,13 @@
     <dimen name="button_width_register_portrait">250dp</dimen>
     <!-- End -->
 
-    <!-- Main screen land-->
+    <!-- Main Screen Land-->
     <dimen name="image_width_navigation_header_main_land">100dp</dimen>
     <dimen name="image_height_navigation_header_main_land">100dp</dimen>
 
     <dimen name="text_view_margin_top_navigation_header_main_land">10dp</dimen>
     <dimen name="text_view_margin_bottom_navigation_header_main_land">10dp</dimen>
     <dimen name="text_view_text_size_navigation_header_main_land">20sp</dimen>
-
-
     <!-- End -->
 
     <!-- Fragment main screen -->
@@ -150,20 +148,6 @@
     <dimen name="button_width_update_profile_portrait">250dp</dimen>
     <!-- End -->
 
-    <!-- Change Password Portrait -->
-    <dimen name="edit_text_drawable_padding_left_change_password_portrait">20sp</dimen>
-
-    <dimen name="text_view_text_size_change_password_portrait">30sp</dimen>
-
-    <dimen name="edit_text_width_change_password_portrait">250dp</dimen>
-    <dimen name="edit_text_margin_top_change_password_portrait">30dp</dimen>
-    <dimen name="edit_text_text_size_change_password_portrait">15sp</dimen>
-
-    <dimen name="button_margin_top_change_password_portrait">40dp</dimen>
-    <dimen name="button_text_size_change_password_portrait">20sp</dimen>
-    <dimen name="button_width_change_password_portrait">250dp</dimen>
-    <!-- End -->
-
     <!-- Change Password Land -->
     <dimen name="edit_text_width_change_password_land">400dp</dimen>
     <dimen name="edit_text_margin_top_change_password_land">20dp</dimen>
@@ -178,6 +162,20 @@
     <dimen name="button_margin_top_change_password_land">20dp</dimen>
     <dimen name="button_text_size_change_password_land">20sp</dimen>
 
+    <!-- End -->
+
+    <!-- Change Password Portrait -->
+    <dimen name="edit_text_drawable_padding_left_change_password_portrait">20sp</dimen>
+
+    <dimen name="text_view_text_size_change_password_portrait">30sp</dimen>
+
+    <dimen name="edit_text_width_change_password_portrait">250dp</dimen>
+    <dimen name="edit_text_margin_top_change_password_portrait">30dp</dimen>
+    <dimen name="edit_text_text_size_change_password_portrait">15sp</dimen>
+
+    <dimen name="button_margin_top_change_password_portrait">40dp</dimen>
+    <dimen name="button_text_size_change_password_portrait">20sp</dimen>
+    <dimen name="button_width_change_password_portrait">250dp</dimen>
     <!-- End -->
 
     <!-- Withdraw Screen Land -->
@@ -198,6 +196,10 @@
     <dimen name="spinner_width_withdraw_land">400dp</dimen>
     <dimen name="spinner_margin_top_withdraw_land">20dp</dimen>
     <dimen name="spinner_text_size_withdraw_land">20sp</dimen>
+
+    <!-- End -->
+
+    <!-- Withdraw Screen Portrait -->
 
     <!-- End -->
 </resources>

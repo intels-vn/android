@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.its.its.R;
-import com.its.its.model.tasks.UpdateUserTask;
+import com.its.its.model.tasks.UpdateProfileTask;
 import com.its.its.presenter.security.EncryptDecrypt;
 
 public class ChangePasswordActivity extends AppCompatActivity {
@@ -39,7 +39,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 newPass = edtNewPass.getText().toString();
                 retypePass_ChangePass = edtRetypePass_ChangePass.getText().toString();
 
-                new UpdateUserTask(ChangePasswordActivity.this).execute(
+                new UpdateProfileTask(ChangePasswordActivity.this).execute(
                         "http://192.168.100.14:8080/Demo",
                         EncryptDecrypt.encrypt(oldPass, getResources().getString(R.string.khoa)),
                         EncryptDecrypt.encrypt(newPass, getResources().getString(R.string.khoa))

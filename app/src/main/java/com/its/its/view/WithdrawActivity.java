@@ -52,7 +52,7 @@ public class WithdrawActivity extends AppCompatActivity {
     private void initView() {
         spAmount = (Spinner) findViewById(R.id.spAmount);
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
                 WithdrawActivity.this, android.R.layout.simple_spinner_dropdown_item, amoutValues);
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spAmount.setAdapter(adapter);

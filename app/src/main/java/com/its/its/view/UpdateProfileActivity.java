@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.its.its.R;
-import com.its.its.model.tasks.UpdateUserTask;
+import com.its.its.model.tasks.UpdateProfileTask;
 import com.its.its.presenter.security.EncryptDecrypt;
 
 public class UpdateProfileActivity extends AppCompatActivity {
@@ -40,7 +40,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
                 phone_update = edtPhone_Update.getText().toString();
 
                 String id = getIntent().getStringExtra("ID");
-                new UpdateUserTask(UpdateProfileActivity.this).execute(
+                new UpdateProfileTask(UpdateProfileActivity.this).execute(
 //                        "http://192.168.100.14:8080/Demo/",
                         EncryptDecrypt.encrypt(id, getResources().getString(R.string.khoa)),
                         EncryptDecrypt.encrypt(fullname_update, getResources().getString(R.string.khoa)),

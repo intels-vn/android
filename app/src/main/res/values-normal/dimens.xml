@@ -197,7 +197,7 @@
     <dimen name="spinner_margin_top_withdraw_land">20dp</dimen>
     <dimen name="spinner_text_size_withdraw_land">20sp</dimen>
     <dimen name="linear_layout_height_withdraw_land">30dp</dimen>
-
+    <dimen name="spinner_padding_left_withdraw_land">40dp</dimen>
     <!-- End -->
 
     <!-- Withdraw Screen Portrait -->

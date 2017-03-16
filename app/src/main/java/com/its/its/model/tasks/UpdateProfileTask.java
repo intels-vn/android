@@ -22,10 +22,10 @@ import java.util.HashMap;
  * Created by BiLac on 3/10/2017.
  */
 
-public class UpdateUserTask extends AsyncTask<String, Void, String>{
+public class UpdateProfileTask extends AsyncTask<String, Void, String>{
     Activity activity;
 
-    public UpdateUserTask(Activity activity) {
+    public UpdateProfileTask(Activity activity) {
         this.activity = activity;
     }
 

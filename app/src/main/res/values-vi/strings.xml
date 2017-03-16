@@ -59,6 +59,11 @@
     <string name="validate_fullname">Nhập tên đầy đủ</string>
     <string name="validate_phone_received">Nhập vào số điện thoại</string>
     <string name="validate_empty_form">Nhập vào các thông tin chi tiết</string>
+    <string name="validate_old_password">Nhập vào password cũ</string>
+    <string name="validate_new_password">Nhập vào password mới</string>
+    <string name="validate_retype_new_password">Nhập lại password mới</string>
+    <string name="validate_matched_old_password">Password mới không được trùng với password cũ</string>
+    <string name="validate_matched_retype_password">Password không hợp lệ</string>
     <!-- End -->
 
     <string name="login_error">Đăng nhập sai. Vui lòng kiểm tra lại !</string>

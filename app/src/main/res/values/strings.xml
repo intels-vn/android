@@ -61,6 +61,11 @@
     <string name="validate_fullname">Please enter your fullname</string>
     <string name="validate_phone_received">Please enter the number</string>
     <string name="validate_empty_form">Please fill in the form</string>
+    <string name="validate_old_password">Please enter your old password</string>
+    <string name="validate_new_password">Please enter your new password</string>
+    <string name="validate_retype_new_password">Please retype the new password</string>
+    <string name="validate_matched_old_password">The new password must be different from the old pass</string>
+    <string name="validate_matched_retype_password">Invalid password</string>
     <!-- End -->
 
     <string name="login_error">Error. Please check again</string>

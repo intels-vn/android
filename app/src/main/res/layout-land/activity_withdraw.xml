@@ -38,7 +38,7 @@
 
         <LinearLayout
             android:layout_width="@dimen/spinner_width_withdraw_land"
-            android:layout_height="match_parent"
+            android:layout_height="@dimen/linear_layout_height_withdraw_land"
             android:layout_marginTop="@dimen/spinner_margin_top_withdraw_land"
             android:background="@color/WHITE"
             android:orientation="horizontal">

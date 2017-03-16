@@ -119,4 +119,118 @@
     <dimen name="button_bet_value_width_main">105dp</dimen>
 
     <!-- End -->
+
+    <!-- Update Profile Land -->
+    <dimen name="edit_text_width_update_profile_land">600dp</dimen>
+    <dimen name="edit_text_margin_top_update_profile_land">30dp</dimen>
+    <dimen name="edit_text_padding_drawable_update_profile_land">30dp</dimen>
+    <dimen name="edit_text_text_size_update_profile_land">30sp</dimen>
+
+    <dimen name="text_view_text_size_update_profile_land">52.5sp</dimen>
+    <dimen name="text_view_margin_bottom_update_profile_land">30dp</dimen>
+    <dimen name="text_view_margin_top_update_profile_land">15dp</dimen>
+
+    <dimen name="button_width_update_profile_land">450dp</dimen>
+    <dimen name="button_margin_top_update_profile_land">30dp</dimen>
+    <dimen name="button_text_size_update_profile_land">30sp</dimen>
+
+    <!-- End -->
+
+    <!-- Update Profile Portrait -->
+    <dimen name="edit_text_drawable_padding_left_update_profile_portrait">30sp</dimen>
+
+    <dimen name="text_view_text_size_update_profile_portrait">45sp</dimen>
+    <dimen name="text_view_margin_bottom_update_profile_portrait">45dp</dimen>
+
+    <dimen name="edit_text_width_update_profile_portrait">375dp</dimen>
+    <dimen name="edit_text_margin_top_update_profile_portrait">45dp</dimen>
+    <dimen name="edit_text_text_size_update_profile_portrait">37.5sp</dimen>
+
+    <dimen name="button_margin_top_update_profile_portrait">60dp</dimen>
+    <dimen name="button_text_size_update_profile_portrait">30sp</dimen>
+    <dimen name="button_width_update_profile_portrait">375dp</dimen>
+    <!-- End -->
+
+    <!-- Change Password Land -->
+    <dimen name="edit_text_width_change_password_land">600dp</dimen>
+    <dimen name="edit_text_margin_top_change_password_land">30dp</dimen>
+    <dimen name="edit_text_padding_drawable_change_password_land">30dp</dimen>
+    <dimen name="edit_text_text_size_change_password_land">30sp</dimen>
+
+    <dimen name="text_view_text_size_change_password_land">52.5sp</dimen>
+    <dimen name="text_view_margin_bottom_change_password_land">30dp</dimen>
+    <dimen name="text_view_margin_top_change_password_land">15dp</dimen>
+
+    <dimen name="button_width_change_password_land">450dp</dimen>
+    <dimen name="button_margin_top_change_password_land">30dp</dimen>
+    <dimen name="button_text_size_change_password_land">30sp</dimen>
+
+    <!-- End -->
+
+    <!-- Change Password Portrait -->
+    <dimen name="edit_text_drawable_padding_left_change_password_portrait">30sp</dimen>
+
+    <dimen name="text_view_text_size_change_password_portrait">45sp</dimen>
+
+    <dimen name="edit_text_width_change_password_portrait">375dp</dimen>
+    <dimen name="edit_text_margin_top_change_password_portrait">45dp</dimen>
+    <dimen name="edit_text_text_size_change_password_portrait">22.5sp</dimen>
+
+    <dimen name="button_margin_top_change_password_portrait">60dp</dimen>
+    <dimen name="button_text_size_change_password_portrait">30sp</dimen>
+    <dimen name="button_width_change_password_portrait">375dp</dimen>
+    <!-- End -->
+
+    <!-- Withdraw Screen Land -->
+
+    <dimen name="edit_text_width_withdraw_land">600dp</dimen>
+    <dimen name="edit_text_margin_top_withdraw_land">30dp</dimen>
+    <dimen name="edit_text_padding_drawable_withdraw_land">30dp</dimen>
+    <dimen name="edit_text_text_size_withdraw_land">30sp</dimen>
+
+    <dimen name="text_view_text_size_withdraw_land">52.5sp</dimen>
+    <dimen name="text_view_margin_bottom_withdraw_land">30dp</dimen>
+    <dimen name="text_view_margin_top_withdraw_land">15dp</dimen>
+
+    <dimen name="button_width_withdraw_land">450dp</dimen>
+    <dimen name="button_margin_top_withdraw_land">30dp</dimen>
+    <dimen name="button_text_size_withdraw_land">30sp</dimen>
+
+    <dimen name="spinner_width_withdraw_land">600dp</dimen>
+    <dimen name="spinner_margin_top_withdraw_land">30dp</dimen>
+    <dimen name="spinner_text_size_withdraw_land">30sp</dimen>
+    <dimen name="linear_layout_height_withdraw_land">45dp</dimen>
+    <dimen name="spinner_padding_left_withdraw_land">60dp</dimen>
+    <!-- End -->
+
+    <!-- Withdraw Screen Portrait -->
+    <dimen name="edit_text_drawable_padding_left_withdraw_portrait">30sp</dimen>
+
+    <dimen name="text_view_text_size_withdraw_portrait">45sp</dimen>
+
+    <dimen name="edit_text_width_withdraw_portrait">375dp</dimen>
+    <dimen name="edit_text_margin_top_withdraw_portrait">45dp</dimen>
+    <dimen name="edit_text_text_size_withdraw_portrait">22.5sp</dimen>
+
+    <dimen name="spinner_width_withdraw_portrait">375dp</dimen>
+    <dimen name="spinner_height_withdraw_portrait">45dp</dimen>
+    <dimen name="spinner_margin_top_withdraw_portrait">45dp</dimen>
+
+    <dimen name="button_margin_top_withdraw_portrait">60dp</dimen>
+    <dimen name="button_text_size_withdraw_portrait">30sp</dimen>
+    <dimen name="button_width_withdraw_portrait">375dp</dimen>
+    <!-- End -->
+
+    <!-- Verify Password -->
+    <dimen name="layout_paddding_verify_password">45dp</dimen>
+
+    <dimen name="text_view_text_size_verify_password">45sp</dimen>
+    <dimen name="text_view_margin_bottom_verify_password">45dp</dimen>
+
+    <dimen name="edit_text_padding_drawable_left_verify_password">30dp</dimen>
+    <dimen name="edit_text_width_verify_password">450dp</dimen>
+    <dimen name="edit_text_margin_bottom_verify_password">45dp</dimen>
+
+    <dimen name="button_width_verify_password">450dp</dimen>
+    <!-- End -->
 </resources>

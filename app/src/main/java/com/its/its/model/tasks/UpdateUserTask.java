@@ -2,6 +2,20 @@ package com.its.its.model.tasks;
 
 import android.app.Activity;
 import android.os.AsyncTask;
+import android.provider.Settings;
+import android.util.Log;
+
+import com.google.gson.Gson;
+import com.its.its.R;
+import com.its.its.model.entity.DataReturn;
+import com.its.its.model.entity.RegisterAndLogin;
+import com.its.its.model.entity.User;
+import com.its.its.model.http.CommonRequest;
+import com.its.its.view.MainActivity;
+
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.HashMap;
 
 /**
  * Created by BiLac on 3/10/2017.
@@ -21,6 +35,32 @@ public class UpdateUserTask extends AsyncTask<String, Void, String>{
 
     @Override
     protected String doInBackground(String... params) {
+        String result = "";
+
+        String api = params[0];
+        String id = params[1];
+        String fullname = params[2];
+        String email = params[3];
+        String phone = params[4];
+
+        try {
+            HashMap<String, String> headers = new HashMap<String, String>();
+            headers.put("Accept", "*/*");
+            headers.put("Localization", activity.getResources().getString(R.string.localization));
+            headers.put("Authorization", " ");
+
+            HashMap<String, String> bodies = new HashMap<String, String>();
+            bodies.put("id", id);
+            bodies.put("fullname", fullname);
+            bodies.put("email", email);
+            bodies.put("phone", phone);
+
+            InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.PUT, api, headers, bodies);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
         return null;
     }

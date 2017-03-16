@@ -101,7 +101,11 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_viewStatistics) {
 
         } else if (id == R.id.nav_editProfile) {
+            String userID = getIntent().getStringExtra("ID");
+            String token = getIntent().getStringExtra("TOKEN");
             Intent intent = new Intent(MainActivity.this, UpdateProfileActivity.class);
+            intent.putExtra("ID", userID);
+            intent.putExtra("TOKEN", token);
             startActivity(intent);
         } else if (id == R.id.nav_logOut) {
             new LogoutTask(MainActivity.this).execute(

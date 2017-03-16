@@ -53,7 +53,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if(validation()){
                     new RegisterTask(RegisterActivity.this)
                             .execute(
-                                    "http://192.168.100.7:8080/Demo/users",
+                                    "http://192.168.100.14:8080/Demo/users",
                                     EncryptDecrypt.encrypt(username_reg, getResources().getString(R.string.khoa)),
                                     EncryptDecrypt.encrypt(password_reg, getResources().getString(R.string.khoa)),
                                     EncryptDecrypt.encrypt(phone_reg, getResources().getString(R.string.khoa)),

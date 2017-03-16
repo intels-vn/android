@@ -39,8 +39,10 @@ public class UpdateProfileActivity extends AppCompatActivity {
                 email_update = edtEmail_Update.getText().toString();
                 phone_update = edtPhone_Update.getText().toString();
 
+                String id = getIntent().getStringExtra("ID");
                 new UpdateUserTask(UpdateProfileActivity.this).execute(
-//                        "http://"
+//                        "http://192.168.100.14:8080/Demo/",
+                        EncryptDecrypt.encrypt(id, getResources().getString(R.string.khoa)),
                         EncryptDecrypt.encrypt(fullname_update, getResources().getString(R.string.khoa)),
                         EncryptDecrypt.encrypt(email_update, getResources().getString(R.string.khoa)),
                         EncryptDecrypt.encrypt(phone_update, getResources().getString(R.string.khoa))

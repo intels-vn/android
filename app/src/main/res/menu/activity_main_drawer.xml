@@ -19,6 +19,10 @@
             android:icon="@color/item_navigation_background"
             android:title="@string/navigation_menu_item_edit_profile" />
         <item
+            android:id="@+id/nav_editPassword"
+            android:icon="@color/item_navigation_background"
+            android:title="@string/change_password" />
+        <item
             android:id="@+id/nav_logOut"
             android:icon="@color/item_navigation_background"
             android:title="@string/navigation_menu_item_log_out" />

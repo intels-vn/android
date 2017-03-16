@@ -15,7 +15,13 @@
         <activity
             android:name=".view.LoginActivity"
             android:label="Main Activity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".view.WelcomeActivity"
             android:theme="@style/WelcomeTheme" />
@@ -25,13 +31,11 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".view.RegisterActivity" />
         <activity android:name=".view.UpdateProfileActivity" />
-        <activity android:name=".view.ChangePasswordActivity" />
-        <activity android:name=".view.WithdrawActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".view.ChangePasswordActivity" >
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity android:name=".view.WithdrawActivity">
+
         </activity>
     </application>
 

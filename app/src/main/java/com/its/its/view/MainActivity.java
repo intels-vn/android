@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     static final int txtMoneyId = 5;
+    TextView tvMoney;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,15 +76,15 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        TextView tv = new TextView(this);
-        tv.setId(txtMoneyId);
-        tv.setText("$ 1,234,567");
-        tv.setTextColor(Color.YELLOW);
-        tv.setPadding(5, 0, 20, 0);
+        tvMoney= new TextView(this);
+        tvMoney.setId(txtMoneyId);
+        tvMoney.setText("$ 1,234,567");
+        tvMoney.setTextColor(Color.YELLOW);
+        tvMoney.setPadding(5, 0, 20, 0);
 
-        tv.setTypeface(null, Typeface.BOLD);
-        tv.setTextSize(14);
-        menu.add(0, txtMoneyId, 1, getResources().getString(R.string.money)).setActionView(tv).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+        tvMoney.setTypeface(null, Typeface.BOLD);
+        tvMoney.setTextSize(14);
+        menu.add(0, txtMoneyId, 1, getResources().getString(R.string.money)).setActionView(tvMoney).setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
 
         return true;
     }
@@ -92,6 +93,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
+        String userID = getIntent().getStringExtra("ID");
+        String token = getIntent().getStringExtra("TOKEN");
         int id = item.getItemId();
 
         if (id == R.id.nav_deposit) {
@@ -101,15 +104,18 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_viewStatistics) {
 
         } else if (id == R.id.nav_editProfile) {
-            String userID = getIntent().getStringExtra("ID");
-            String token = getIntent().getStringExtra("TOKEN");
             Intent intent = new Intent(MainActivity.this, UpdateProfileActivity.class);
+            intent.putExtra("ID", userID);
+            intent.putExtra("TOKEN", token);
+            startActivity(intent);
+        } else if(id == R.id.nav_editPassword){
+            Intent intent = new Intent(MainActivity.this, ChangePasswordActivity.class);
             intent.putExtra("ID", userID);
             intent.putExtra("TOKEN", token);
             startActivity(intent);
         } else if (id == R.id.nav_logOut) {
             new LogoutTask(MainActivity.this).execute(
-                    "http://192.168.100.7:8080/Demo/user/" + getIntent().getStringExtra("ID"),
+                    "http://192.168.100.14:8080/Demo/user/" + getIntent().getStringExtra("ID"),
                     getIntent().getStringExtra("TOKEN"));
         }
 

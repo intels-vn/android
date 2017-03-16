@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 new LoginTask(LoginActivity.this)
                         .execute(
-                                "http://192.168.100.7:8080/Demo/users/login"
+                                "http://192.168.100.14:8080/Demo/users/login"
                                 , EncryptDecrypt.encrypt(editUserName_Login.getText().toString(), getResources().getString(R.string.khoa))
                                 , EncryptDecrypt.encrypt(editPassword_Login.getText().toString(), getResources().getString(R.string.khoa))
                         );

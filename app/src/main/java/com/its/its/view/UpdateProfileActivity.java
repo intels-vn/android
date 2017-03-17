@@ -24,6 +24,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
         addEvents();
     }
 
+    //Fetch the ID from the update profile layout.
     private void initView() {
         edtFullname_Update = (EditText) findViewById(R.id.edtFullname_Update);
         edtEmail_Update = (EditText) findViewById(R.id.edtEmail_Update);
@@ -31,6 +32,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
         btnUpdate = (Button) findViewById(R.id.btnUpdate);
     }
 
+    //Add events to the update button.
     private void addEvents() {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
         });
     }
 
+    //Validate the update profile form.
     private boolean validation() {
         boolean valid = true;
 

@@ -29,12 +29,14 @@ public class LoginActivity extends AppCompatActivity {
         addEvents();
     }
 
+    //Fetch the ID from the login layout.
     private void initView() {
         editUserName_Login = (EditText) findViewById(R.id.editUserName_Login);
         editPassword_Login = (EditText) findViewById(R.id.editPassword_Login);
         btnPlay_Login = (Button) findViewById(R.id.btnPlay_Login);
     }
 
+    //Add events to login button.
     private void addEvents() {
         btnPlay_Login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,7 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+    //Validate the login form.
     private boolean validation() {
         boolean valid = true;
 

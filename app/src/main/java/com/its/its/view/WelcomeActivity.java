@@ -18,15 +18,16 @@ public class WelcomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_welcome);
 
         initView();
-
         addEvent();
     }
 
+    //Fetch the ID from the welcome layout.
     private void initView() {
         btnPlay_Welcome = (Button) findViewById(R.id.btnPlay_Welcome);
         btnJoin_Welcome = (Button) findViewById(R.id.btnJoin_Welcome);
     }
 
+    //Add events to the buttons.
     private void addEvent() {
         btnPlay_Welcome.setOnClickListener(new View.OnClickListener() {
             @Override

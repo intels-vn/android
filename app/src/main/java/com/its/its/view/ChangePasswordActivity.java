@@ -25,6 +25,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         addEvents();
     }
 
+    //Fetch the ID from the change password layout.
     private void initView() {
         edtOldPass = (EditText) findViewById(R.id.edtOldPass);
         edtNewPass = (EditText) findViewById(R.id.edtNewPass);
@@ -32,6 +33,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         btnApplyChange = (Button) findViewById(R.id.btnApplyChange);
     }
 
+    //Add events to apply change button.
     private void addEvents() {
         btnApplyChange.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +55,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         });
     }
 
+    //Validate the change password form.
     private boolean validate() {
         boolean valid = true;
 

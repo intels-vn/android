@@ -29,6 +29,7 @@ public class RegisterActivity extends AppCompatActivity {
         addEvents();
     }
 
+    //Fetch the ID from the register layout.
     private void initView() {
         edtUsername_Register = (EditText) findViewById(R.id.edtUsername_Register);
         edtPassword_Register = (EditText) findViewById(R.id.edtPassword_Register);
@@ -39,6 +40,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnJoin_Register = (Button) findViewById(R.id.btnJoin_Register);
     }
 
+    //Add events to register button.
     private void addEvents() {
         btnJoin_Register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +69,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    //Validate the register form.
     private boolean validation(){
         boolean valid = true;
 

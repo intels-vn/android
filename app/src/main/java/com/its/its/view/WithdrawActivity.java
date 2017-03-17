@@ -19,11 +19,11 @@ import com.its.its.presenter.security.EncryptDecrypt;
 
 public class WithdrawActivity extends AppCompatActivity {
 
-    String[] amoutValues = {"10.000", "20.000", "50.000", "100.000", "200.000", "500.000"};
+    String[] amountValues = {"10.000", "20.000", "50.000", "100.000", "200.000", "500.000"};
     Button btnWithdraw;
     Spinner spAmount;
     String amount;
-    EditText edtPhoneReceiveExchangeWithdraw;
+    EditText edtPhoneReceiveExchangeWithdraw, edtPasswordVerifyWithdraw;
     String phoneReceiveExchange;
 
     @Override
@@ -47,9 +47,9 @@ public class WithdrawActivity extends AppCompatActivity {
                 btnVerify.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        EditText edtPasswordVerifyWithdraw = (EditText) dialog.findViewById(R.id.edtPasswordVerifyWithdraw);
-                        Log.d("Amount ", amount);
-                        Log.d("Phone ", phoneReceiveExchange);
+                        edtPasswordVerifyWithdraw = (EditText) dialog.findViewById(R.id.edtPasswordVerifyWithdraw);
+//                        Log.d("Amount ", amount);
+//                        Log.d("Phone ", phoneReceiveExchange);
                         new WithdrawTask(WithdrawActivity.this, MainActivity.tvMoney).execute(
                                 "http://192.168.100.14:8080/Demo/withdraw?id=" + getIntent().getStringExtra("ID") +
                                         "&amount=" + amount +
@@ -71,7 +71,7 @@ public class WithdrawActivity extends AppCompatActivity {
         spAmount.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                switch (amoutValues[position]){
+                switch (amountValues[position]){
                     case "10.000":
                         amount = "10000";
                         break;
@@ -107,7 +107,7 @@ public class WithdrawActivity extends AppCompatActivity {
         edtPhoneReceiveExchangeWithdraw = (EditText) findViewById(R.id.edtPhoneReceiveExchangeWithdraw);
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                WithdrawActivity.this, android.R.layout.simple_spinner_dropdown_item, amoutValues);
+                WithdrawActivity.this, android.R.layout.simple_spinner_dropdown_item, amountValues);
         adapter.setDropDownViewResource(android.R.layout.simple_list_item_single_choice);
         spAmount.setAdapter(adapter);
 

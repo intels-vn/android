@@ -54,10 +54,10 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
             headers.put("DeviceId", deviceId);
 
             HashMap<String, String> bodies = new HashMap<String, String >();
-            bodies.put("useraccount", username);
+            bodies.put("username", username);
             bodies.put("password", password);
             bodies.put("phonenumber", phone);
-            bodies.put("emai;", email);
+            bodies.put("email", email);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.POST, api, headers, bodies);
 

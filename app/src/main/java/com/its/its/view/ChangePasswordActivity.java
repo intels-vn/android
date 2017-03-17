@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.its.its.R;
+import com.its.its.model.tasks.ChangePasswordTask;
 import com.its.its.model.tasks.UpdateProfileTask;
 import com.its.its.presenter.security.EncryptDecrypt;
 
@@ -25,7 +26,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
         addEvents();
     }
 
-    //Fetch the ID from the change password layout.
     private void initView() {
         edtOldPass = (EditText) findViewById(R.id.edtOldPass);
         edtNewPass = (EditText) findViewById(R.id.edtNewPass);
@@ -33,7 +33,6 @@ public class ChangePasswordActivity extends AppCompatActivity {
         btnApplyChange = (Button) findViewById(R.id.btnApplyChange);
     }
 
-    //Add events to apply change button.
     private void addEvents() {
         btnApplyChange.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,11 +41,12 @@ public class ChangePasswordActivity extends AppCompatActivity {
                 newPass = edtNewPass.getText().toString();
                 retypePass_ChangePass = edtRetypePass_ChangePass.getText().toString();
 
-                if(validate()) {
-                    new UpdateProfileTask(ChangePasswordActivity.this).execute(
-                            "http://192.168.100.14:8080/Demo",
-                            EncryptDecrypt.encrypt(oldPass, getResources().getString(R.string.khoa)),
-                            EncryptDecrypt.encrypt(newPass, getResources().getString(R.string.khoa))
+                if(validation()) {
+                    new ChangePasswordTask(ChangePasswordActivity.this).execute(
+                            "http://192.168.100.14:8080/Demo/user/" + getIntent().getStringExtra("ID") +
+                                    "/password?password=" + EncryptDecrypt.encrypt(newPass, getResources().getString(R.string.khoa)) +
+                                    "&oldpassword=" + EncryptDecrypt.encrypt(newPass, getResources().getString(R.string.khoa)),
+                            getIntent().getStringExtra("TOKEN")
                     );
                 }else{
                     Toast.makeText(ChangePasswordActivity.this, getResources().getString(R.string.validate_empty_form), Toast.LENGTH_SHORT).show();
@@ -55,8 +55,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
         });
     }
 
-    //Validate the change password form.
-    private boolean validate() {
+    private boolean validation() {
         boolean valid = true;
 
         if(oldPass.isEmpty()){

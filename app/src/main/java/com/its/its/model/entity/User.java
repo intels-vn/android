@@ -8,16 +8,16 @@ import java.io.Serializable;
 
 public class User implements Serializable {
     private String id;
-    private String useraccount;
+    private String username;
     private String phonenumber;
     private String phone_received_exchange;
     private String fullname;
     private String password;
     private String email;
 
-    public User(String id, String useraccount, String phonenumber, String phone_received_exchange, String fullname, String password, String email) {
+    public User(String id, String username, String phonenumber, String phone_received_exchange, String fullname, String password, String email) {
         this.id = id;
-        this.useraccount = useraccount;
+        this.username = username;
         this.phonenumber = phonenumber;
         this.phone_received_exchange = phone_received_exchange;
         this.fullname = fullname;
@@ -45,12 +45,12 @@ public class User implements Serializable {
         this.id = id;
     }
 
-    public String getUseraccount() {
-        return useraccount;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUseraccount(String useraccount) {
-        this.useraccount = useraccount;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPhonenumber() {

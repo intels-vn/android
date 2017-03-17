@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     static final int txtMoneyId = 5;
-    TextView tvMoney;
+    public static TextView tvMoney;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

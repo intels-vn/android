@@ -18,6 +18,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText editUserName_Login, editPassword_Login;
     private Button btnPlay_Login;
+    private String username, password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,23 +29,43 @@ public class LoginActivity extends AppCompatActivity {
         addEvents();
     }
 
-    private void addEvents() {
-        btnPlay_Login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new LoginTask(LoginActivity.this)
-                        .execute(
-                                "http://192.168.100.14:8080/Demo/users/login"
-                                , EncryptDecrypt.encrypt(editUserName_Login.getText().toString(), getResources().getString(R.string.khoa))
-                                , EncryptDecrypt.encrypt(editPassword_Login.getText().toString(), getResources().getString(R.string.khoa))
-                        );
-            }
-        });
-    }
-
     private void initView() {
         editUserName_Login = (EditText) findViewById(R.id.editUserName_Login);
         editPassword_Login = (EditText) findViewById(R.id.editPassword_Login);
         btnPlay_Login = (Button) findViewById(R.id.btnPlay_Login);
+    }
+
+    private void addEvents() {
+        btnPlay_Login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                username = editUserName_Login.getText().toString();
+                password = editPassword_Login.getText().toString();
+
+                if(validation()) {
+                    new LoginTask(LoginActivity.this)
+                            .execute(
+                                    "http://192.168.100.14:8080/Demo/users/login"
+                                    , EncryptDecrypt.encrypt(username, getResources().getString(R.string.khoa))
+                                    , EncryptDecrypt.encrypt(password, getResources().getString(R.string.khoa))
+                            );
+                }
+            }
+        });
+    }
+
+    private boolean validation() {
+        boolean valid = true;
+
+        if(username.isEmpty()){
+            editUserName_Login.setError(getResources().getString(R.string.validate_username));
+            valid = false;
+        }
+
+        if(password.isEmpty()){
+            editPassword_Login.setError(getResources().getString(R.string.validate_password));
+            valid = false;
+        }
+        return valid;
     }
 }

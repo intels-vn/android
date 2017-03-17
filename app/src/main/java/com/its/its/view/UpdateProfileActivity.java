@@ -40,14 +40,38 @@ public class UpdateProfileActivity extends AppCompatActivity {
                 phone_update = edtPhone_Update.getText().toString();
 
                 String id = getIntent().getStringExtra("ID");
-                new UpdateProfileTask(UpdateProfileActivity.this).execute(
+
+                if(validation()) {
+                    new UpdateProfileTask(UpdateProfileActivity.this).execute(
 //                        "http://192.168.100.14:8080/Demo/",
-                        EncryptDecrypt.encrypt(id, getResources().getString(R.string.khoa)),
-                        EncryptDecrypt.encrypt(fullname_update, getResources().getString(R.string.khoa)),
-                        EncryptDecrypt.encrypt(email_update, getResources().getString(R.string.khoa)),
-                        EncryptDecrypt.encrypt(phone_update, getResources().getString(R.string.khoa))
-                );
+                            EncryptDecrypt.encrypt(id, getResources().getString(R.string.khoa)),
+                            EncryptDecrypt.encrypt(fullname_update, getResources().getString(R.string.khoa)),
+                            EncryptDecrypt.encrypt(email_update, getResources().getString(R.string.khoa)),
+                            EncryptDecrypt.encrypt(phone_update, getResources().getString(R.string.khoa))
+                    );
+                }
             }
         });
+    }
+
+    private boolean validation() {
+        boolean valid = true;
+
+        if(fullname_update.isEmpty()){
+            edtFullname_Update.setError(getResources().getString(R.string.validate_fullname));
+            valid = false;
+        }
+
+        if(email_update.isEmpty()){
+            edtEmail_Update.setError(getResources().getString(R.string.validate_email));
+            valid = false;
+        }
+
+        if(phone_update.isEmpty()){
+            edtPhone_Update.setError(getResources().getString(R.string.validate_phone));
+            valid = false;
+        }
+
+        return valid;
     }
 }

@@ -1,9 +1,11 @@
 package com.its.its.model.tasks;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.provider.Settings;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -25,7 +27,7 @@ import java.util.HashMap;
 public class RegisterTask extends AsyncTask<String, Void, String>{
     private Activity activity;
 
-    public RegisterTask(Activity register) {
+    public RegisterTask(Activity activity) {
         this.activity = activity;
     }
 
@@ -41,22 +43,23 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
         String api = params[0];
         String username = params[1];
         String password = params[2];
-        String phone = params[3];
+        String phonenumber = params[3];
         String email = params[4];
-
-        String deviceId = Settings.Secure.getString(activity.getContentResolver(), Settings.Secure.ANDROID_ID);
-        Log.d("ANDROID ID   ", deviceId);
+        String fullname = params[5];
+        String deviceId = params[6];
 
         try {
             HashMap<String, String> headers = new HashMap<String, String>();
             headers.put("Accept", "application/json;charset=UTF-8");
-            headers.put("Localization", activity.getResources().getString(R.string.localization));
+            headers.put("Content-Type", "application/json");
+            headers.put("Localization", "en");
             headers.put("DeviceId", deviceId);
 
-            HashMap<String, String> bodies = new HashMap<String, String >();
+            HashMap<String, String> bodies = new HashMap<String, String>();
             bodies.put("username", username);
             bodies.put("password", password);
-            bodies.put("phonenumber", phone);
+            bodies.put("phonenumber", phonenumber);
+            bodies.put("fullname", fullname);
             bodies.put("email", email);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.POST, api, headers, bodies);
@@ -68,10 +71,10 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
                 case "200":
                     String data = dataReturn.getData().toString();
                     RegisterAndLogin registerAndLogin = new Gson().fromJson(data, RegisterAndLogin.class);
-                    Intent intent = new Intent(activity, MainActivity.class);
-                    intent.putExtra("REG_TOKEN", registerAndLogin.getToken());
-
-                    activity.startActivity(intent);
+//                    Intent intent = new Intent(activity, MainActivity.class);
+//                    intent.putExtra("TOKEN", registerAndLogin.getToken());
+//                    intent.putExtra("ID", registerAndLogin.getId());
+//                    activity.startActivity(intent);
                     break;
                 case "404":
                     break;

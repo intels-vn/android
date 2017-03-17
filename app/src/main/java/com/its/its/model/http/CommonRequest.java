@@ -1,5 +1,7 @@
 package com.its.its.model.http;
 
+import android.util.Log;
+
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -57,7 +59,7 @@ public class CommonRequest {
                 }
             }
 
-            if(!method.equals("GET") && bodies != null){
+            if(!method.equals(GET) && bodies != null){
                 connection.setDoOutput(true);
 
                 JSONObject object = new JSONObject(bodies);
@@ -82,6 +84,7 @@ public class CommonRequest {
         HttpURLConnection connection = sendRequest(method, api, headers, bodies);
         connection.connect();
         int responseCode = connection.getResponseCode();
+        Log.d("Status ", responseCode + "");
         switch (responseCode){
             case 200:
                 InputStream inputStream = connection.getInputStream();

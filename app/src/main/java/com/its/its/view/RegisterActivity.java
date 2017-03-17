@@ -1,8 +1,11 @@
 package com.its.its.view;
 
+import android.content.Context;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -51,16 +54,20 @@ public class RegisterActivity extends AppCompatActivity {
                 phone_reg = edtPhone_Register.getText().toString();
                 email_reg = edtEmail_Register.getText().toString();
                 fullname_reg = edtFullname_Register.getText().toString();
+                TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+                String deviceId = telephonyManager.getDeviceId();
+                Log.d("ID ", deviceId);
 
                 if(validation()){
                     new RegisterTask(RegisterActivity.this)
                             .execute(
-                                    "http://192.168.100.14:8080/Demo/users",
+                                    "http://192.168.0.9:8080/Demo/users",
                                     EncryptDecrypt.encrypt(username_reg, getResources().getString(R.string.khoa)),
                                     EncryptDecrypt.encrypt(password_reg, getResources().getString(R.string.khoa)),
                                     EncryptDecrypt.encrypt(phone_reg, getResources().getString(R.string.khoa)),
                                     EncryptDecrypt.encrypt(email_reg, getResources().getString(R.string.khoa)),
-                                    EncryptDecrypt.encrypt(fullname_reg, getResources().getString(R.string.khoa))
+                                    EncryptDecrypt.encrypt(fullname_reg, getResources().getString(R.string.khoa)),
+                                    deviceId
                             );
                 }else{
                     Toast.makeText(RegisterActivity.this, getResources().getString(R.string.validate_empty_form), Toast.LENGTH_SHORT).show();

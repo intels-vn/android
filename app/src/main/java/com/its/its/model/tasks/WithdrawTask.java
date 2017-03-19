@@ -61,7 +61,7 @@ public class WithdrawTask extends AsyncTask<String, Void, String> {
             headers.put("Localization", activity.getResources().getString(R.string.localization));
             headers.put("Authorization", token);
 
-            InputStreamReader inputStreamReader = CommonRequest.receiveResponse("POST", api, headers, null);
+            InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.POST, api, headers, null);
 
             DataReturn data = new Gson().fromJson(inputStreamReader, DataReturn.class);
             switch (data.getStatus()){

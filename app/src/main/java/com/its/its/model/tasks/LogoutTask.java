@@ -38,7 +38,7 @@ public class LogoutTask extends AsyncTask<String, Void, Void>{
             headers.put("Localization", activity.getResources().getString(R.string.localization));
             headers.put("Authorization", token);
 
-            InputStreamReader inputStreamReader = CommonRequest.receiveResponse("DELETE", url, headers, null);
+            InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.DELETE, url, headers, null);
             DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
             if(dataReturn.getStatus().equals("200")){
                 Intent intent = new Intent(activity, LoginActivity.class);

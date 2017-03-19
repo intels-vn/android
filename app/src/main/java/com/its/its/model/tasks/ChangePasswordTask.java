@@ -37,7 +37,7 @@ public class ChangePasswordTask extends AsyncTask<String, Void, Void> {
             headers.put("Localization", "vi");
             headers.put("Authorization", token);
 
-            InputStreamReader inputStreamReader = CommonRequest.receiveResponse("PUT", api, headers, null);
+            InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.PUT, api, headers, null);
             DataReturn data = new Gson().fromJson(inputStreamReader, DataReturn.class);
             String status = data.getStatus();
             switch (status){

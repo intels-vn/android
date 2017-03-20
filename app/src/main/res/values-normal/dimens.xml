@@ -53,6 +53,7 @@
     <dimen name="edit_text_password_text_size_login_portrait">20sp</dimen>
 
     <dimen name="text_view_margin_top_login_portrait">50dp</dimen>
+    <dimen name="text_view_margin_left_login_portrait">20dp</dimen>
     <dimen name="text_view_width_login_portrait">200dp</dimen>
     <dimen name="text_view_text_size_forgot_password_login_portrait">15sp</dimen>
 

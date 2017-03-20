@@ -14,7 +14,7 @@
     <color name="button_play_text_welcome_screen">#FFFFFF</color>
     <color name="button_join_text_welcome_screen">#000000</color>
     <color name="text_view_forgot_password">#FFFFFF</color>
-    <color name="background_app">#1aff1a</color>
+    <color name="background_app">#ffff66</color>
     <color name="item_navigation_text_color">#FFFF00</color>
     <color name="item_navigation_background">#000000</color>
     <color name="bet_value_background">#FFF000</color>

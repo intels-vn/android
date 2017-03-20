@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/text_view_margin_top_login_portrait"
-        android:layout_marginLeft="20dp"
+        android:layout_marginLeft="@dimen/text_view_margin_left_login_portrait"
         android:text="@string/text_view_forgot_password_login"
         android:textColor="@color/button_play_text_welcome_screen"
         android:textSize="@dimen/text_view_text_size_forgot_password_login_portrait" />

@@ -54,6 +54,8 @@ public class RegisterActivity extends AppCompatActivity {
                 phone_reg = edtPhone_Register.getText().toString();
                 email_reg = edtEmail_Register.getText().toString();
                 fullname_reg = edtFullname_Register.getText().toString();
+
+                //Get the Android device ID.
                 TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
                 String deviceId = telephonyManager.getDeviceId();
                 Log.d("ID ", deviceId);

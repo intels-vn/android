@@ -23,6 +23,7 @@
     <string name="edit_text_phone_register">Nhập Số Điện Thoại</string>
     <string name="edit_text_email_register">Nhập Email</string>
     <string name="edit_text_fullname_register">Nhập tên họ đầy đủ</string>
+    <string name="edt_text_phone_receive_exchange_register">Nhập số đt để rút tiền</string>
     <string name="button_join_now_register">Tham Gia</string>
     <!-- End -->
 
@@ -64,6 +65,7 @@
     <string name="validate_retype_new_password">Nhập lại password mới</string>
     <string name="validate_matched_old_password">Password mới không được trùng với password cũ</string>
     <string name="validate_matched_retype_password">Password không hợp lệ</string>
+    <string name="validate_phone_received_exchange">Nhập vào số đt rút tiền</string>
     <!-- End -->
 
     <string name="login_error">Đăng nhập sai. Vui lòng kiểm tra lại !</string>

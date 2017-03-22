@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.its.its.R;
@@ -66,17 +67,22 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
 
             DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
             String status = dataReturn.getStatus();
+            Log.e("Status ", status);
 
             switch (status){
                 case "200":
                     String data = dataReturn.getData().toString();
                     RegisterAndLogin registerAndLogin = new Gson().fromJson(data, RegisterAndLogin.class);
-//                    Intent intent = new Intent(activity, MainActivity.class);
-//                    intent.putExtra("TOKEN", registerAndLogin.getToken());
-//                    intent.putExtra("ID", registerAndLogin.getId());
-//                    activity.startActivity(intent);
+
+                    Intent intent = new Intent(activity, MainActivity.class);
+                    intent.putExtra("TOKEN", registerAndLogin.getToken());
+                    intent.putExtra("ID", registerAndLogin.getId());
+                    activity.startActivity(intent);
+
+                    Toast.makeText(activity, "Registered Successfully", Toast.LENGTH_SHORT).show();
                     break;
-                case "404":
+                case "400":
+                    Toast.makeText(activity, "Error", Toast.LENGTH_SHORT).show();
                     break;
                 case "500":
                     break;

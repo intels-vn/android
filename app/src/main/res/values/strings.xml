@@ -23,6 +23,7 @@
     <string name="edit_text_phone_register">Enter your phone</string>
     <string name="edit_text_email_register">Enter your email</string>
     <string name="edit_text_fullname_register">Enter your fullname</string>
+    <string name="edt_text_phone_receive_exchange_register">Enter phone receive change</string>
     <string name="button_join_now_register">Join now</string>
     <!-- End -->
 
@@ -66,6 +67,7 @@
     <string name="validate_retype_new_password">Please retype the new password</string>
     <string name="validate_matched_old_password">The new password must be different from the old pass</string>
     <string name="validate_matched_retype_password">Invalid password</string>
+    <string name="validate_phone_received_exchange">Please enter the number receive change</string>
     <!-- End -->
 
     <string name="login_error">Error. Please check again</string>

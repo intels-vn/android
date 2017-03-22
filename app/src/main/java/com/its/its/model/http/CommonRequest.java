@@ -84,7 +84,7 @@ public class CommonRequest {
         HttpURLConnection connection = sendRequest(method, api, headers, bodies);
         connection.connect();
         int responseCode = connection.getResponseCode();
-        Log.d("Status ", responseCode + "");
+        Log.d("Response Code ", responseCode + "");
         switch (responseCode){
             case 200:
                 InputStream inputStream = connection.getInputStream();

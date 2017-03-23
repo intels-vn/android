@@ -53,7 +53,7 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
             HashMap<String, String> headers = new HashMap<String, String>();
             headers.put("Accept", "application/json;charset=UTF-8");
             headers.put("Content-Type", "application/json");
-            headers.put("Localization", "en");
+            headers.put("Localization", activity.getResources().getString(R.string.localization));
             headers.put("DeviceId", deviceId);
 
             HashMap<String, String> bodies = new HashMap<String, String>();

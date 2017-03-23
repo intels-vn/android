@@ -78,7 +78,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
             valid = false;
         }
 
-        if(retypePass_ChangePass.equals(newPass)){
+        if(!retypePass_ChangePass.equals(newPass)){
             edtRetypePass_ChangePass.setError(getResources().getString(R.string.validate_matched_retype_password));
             valid = false;
         }

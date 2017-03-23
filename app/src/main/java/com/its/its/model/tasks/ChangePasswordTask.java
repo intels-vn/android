@@ -34,7 +34,7 @@ public class ChangePasswordTask extends AsyncTask<String, Void, Void> {
         try {
             HashMap<String, String> headers = new HashMap<>();
             headers.put("Accept", "*/*");
-            headers.put("Localization", "vi");
+            headers.put("Localization", activity.getResources().getString(R.string.localization));
             headers.put("Authorization", token);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.PUT, api, headers, null);

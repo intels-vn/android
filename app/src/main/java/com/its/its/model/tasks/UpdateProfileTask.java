@@ -36,7 +36,6 @@ public class UpdateProfileTask extends AsyncTask<String, Void, String>{
 
     @Override
     protected String doInBackground(String... params) {
-        String result = "";
 
         String api = params[0];
         String token = params[1];
@@ -44,7 +43,6 @@ public class UpdateProfileTask extends AsyncTask<String, Void, String>{
         try {
             HashMap<String, String> headers = new HashMap<String, String>();
             headers.put("Accept", "*/*");
-            headers.put("Content-Type", "*/*");
             headers.put("Localization", activity.getResources().getString(R.string.localization));
             headers.put("Authorization", token);
 
@@ -55,7 +53,8 @@ public class UpdateProfileTask extends AsyncTask<String, Void, String>{
 
             switch (status){
                 case "200":
-                    Toast.makeText(activity, "Updated profile successfully", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(activity, "Updated profile successfully", Toast.LENGTH_SHORT).show();
+                    Log.d("Data: ", dataReturn.getMessage());
                     break;
                 case "400":
                     break;

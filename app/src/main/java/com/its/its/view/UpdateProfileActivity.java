@@ -44,7 +44,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
 
                 if(validation()) {
                     new UpdateProfileTask(UpdateProfileActivity.this).execute(
-                        "http://192.168.100.14:8080/Demo/" + getIntent().getStringExtra("ID") +
+                        "http://192.168.100.14:8080/Demo/user" + getIntent().getStringExtra("ID") +
                                 "/profile?email=" + EncryptDecrypt.encrypt(email_update, getResources().getString(R.string.khoa))+
                                 "&phone=" + EncryptDecrypt.encrypt(phone_update, getResources().getString(R.string.khoa)) +
                                 "&fullname=" + EncryptDecrypt.encrypt(fullname_update, getResources().getString(R.string.khoa)),

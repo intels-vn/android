@@ -78,11 +78,8 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
                     intent.putExtra("TOKEN", registerAndLogin.getToken());
                     intent.putExtra("ID", registerAndLogin.getId());
                     activity.startActivity(intent);
-
-                    Toast.makeText(activity, "Registered Successfully", Toast.LENGTH_SHORT).show();
                     break;
                 case "400":
-                    Toast.makeText(activity, "Error", Toast.LENGTH_SHORT).show();
                     break;
                 case "500":
                     break;

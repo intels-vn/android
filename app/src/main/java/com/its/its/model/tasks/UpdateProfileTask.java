@@ -39,28 +39,16 @@ public class UpdateProfileTask extends AsyncTask<String, Void, String>{
         String result = "";
 
         String api = params[0];
-        String id = params[1];
-        String fullname = params[2];
-        String email = params[3];
-        String phone = params[4];
-        String oldPass = params[5];
-        String newPass = params[6];
+        String token = params[1];
 
         try {
             HashMap<String, String> headers = new HashMap<String, String>();
             headers.put("Accept", "*/*");
+            headers.put("Content-Type", "*/*");
             headers.put("Localization", activity.getResources().getString(R.string.localization));
-            headers.put("Authorization", " ");
+            headers.put("Authorization", token);
 
-            HashMap<String, String> bodies = new HashMap<String, String>();
-            bodies.put("id", id);
-            bodies.put("fullname", fullname);
-            bodies.put("email", email);
-            bodies.put("phone", phone);
-            bodies.put("password", newPass);
-            bodies.put("oldpassword", oldPass);
-
-            InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.PUT, api, headers, bodies);
+            InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.PUT, api, headers, null);
 
             DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
             String status = dataReturn.getStatus();

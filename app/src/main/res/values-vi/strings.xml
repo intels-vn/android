@@ -73,6 +73,9 @@
 
     <!-- Update Profile Screen -->
     <string name="update_profile">Cập nhật tài khoản</string>
+    <string name="update_fullname">Nhập vào họ tên mới</string>
+    <string name="update_phone">Nhập vào số điện thoại mới</string>
+    <string name="update_email">Nhập vào email mới</string>
     <string name="apply_change">Cập nhật</string>
     <!-- End -->
 

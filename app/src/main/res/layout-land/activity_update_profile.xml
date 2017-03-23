@@ -30,6 +30,7 @@
             android:background="@color/WHITE"
             android:drawableLeft="@drawable/username"
             android:drawablePadding="@dimen/edit_text_padding_drawable_update_profile_land"
+            android:hint="@string/update_fullname"
             android:ems="10"
             android:inputType="textEmailAddress"
             android:textSize="@dimen/edit_text_text_size_update_profile_land" />
@@ -42,6 +43,7 @@
             android:background="@color/WHITE"
             android:drawableLeft="@drawable/phone"
             android:drawablePadding="@dimen/edit_text_padding_drawable_update_profile_land"
+            android:hint="@string/update_phone"
             android:ems="10"
             android:inputType="textEmailAddress"
             android:textSize="@dimen/edit_text_text_size_update_profile_land" />
@@ -54,6 +56,7 @@
             android:background="@color/WHITE"
             android:drawableLeft="@drawable/email"
             android:drawablePadding="@dimen/edit_text_padding_drawable_update_profile_land"
+            android:hint="@string/update_email"
             android:ems="10"
             android:inputType="phone"
             android:textSize="@dimen/edit_text_text_size_update_profile_land" />

@@ -29,6 +29,7 @@
         android:drawableLeft="@drawable/phone"
         android:drawablePadding="@dimen/edit_text_drawable_padding_left_withdraw_portrait"
         android:hint="@string/edit_text_phone_receive_exchange"
+        android:textSize="@dimen/hint_text_size_withdraw_portrait"
         android:ems="10"
         android:inputType="phone" />
 

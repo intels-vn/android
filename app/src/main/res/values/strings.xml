@@ -75,6 +75,9 @@
 
     <!-- Update Profile Screen -->
     <string name="update_profile">Update Profile</string>
+    <string name="update_fullname">Enter your new name</string>
+    <string name="update_phone">Enter your new number</string>
+    <string name="update_email">Enter your new email</string>
     <string name="apply_change">Apply Change</string>
     <!-- End -->
 

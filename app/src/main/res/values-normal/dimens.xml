@@ -210,6 +210,8 @@
     <dimen name="edit_text_margin_top_withdraw_portrait">30dp</dimen>
     <dimen name="edit_text_text_size_withdraw_portrait">15sp</dimen>
 
+    <dimen name="hint_text_size_withdraw_portrait">11dp</dimen>
+
     <dimen name="spinner_width_withdraw_portrait">250dp</dimen>
     <dimen name="spinner_height_withdraw_portrait">30dp</dimen>
     <dimen name="spinner_margin_top_withdraw_portrait">30dp</dimen>

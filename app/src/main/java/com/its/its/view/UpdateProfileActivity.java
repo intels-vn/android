@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.its.its.R;
 import com.its.its.model.tasks.UpdateProfileTask;
@@ -41,16 +42,16 @@ public class UpdateProfileActivity extends AppCompatActivity {
                 email_update = edtEmail_Update.getText().toString();
                 phone_update = edtPhone_Update.getText().toString();
 
-                String id = getIntent().getStringExtra("ID");
-
                 if(validation()) {
                     new UpdateProfileTask(UpdateProfileActivity.this).execute(
-//                        "http://192.168.100.14:8080/Demo/",
-                            EncryptDecrypt.encrypt(id, getResources().getString(R.string.khoa)),
-                            EncryptDecrypt.encrypt(fullname_update, getResources().getString(R.string.khoa)),
-                            EncryptDecrypt.encrypt(email_update, getResources().getString(R.string.khoa)),
-                            EncryptDecrypt.encrypt(phone_update, getResources().getString(R.string.khoa))
+                        "http://192.168.100.14:8080/Demo/" + getIntent().getStringExtra("ID") +
+                                "/profile?email=" + EncryptDecrypt.encrypt(email_update, getResources().getString(R.string.khoa))+
+                                "&phone=" + EncryptDecrypt.encrypt(phone_update, getResources().getString(R.string.khoa)) +
+                                "&fullname=" + EncryptDecrypt.encrypt(fullname_update, getResources().getString(R.string.khoa)),
+                            getIntent().getStringExtra("TOKEN")
                     );
+                }else{
+                    Toast.makeText(UpdateProfileActivity.this, getResources().getString(R.string.validate_empty_form), Toast.LENGTH_SHORT).show();
                 }
             }
         });

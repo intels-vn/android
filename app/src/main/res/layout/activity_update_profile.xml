@@ -25,6 +25,8 @@
         android:layout_height="wrap_content"
         android:background="@color/button_channel_background"
         android:drawableLeft="@drawable/username"
+        android:drawablePadding="@dimen/drawable_padding_left_login_portrait"
+        android:hint="@string/update_fullname"
         android:ems="10"
         android:inputType="text" />
 
@@ -35,6 +37,9 @@
         android:layout_marginTop="@dimen/edit_text_margin_top_update_profile_portrait"
         android:background="@color/button_channel_background"
         android:drawableLeft="@drawable/phone"
+        android:drawablePadding="@dimen/drawable_padding_left_login_portrait"
+
+        android:hint="@string/update_phone"
         android:ems="10"
         android:inputType="phone" />
 
@@ -45,6 +50,8 @@
         android:layout_marginTop="@dimen/edit_text_margin_top_update_profile_portrait"
         android:background="@color/button_channel_background"
         android:drawableLeft="@drawable/email"
+        android:drawablePadding="@dimen/drawable_padding_left_login_portrait"
+        android:hint="@string/update_email"
         android:ems="10"
         android:inputType="textEmailAddress" />
 

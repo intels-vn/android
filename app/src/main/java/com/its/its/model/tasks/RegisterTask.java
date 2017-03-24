@@ -67,7 +67,9 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
 
             DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
             String status = dataReturn.getStatus();
+            String message = dataReturn.getMessage();
             Log.e("Status ", status);
+            Log.e("Message ", message);
 
             switch (status){
                 case "200":

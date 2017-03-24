@@ -41,6 +41,7 @@ public class WithdrawTask extends AsyncTask<String, Void, String> {
         super.onPostExecute(s);
         dialog.dismiss();
         textView.setText(s);
+        Log.d("Money ", s);
         Intent intent = new Intent(activity, MainActivity.class);
         activity.startActivity(intent);
     }

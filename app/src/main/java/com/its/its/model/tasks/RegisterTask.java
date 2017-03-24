@@ -71,6 +71,7 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
 
             switch (status){
                 case "200":
+
                     String data = dataReturn.getData().toString();
                     RegisterAndLogin registerAndLogin = new Gson().fromJson(data, RegisterAndLogin.class);
 
@@ -103,5 +104,6 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
+
     }
 }

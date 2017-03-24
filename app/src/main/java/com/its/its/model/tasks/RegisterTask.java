@@ -15,6 +15,7 @@ import com.its.its.model.entity.DataReturn;
 import com.its.its.model.entity.RegisterAndLogin;
 import com.its.its.model.http.CommonRequest;
 import com.its.its.view.MainActivity;
+import com.its.its.view.RegisterActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,7 +26,7 @@ import java.util.HashMap;
  * Created by BiLac on 3/10/2017.
  */
 
-public class RegisterTask extends AsyncTask<String, Void, String>{
+public class RegisterTask extends AsyncTask<String, Void, DataReturn>{
     private Activity activity;
 
     public RegisterTask(Activity activity) {
@@ -38,9 +39,9 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
     }
 
     @Override
-    protected String doInBackground(String... params) {
-        String result = "";
-
+    protected DataReturn doInBackground(String... params) {
+        DataReturn result = new DataReturn();
+        
         String api = params[0];
         String username = params[1];
         String password = params[2];
@@ -64,32 +65,9 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
             bodies.put("email", email);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.POST, api, headers, bodies);
-
-            DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
-            String status = dataReturn.getStatus();
-            String message = dataReturn.getMessage();
-            Log.e("Status ", status);
-            Log.e("Message ", message);
-
-            switch (status){
-                case "200":
-
-                    String data = dataReturn.getData().toString();
-                    RegisterAndLogin registerAndLogin = new Gson().fromJson(data, RegisterAndLogin.class);
-
-                    Intent intent = new Intent(activity, MainActivity.class);
-                    intent.putExtra("TOKEN", registerAndLogin.getToken());
-                    intent.putExtra("ID", registerAndLogin.getId());
-                    activity.startActivity(intent);
-                    break;
-                case "400":
-                    break;
-                case "500":
-                    break;
-                default:
-                    break;
+            if(inputStreamReader != null){
+                result = new Gson().fromJson(inputStreamReader, DataReturn.class);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
             Log.e("Error  ", e.getMessage());
@@ -104,8 +82,30 @@ public class RegisterTask extends AsyncTask<String, Void, String>{
     }
 
     @Override
-    protected void onPostExecute(String s) {
+    protected void onPostExecute(DataReturn s) {
         super.onPostExecute(s);
+        if(s != null){
+            switch (s.getStatus()){
+                case "200":
+                    String data = s.getData().toString();
+                    RegisterAndLogin registerAndLogin = new Gson().fromJson(data, RegisterAndLogin.class);
+                    
+                    Intent intent = new Intent(activity, MainActivity.class);
+                    intent.putExtra("ID", registerAndLogin.getId());
+                    intent.putExtra("TOKEN", registerAndLogin.getToken());
+                    activity.startActivity(intent);
 
+                    Toast.makeText(activity, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                    break;
+                case "400":
+                    Toast.makeText(activity, s.getMessage(), Toast.LENGTH_SHORT).show();
+                    break;
+                case "500":
+                    Toast.makeText(activity, s.getMessage(), Toast.LENGTH_SHORT).show();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

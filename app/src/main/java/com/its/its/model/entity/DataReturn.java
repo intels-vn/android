@@ -17,6 +17,9 @@ public class DataReturn {
         this.status = status;
     }
 
+    public DataReturn() {
+    }
+
     public Object getData() {
         return data;
     }

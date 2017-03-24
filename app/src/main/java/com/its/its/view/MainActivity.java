@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
         tvMoney= new TextView(this);
         tvMoney.setId(txtMoneyId);
-        tvMoney.setText("$ 1,234,567");
+//        tvMoney.setText("$ 1,234,567");
         tvMoney.setTextColor(Color.YELLOW);
         tvMoney.setPadding(5, 0, 20, 0);
 

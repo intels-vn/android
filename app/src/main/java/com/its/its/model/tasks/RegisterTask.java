@@ -95,7 +95,7 @@ public class RegisterTask extends AsyncTask<String, Void, DataReturn>{
                     intent.putExtra("TOKEN", registerAndLogin.getToken());
                     activity.startActivity(intent);
 
-                    Toast.makeText(activity, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, s.getMessage(), Toast.LENGTH_SHORT).show();
                     break;
                 case "400":
                     Toast.makeText(activity, s.getMessage(), Toast.LENGTH_SHORT).show();
@@ -106,6 +106,8 @@ public class RegisterTask extends AsyncTask<String, Void, DataReturn>{
                 default:
                     break;
             }
+        }else{
+            Toast.makeText(activity, "Error", Toast.LENGTH_SHORT).show();
         }
     }
 }

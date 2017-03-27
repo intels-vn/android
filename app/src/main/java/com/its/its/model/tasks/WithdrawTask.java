@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.its.its.R;
+import com.its.its.model.entity.Coin;
 import com.its.its.model.entity.DataReturn;
 import com.its.its.model.http.CommonRequest;
 import com.its.its.view.MainActivity;
@@ -70,11 +71,15 @@ public class WithdrawTask extends AsyncTask<String, Void, DataReturn> {
         super.onPostExecute(s);
 
         dialog.dismiss();
+        String data = s.getData().toString();
+        Coin current_coin = new Gson().fromJson(data, Coin.class);
+
+        String money = current_coin.toString();
         if(s != null) {
-//            textView.setText(s.getData().toString());
-//            Log.d("Money ", s);
-//            Intent intent = new Intent(activity, MainActivity.class);
-//            activity.startActivity(intent);
+            textView.setText(money);
+            Log.d("Money ", money);
+            Intent intent = new Intent(activity, MainActivity.class);
+            activity.startActivity(intent);
         }
     }
 }

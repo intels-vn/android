@@ -14,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.its.its.R;
+import com.its.its.model.http.CommonRequest;
 import com.its.its.model.tasks.WithdrawTask;
 import com.its.its.presenter.security.EncryptDecrypt;
 
@@ -51,7 +52,7 @@ public class WithdrawActivity extends AppCompatActivity {
 //                        Log.d("Amount ", amount);
 //                        Log.d("Phone ", phoneReceiveExchange);
                         new WithdrawTask(WithdrawActivity.this, MainActivity.tvMoney).execute(
-                                "http://192.168.100.14:8080/Demo/withdraw?id=" + getIntent().getStringExtra("ID") +
+                                CommonRequest.link + "withdraw?id=" + getIntent().getStringExtra("ID") +
                                         "&amount=" + amount +
                                         "&phoneRX=" + EncryptDecrypt.encrypt(
                                                 phoneReceiveExchange,

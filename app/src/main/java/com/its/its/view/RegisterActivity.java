@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.its.its.R;
+import com.its.its.model.http.CommonRequest;
 import com.its.its.model.tasks.RegisterTask;
 import com.its.its.presenter.security.EncryptDecrypt;
 
@@ -63,7 +64,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if(validation()){
                     new RegisterTask(RegisterActivity.this)
                             .execute(
-                                    "http://192.168.100.14:8080/Demo/users",
+                                    CommonRequest.link + "users",
                                     EncryptDecrypt.encrypt(username_reg, getResources().getString(R.string.khoa)),
                                     EncryptDecrypt.encrypt(password_reg, getResources().getString(R.string.khoa)),
                                     EncryptDecrypt.encrypt(phone_reg, getResources().getString(R.string.khoa)),

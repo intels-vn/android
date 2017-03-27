@@ -19,7 +19,7 @@ import java.util.HashMap;
  * Created by Chinh Bui on 3/16/2017.
  */
 
-public class ChangePasswordTask extends AsyncTask<String, Void, Void> {
+public class ChangePasswordTask extends AsyncTask<String, Void, DataReturn> {
     Activity activity;
 
     public ChangePasswordTask(Activity activity) {
@@ -27,7 +27,9 @@ public class ChangePasswordTask extends AsyncTask<String, Void, Void> {
     }
 
     @Override
-    protected Void doInBackground(String... params) {
+    protected DataReturn doInBackground(String... params) {
+        DataReturn result = new DataReturn();
+
         String api = params[0];
         String token = params[1];
 
@@ -38,26 +40,32 @@ public class ChangePasswordTask extends AsyncTask<String, Void, Void> {
             headers.put("Authorization", token);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.PUT, api, headers, null);
-            DataReturn data = new Gson().fromJson(inputStreamReader, DataReturn.class);
-            String status = data.getStatus();
-            switch (status){
-                case "200":
-//                    Toast.makeText(activity, "Change Password Success", Toast.LENGTH_SHORT).show();
-                    Log.d("API: ", api);
-                    Log.d("Data: ", data.getMessage());
-                    break;
-
-                default:
-//                    Toast.makeText(activity, "Change Password Fail", Toast.LENGTH_SHORT).show();
-                    Log.e("API: ", api);
-                    Log.e("Error: ", data.getMessage());
-                    break;
-            }
+            result = new Gson().fromJson(inputStreamReader, DataReturn.class);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        return null;
+        return result;
+    }
+
+    @Override
+    protected void onPostExecute(DataReturn s) {
+        super.onPostExecute(s);
+
+        String status = s.getStatus();
+        switch (status){
+            case "200":
+                Toast.makeText(activity, "Change Password Success", Toast.LENGTH_SHORT).show();
+//                Log.d("API: ", api);
+                Log.d("Data: ", s.getMessage());
+                break;
+
+            default:
+                Toast.makeText(activity, "Change Password Fail", Toast.LENGTH_SHORT).show();
+//                Log.e("API: ", api);
+                Log.e("Error: ", s.getMessage());
+                break;
+        }
     }
 }

@@ -22,7 +22,7 @@ import java.util.HashMap;
  * Created by BiLac on 3/10/2017.
  */
 
-public class UpdateProfileTask extends AsyncTask<String, Void, String>{
+public class UpdateProfileTask extends AsyncTask<String, Void, DataReturn>{
     Activity activity;
 
     public UpdateProfileTask(Activity activity) {
@@ -35,7 +35,8 @@ public class UpdateProfileTask extends AsyncTask<String, Void, String>{
     }
 
     @Override
-    protected String doInBackground(String... params) {
+    protected DataReturn doInBackground(String... params) {
+        DataReturn result = new DataReturn();
 
         String api = params[0];
         String token = params[1];
@@ -47,27 +48,13 @@ public class UpdateProfileTask extends AsyncTask<String, Void, String>{
             headers.put("Authorization", token);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.PUT, api, headers, null);
-
-            DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
-            String status = dataReturn.getStatus();
-
-            switch (status){
-                case "200":
-//                    Toast.makeText(activity, "Updated profile successfully", Toast.LENGTH_SHORT).show();
-                    Log.d("Data: ", dataReturn.getMessage());
-                    break;
-                case "400":
-                    break;
-                default:
-                    break;
-            }
+            result = new Gson().fromJson(inputStreamReader, DataReturn.class);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
-        return null;
+        return result;
     }
 
     @Override
@@ -76,7 +63,20 @@ public class UpdateProfileTask extends AsyncTask<String, Void, String>{
     }
 
     @Override
-    protected void onPostExecute(String s) {
+    protected void onPostExecute(DataReturn s) {
         super.onPostExecute(s);
+
+        String status = s.getStatus();
+
+        switch (status){
+            case "200":
+                Toast.makeText(activity, "Updated profile successfully", Toast.LENGTH_SHORT).show();
+                Log.d("Data: ", s.getMessage());
+                break;
+            case "400":
+                break;
+            default:
+                break;
+        }
     }
 }

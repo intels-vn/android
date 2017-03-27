@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.its.its.R;
+import com.its.its.model.http.CommonRequest;
 import com.its.its.model.tasks.LoginTask;
 import com.its.its.presenter.security.EncryptDecrypt;
 
@@ -47,9 +48,9 @@ public class LoginActivity extends AppCompatActivity {
                 if(validation()) {
                     new LoginTask(LoginActivity.this)
                             .execute(
-                                    "http://192.168.100.14:8080/Demo/users/login"
-                                    , EncryptDecrypt.encrypt(username, getResources().getString(R.string.khoa))
-                                    , EncryptDecrypt.encrypt(password, getResources().getString(R.string.khoa))
+                                    CommonRequest.link + "users/login",
+                                    EncryptDecrypt.encrypt(username, getResources().getString(R.string.khoa)),
+                                    EncryptDecrypt.encrypt(password, getResources().getString(R.string.khoa))
                             );
                 }
             }

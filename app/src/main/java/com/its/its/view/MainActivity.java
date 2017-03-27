@@ -25,6 +25,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.its.its.R;
+import com.its.its.model.http.CommonRequest;
 import com.its.its.model.tasks.LogoutTask;
 
 @SuppressWarnings("ResourceAsColor")
@@ -118,7 +119,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_logOut) {
             new LogoutTask(MainActivity.this).execute(
-                    "http://192.168.100.14:8080/Demo/user/" + getIntent().getStringExtra("ID"),
+                    CommonRequest.link + "user/" + getIntent().getStringExtra("ID"),
                     getIntent().getStringExtra("TOKEN"));
         }
 

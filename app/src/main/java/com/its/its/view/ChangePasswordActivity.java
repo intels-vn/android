@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.its.its.R;
+import com.its.its.model.http.CommonRequest;
 import com.its.its.model.tasks.ChangePasswordTask;
 import com.its.its.model.tasks.UpdateProfileTask;
 import com.its.its.presenter.security.EncryptDecrypt;
@@ -43,7 +44,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
 
                 if(validation()) {
                     new ChangePasswordTask(ChangePasswordActivity.this).execute(
-                            "http://192.168.100.14:8080/Demo/user/" + getIntent().getStringExtra("ID") +
+                            CommonRequest.link + "user/" + getIntent().getStringExtra("ID") +
                                     "/password?password=" + EncryptDecrypt.encrypt(newPass, getResources().getString(R.string.khoa)) +
                                     "&oldpassword=" + EncryptDecrypt.encrypt(newPass, getResources().getString(R.string.khoa)),
                             getIntent().getStringExtra("TOKEN")

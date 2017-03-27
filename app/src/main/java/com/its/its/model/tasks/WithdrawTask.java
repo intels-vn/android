@@ -21,7 +21,7 @@ import java.util.HashMap;
  * Created by Chinh Bui on 3/16/2017.
  */
 
-public class WithdrawTask extends AsyncTask<String, Void, String> {
+public class WithdrawTask extends AsyncTask<String, Void, DataReturn> {
 
     Activity activity;
     TextView textView;
@@ -36,24 +36,15 @@ public class WithdrawTask extends AsyncTask<String, Void, String> {
         dialog.show();
     }
 
-    @Override
-    protected void onPostExecute(String s) {
-        super.onPostExecute(s);
-        dialog.dismiss();
-        textView.setText(s);
-        Log.d("Money ", s);
-        Intent intent = new Intent(activity, MainActivity.class);
-        activity.startActivity(intent);
-    }
-
     public WithdrawTask(Activity activity, TextView textView) {
         this.activity = activity;
         this.textView = textView;
     }
 
     @Override
-    protected String doInBackground(String... params) {
-        String result = "";
+    protected DataReturn doInBackground(String... params) {
+        DataReturn result = new DataReturn();
+
         String api = params[0];
         String token = params[1];
 
@@ -63,14 +54,8 @@ public class WithdrawTask extends AsyncTask<String, Void, String> {
             headers.put("Authorization", token);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.POST, api, headers, null);
-
-            DataReturn data = new Gson().fromJson(inputStreamReader, DataReturn.class);
-            switch (data.getStatus()){
-                case "200":
-                    result = data.getData().toString();
-                    break;
-                default:
-                    break;
+            if(inputStreamReader != null){
+                result = new Gson().fromJson(inputStreamReader, DataReturn.class);
             }
 
         }catch (IOException e){
@@ -78,5 +63,18 @@ public class WithdrawTask extends AsyncTask<String, Void, String> {
         }
 
         return result;
+    }
+
+    @Override
+    protected void onPostExecute(DataReturn s) {
+        super.onPostExecute(s);
+
+        dialog.dismiss();
+        if(s != null) {
+//            textView.setText(s.getData().toString());
+//            Log.d("Money ", s);
+//            Intent intent = new Intent(activity, MainActivity.class);
+//            activity.startActivity(intent);
+        }
     }
 }

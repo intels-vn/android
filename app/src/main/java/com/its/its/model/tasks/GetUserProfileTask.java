@@ -19,7 +19,7 @@ import java.util.HashMap;
  * Created by Chinh Bui on 3/19/2017.
  */
 
-public class GetUserProfileTask extends AsyncTask<String, Void, String> {
+public class GetUserProfileTask extends AsyncTask<String, Void, DataReturn> {
     Activity activity;
     EditText edtFullName, edtEmail, edtPhoneNumber;
 
@@ -31,8 +31,9 @@ public class GetUserProfileTask extends AsyncTask<String, Void, String> {
     }
 
     @Override
-    protected String doInBackground(String... params) {
-        String result = "";
+    protected DataReturn doInBackground(String... params) {
+        DataReturn result = new DataReturn();
+
         String api = params[0];
         String token = params[1];
 
@@ -44,14 +45,7 @@ public class GetUserProfileTask extends AsyncTask<String, Void, String> {
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.GET, api, headers, null);
             if(inputStreamReader != null){
-                DataReturn data = new Gson().fromJson(inputStreamReader, DataReturn.class);
-                switch (data.getStatus()){
-                    case "200":
-                        result = data.getData().toString();
-                        break;
-                    default:
-                        break;
-                }
+                result = new Gson().fromJson(inputStreamReader, DataReturn.class);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -61,13 +55,20 @@ public class GetUserProfileTask extends AsyncTask<String, Void, String> {
     }
 
     @Override
-    protected void onPostExecute(String s) {
+    protected void onPostExecute(DataReturn s) {
         super.onPostExecute(s);
         if(s != null){
-            User user = new Gson().fromJson(s, User.class);
-            edtFullName.setText(EncryptDecrypt.decrypt(user.getFullname(), activity.getResources().getString(R.string.khoa)));
-            edtPhoneNumber.setText(EncryptDecrypt.decrypt(user.getPhonenumber(), activity.getResources().getString(R.string.khoa)));
-            edtEmail.setText(EncryptDecrypt.decrypt(user.getEmail(), activity.getResources().getString(R.string.khoa)));
+            switch (s.getStatus()){
+                case "200":
+                    String data = s.getData().toString();
+                    User user = new Gson().fromJson(data, User.class);
+                    edtFullName.setText(EncryptDecrypt.decrypt(user.getFullname(), activity.getResources().getString(R.string.khoa)));
+                    edtPhoneNumber.setText(EncryptDecrypt.decrypt(user.getPhonenumber(), activity.getResources().getString(R.string.khoa)));
+                    edtEmail.setText(EncryptDecrypt.decrypt(user.getEmail(), activity.getResources().getString(R.string.khoa)));
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

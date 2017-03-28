@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.its.its.R;
+import com.its.its.model.entity.Coin;
 import com.its.its.model.entity.DataReturn;
 import com.its.its.model.http.CommonRequest;
 
@@ -20,7 +21,7 @@ import java.util.HashMap;
  * Created by Chinh Bui on 3/19/2017.
  */
 
-public class GetCurrentCoinTask extends AsyncTask<String, Void, String> {
+public class GetCurrentCoinTask extends AsyncTask<String, Void, DataReturn> {
     Activity activity;
     TextView txtMoney;
 
@@ -30,8 +31,9 @@ public class GetCurrentCoinTask extends AsyncTask<String, Void, String> {
     }
 
     @Override
-    protected String doInBackground(String... params) {
-        String result = "";
+    protected DataReturn doInBackground(String... params) {
+        DataReturn result = new DataReturn();
+
         String api = params[0];
         String token = params[1];
 
@@ -44,14 +46,7 @@ public class GetCurrentCoinTask extends AsyncTask<String, Void, String> {
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.GET, api, headers, null);
 
             if(inputStreamReader != null){
-                DataReturn data = new Gson().fromJson(inputStreamReader, DataReturn.class);
-                switch (data.getStatus()){
-                    case "200":
-                        result = data.getData().toString();
-                        break;
-                    default:
-                        break;
-                }
+                result = new Gson().fromJson(inputStreamReader, DataReturn.class);
             }
         } catch (IOException e){
             e.printStackTrace();
@@ -61,15 +56,19 @@ public class GetCurrentCoinTask extends AsyncTask<String, Void, String> {
     }
 
     @Override
-    protected void onPostExecute(String s) {
+    protected void onPostExecute(DataReturn s) {
         super.onPostExecute(s);
-        try{
-            if(s != null){
-                int currentCoin = new JSONObject(s).getInt("current-coint");
-                txtMoney.setText(currentCoin + "");
+
+        if(s != null){
+            switch (s.getStatus()){
+                case "200":
+                    String data = s.getData().toString();
+                    Coin currentCoin = new Gson().fromJson(data, Coin.class);
+                    txtMoney.setText(currentCoin.getCurrent_coin() + "");
+                    break;
+                default:
+                    break;
             }
-        } catch (JSONException e){
-            e.printStackTrace();
         }
     }
 }

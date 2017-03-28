@@ -46,7 +46,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                     new ChangePasswordTask(ChangePasswordActivity.this).execute(
                             CommonRequest.link + "user/" + getIntent().getStringExtra("ID") +
                                     "/password?password=" + EncryptDecrypt.encrypt(newPass, getResources().getString(R.string.khoa)) +
-                                    "&oldpassword=" + EncryptDecrypt.encrypt(newPass, getResources().getString(R.string.khoa)),
+                                    "&oldpassword=" + EncryptDecrypt.encrypt(oldPass, getResources().getString(R.string.khoa)),
                             getIntent().getStringExtra("TOKEN")
                     );
                 }else{

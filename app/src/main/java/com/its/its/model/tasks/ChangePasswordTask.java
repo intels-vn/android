@@ -40,7 +40,9 @@ public class ChangePasswordTask extends AsyncTask<String, Void, DataReturn> {
             headers.put("Authorization", token);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.PUT, api, headers, null);
-            result = new Gson().fromJson(inputStreamReader, DataReturn.class);
+            if(inputStreamReader != null){
+                result = new Gson().fromJson(inputStreamReader, DataReturn.class);
+            }
 
         } catch (IOException e) {
             e.printStackTrace();

@@ -41,22 +41,27 @@ public class CommonRequest {
             for(String key : headers.keySet()){
                 if(key.equals("Content-Type")){
                     connection.setRequestProperty("Content-Type", headers.get("Content-Type"));
+//                    break;
                 }
 
                 if(key.equals("Accept")){
                     connection.setRequestProperty("Accept", headers.get("Accept"));
+//                    break;
                 }
 
                 if(key.equals("Authorization")){
                     connection.setRequestProperty("Authorization", headers.get("Authorization"));
+//                    break;
                 }
 
                 if(key.equals("Localization")){
                     connection.setRequestProperty("Localization", headers.get("Localization"));
+//                    break;
                 }
 
                 if(key.equals("DeviceId")) {
                     connection.setRequestProperty("DeviceId", headers.get("DeviceId"));
+//                    break;
                 }
             }
 

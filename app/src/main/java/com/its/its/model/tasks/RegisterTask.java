@@ -34,11 +34,6 @@ public class RegisterTask extends AsyncTask<String, Void, DataReturn>{
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-    }
-
-    @Override
     protected DataReturn doInBackground(String... params) {
         DataReturn result = new DataReturn();
         
@@ -52,7 +47,7 @@ public class RegisterTask extends AsyncTask<String, Void, DataReturn>{
 
         try {
             HashMap<String, String> headers = new HashMap<String, String>();
-            headers.put("Accept", "application/json;charset=UTF-8");
+            headers.put("Accept", "application/json");
             headers.put("Content-Type", "application/json");
             headers.put("Localization", activity.getResources().getString(R.string.localization));
             headers.put("DeviceId", deviceId);
@@ -74,11 +69,6 @@ public class RegisterTask extends AsyncTask<String, Void, DataReturn>{
         }
 
         return result;
-    }
-
-    @Override
-    protected void onProgressUpdate(Void... values) {
-        super.onProgressUpdate(values);
     }
 
     @Override

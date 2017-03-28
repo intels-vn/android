@@ -31,16 +31,6 @@ public class LoginTask extends AsyncTask<String, Void, DataReturn>{
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-    }
-
-    @Override
-    protected void onProgressUpdate(Void... values) {
-        super.onProgressUpdate(values);
-    }
-
-    @Override
     protected DataReturn doInBackground(String... params) {
         DataReturn result = new DataReturn();
 

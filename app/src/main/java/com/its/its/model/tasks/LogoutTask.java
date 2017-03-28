@@ -20,16 +20,37 @@ import java.util.HashMap;
  * Created by BiLac on 3/10/2017.
  */
 
-public class LogoutTask extends AsyncTask<String, Void, Void>{
+public class LogoutTask extends AsyncTask<String, Void, DataReturn>{
 
     Activity activity;
+
+    @Override
+    protected void onPostExecute(DataReturn dataReturn) {
+        super.onPostExecute(dataReturn);
+        if(dataReturn != null){
+            switch (dataReturn.getStatus()){
+                case "200":
+                    Intent intent = new Intent(activity, LoginActivity.class);
+                    activity.startActivity(intent);
+                    Toast.makeText(activity, "Log out success", Toast.LENGTH_SHORT).show();
+                    break;
+                case "400":
+                    break;
+                case "500":
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
 
     public LogoutTask(Activity activity) {
         this.activity = activity;
     }
 
     @Override
-    protected Void doInBackground(String... params) {
+    protected DataReturn doInBackground(String... params) {
+        DataReturn result = new DataReturn();
         String url = params[0];
         String token = params[1];
 
@@ -39,16 +60,14 @@ public class LogoutTask extends AsyncTask<String, Void, Void>{
             headers.put("Authorization", token);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.DELETE, url, headers, null);
-            DataReturn dataReturn = new Gson().fromJson(inputStreamReader, DataReturn.class);
-            if(dataReturn.getStatus().equals("200")){
-                Intent intent = new Intent(activity, LoginActivity.class);
-                activity.startActivity(intent);
+            if(inputStreamReader != null){
+                result = new Gson().fromJson(inputStreamReader, DataReturn.class);
             }
 
         } catch (IOException e) {
             e.printStackTrace();
             Log.e("Error: ", e.getMessage());
         }
-        return null;
+        return result;
     }
 }

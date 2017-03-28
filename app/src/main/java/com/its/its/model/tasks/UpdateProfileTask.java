@@ -1,6 +1,7 @@
 package com.its.its.model.tasks;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.provider.Settings;
 import android.util.Log;
@@ -30,11 +31,6 @@ public class UpdateProfileTask extends AsyncTask<String, Void, DataReturn>{
     }
 
     @Override
-    protected void onPreExecute() {
-        super.onPreExecute();
-    }
-
-    @Override
     protected DataReturn doInBackground(String... params) {
         DataReturn result = new DataReturn();
 
@@ -48,7 +44,9 @@ public class UpdateProfileTask extends AsyncTask<String, Void, DataReturn>{
             headers.put("Authorization", token);
 
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.PUT, api, headers, null);
-            result = new Gson().fromJson(inputStreamReader, DataReturn.class);
+            if(inputStreamReader != null){
+                result = new Gson().fromJson(inputStreamReader, DataReturn.class);
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -58,25 +56,22 @@ public class UpdateProfileTask extends AsyncTask<String, Void, DataReturn>{
     }
 
     @Override
-    protected void onProgressUpdate(Void... values) {
-        super.onProgressUpdate(values);
-    }
-
-    @Override
     protected void onPostExecute(DataReturn s) {
         super.onPostExecute(s);
 
-        String status = s.getStatus();
-
-        switch (status){
-            case "200":
-                Toast.makeText(activity, "Updated profile successfully", Toast.LENGTH_SHORT).show();
-                Log.d("Data: ", s.getMessage());
-                break;
-            case "400":
-                break;
-            default:
-                break;
+        if(s != null){
+            switch (s.getStatus()){
+                case "200":
+                    Toast.makeText(activity, "Updated profile successfully", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(activity, MainActivity.class);
+                    activity.startActivity(intent);
+                    break;
+                case "400":
+                    break;
+                default:
+                    break;
+            }
         }
+
     }
 }

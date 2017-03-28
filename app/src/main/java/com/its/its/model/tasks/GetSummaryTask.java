@@ -18,7 +18,7 @@ import java.util.HashMap;
  * Created by Chinh Bui on 3/19/2017.
  */
 
-public class GetSummaryTask extends AsyncTask<String, Void, String> {
+public class GetSummaryTask extends AsyncTask<String, Void, DataReturn> {
     Activity activity;
     TextView txtCoinAmount, txtTotalLose, txtTotalWin;
 
@@ -30,19 +30,8 @@ public class GetSummaryTask extends AsyncTask<String, Void, String> {
     }
 
     @Override
-    protected void onPostExecute(String s) {
-        super.onPostExecute(s);
-        if(s != null){
-            Summary summary = new Gson().fromJson(s, Summary.class);
-            txtCoinAmount.setText(summary.getCoinAmount() + "");;
-            txtTotalLose.setText(summary.getTotalLose() + "");
-            txtTotalWin.setText(summary.getTotalWin() + "");
-        }
-    }
-
-    @Override
-    protected String doInBackground(String... params) {
-        String result = "";
+    protected DataReturn doInBackground(String... params) {
+        DataReturn result = new DataReturn();
         String api = params[0];
         String token = params[1];
 
@@ -55,19 +44,30 @@ public class GetSummaryTask extends AsyncTask<String, Void, String> {
             InputStreamReader inputStreamReader = CommonRequest.receiveResponse(CommonRequest.GET, api, headers, null);
 
             if(inputStreamReader != null){
-                DataReturn data = new Gson().fromJson(inputStreamReader, DataReturn.class);
-                switch (data.getStatus()){
-                    case "200":
-                        result = data.getData().toString();
-                        break;
-                    default:
-                        break;
-                }
+                result = new Gson().fromJson(inputStreamReader, DataReturn.class);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         return result;
+    }
+
+    @Override
+    protected void onPostExecute(DataReturn s) {
+        super.onPostExecute(s);
+        if(s != null){
+            switch (s.getStatus()){
+                case "200":
+                    String data = s.getData().toString();
+                    Summary summary = new Gson().fromJson(data, Summary.class);
+                    txtCoinAmount.setText(summary.getCoinAmount() + "");;
+                    txtTotalLose.setText(summary.getTotalLose() + "");
+                    txtTotalWin.setText(summary.getTotalWin() + "");
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

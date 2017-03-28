@@ -24,26 +24,6 @@ public class LogoutTask extends AsyncTask<String, Void, DataReturn>{
 
     Activity activity;
 
-    @Override
-    protected void onPostExecute(DataReturn dataReturn) {
-        super.onPostExecute(dataReturn);
-        if(dataReturn != null){
-            switch (dataReturn.getStatus()){
-                case "200":
-                    Intent intent = new Intent(activity, LoginActivity.class);
-                    activity.startActivity(intent);
-                    Toast.makeText(activity, "Log out success", Toast.LENGTH_SHORT).show();
-                    break;
-                case "400":
-                    break;
-                case "500":
-                    break;
-                default:
-                    break;
-            }
-        }
-    }
-
     public LogoutTask(Activity activity) {
         this.activity = activity;
     }
@@ -69,5 +49,25 @@ public class LogoutTask extends AsyncTask<String, Void, DataReturn>{
             Log.e("Error: ", e.getMessage());
         }
         return result;
+    }
+
+    @Override
+    protected void onPostExecute(DataReturn dataReturn) {
+        super.onPostExecute(dataReturn);
+        if(dataReturn != null){
+            switch (dataReturn.getStatus()){
+                case "200":
+                    Intent intent = new Intent(activity, LoginActivity.class);
+                    activity.startActivity(intent);
+                    Toast.makeText(activity, activity.getResources().getString(R.string.logout_success), Toast.LENGTH_SHORT).show();
+                    break;
+                case "400":
+                    break;
+                case "500":
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

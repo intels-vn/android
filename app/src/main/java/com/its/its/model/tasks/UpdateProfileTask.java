@@ -62,7 +62,7 @@ public class UpdateProfileTask extends AsyncTask<String, Void, DataReturn>{
         if(s != null){
             switch (s.getStatus()){
                 case "200":
-                    Toast.makeText(activity, "Updated profile successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(activity, activity.getResources().getString(R.string.profile_update_success), Toast.LENGTH_SHORT).show();
                     Intent intent = new Intent(activity, MainActivity.class);
                     activity.startActivity(intent);
                     break;

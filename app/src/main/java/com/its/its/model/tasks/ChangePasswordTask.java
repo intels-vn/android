@@ -58,13 +58,13 @@ public class ChangePasswordTask extends AsyncTask<String, Void, DataReturn> {
         String status = s.getStatus();
         switch (status){
             case "200":
-                Toast.makeText(activity, "Change Password Success", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, activity.getResources().getString(R.string.change_password_success), Toast.LENGTH_SHORT).show();
 //                Log.d("API: ", api);
                 Log.d("Data: ", s.getMessage());
                 break;
 
             default:
-                Toast.makeText(activity, "Change Password Fail", Toast.LENGTH_SHORT).show();
+                Toast.makeText(activity, activity.getResources().getString(R.string.change_password_failed), Toast.LENGTH_SHORT).show();
 //                Log.e("API: ", api);
                 Log.e("Error: ", s.getMessage());
                 break;

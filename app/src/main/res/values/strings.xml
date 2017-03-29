@@ -96,4 +96,14 @@
     <string name="new_password">Enter new password</string>
     <string name="retype_new_password">Retype new password</string>
     <!-- End -->
+
+    <!-- Server Request Success message -->
+    <string name="logout_success">Logged out successful</string>
+    <string name="profile_update_success">Updated successful</string>
+    <string name="change_password_success">Updated new password successful</string>
+    <!-- End -->
+
+    <!-- Server Request Failed message -->
+    <string name="change_password_failed">Failed to updated new password</string>
+    <!-- End -->
 </resources>

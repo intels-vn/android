@@ -22,7 +22,7 @@
     <string name="edit_text_retype_password_register">Nhập Lại Mật Khẩu</string>
     <string name="edit_text_phone_register">Nhập Số Điện Thoại</string>
     <string name="edit_text_email_register">Nhập Email</string>
-    <string name="edit_text_fullname_register">Nhập tên họ đầy đủ</string>
+    <string name="edit_text_fullname_register">Nhập họ tên đầy đủ</string>
     <string name="edt_text_phone_receive_exchange_register">Nhập số đt để rút tiền</string>
     <string name="button_join_now_register">Tham Gia</string>
     <!-- End -->
@@ -90,5 +90,15 @@
     <string name="old_password">Nhập vào password cũ</string>
     <string name="new_password">Nhập vào password mới</string>
     <string name="retype_new_password">Nhập lại password mới</string>
+    <!-- End -->
+
+    <!-- Server Request Success message -->
+    <string name="logout_success">Đã thoát</string>
+    <string name="profile_update_success">Cập nhật thành công</string>
+    <string name="change_password_success">Cập nhật password mới thành công</string>
+    <!-- End -->
+
+    <!-- Server Request Failed message -->
+    <string name="change_password_failed">Không cập nhật được password</string>
     <!-- End -->
 </resources>

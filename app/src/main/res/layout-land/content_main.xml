@@ -13,26 +13,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent">
 
             <FrameLayout
                 android:id="@+id/frame1"
-                android:layout_width="300dp"
+                android:layout_width="315dp"
                 android:layout_height="match_parent">
 
             </FrameLayout>
 
             <FrameLayout
                 android:id="@+id/frame2"
-                android:layout_width="300dp"
+                android:layout_width="315dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="2dp">
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="false">
 
             </FrameLayout>
-        </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
 </LinearLayout>
 

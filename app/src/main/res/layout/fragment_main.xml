@@ -16,13 +16,23 @@
             android:background="@color/video_view_background"
             android:orientation="vertical">
 
-            <io.vov.vitamio.widget.VideoView
-                android:id="@+id/videoView"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/video_view_height_content_main"
-                android:layout_marginLeft="@dimen/video_view_margin_main"
-                android:layout_marginRight="@dimen/video_view_margin_main"
-                android:layout_marginTop="@dimen/video_view_margin_main" />
+                android:orientation="vertical">
+
+                <io.vov.vitamio.widget.VideoView
+                    android:id="@+id/videoView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/video_view_margin_main"
+                    android:layout_marginRight="@dimen/video_view_margin_main"
+                    android:layout_marginTop="@dimen/video_view_margin_main" />
+            </LinearLayout>
 
             <HorizontalScrollView
                 android:id="@+id/hsvChannel"

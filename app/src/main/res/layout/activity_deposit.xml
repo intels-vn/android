@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/background_app"
+    tools:context="com.its.its.view.DepositActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/RED"
+        android:textSize="@dimen/text_view_text_size_deposit_portrait"
+        android:text="@string/deposit"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/spinner_width_deposit_portrait"
+        android:layout_height="wrap_content"
+        android:background="@color/WHITE"
+        android:layout_marginTop="@dimen/spinner_margin_top_withdraw_portrait">
+
+        <Spinner
+            android:id="@+id/spAmount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/spinner_height_withdraw_portrait"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnWithdraw"
+        android:layout_width="@dimen/button_width_deposit_portrait"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_margin_top_deposit_portrait"
+        android:background="@drawable/button_play_shape"
+        android:text="@string/done"
+        android:textColor="@color/WHITE"
+        android:textSize="@dimen/button_text_size_deposit_portrait" />
+</LinearLayout>

@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
@@ -16,33 +16,25 @@
         <activity
             android:name=".view.LoginActivity"
             android:label="Main Activity"
-            android:theme="@style/AppTheme">
-
-        </activity>
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".view.WelcomeActivity"
-            android:theme="@style/WelcomeTheme" >
-
-        </activity>
-        <activity
-            android:name=".view.MainActivity"
-            android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/WelcomeTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.RegisterActivity" >
-        </activity>
+        <activity
+            android:name=".view.MainActivity"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".view.RegisterActivity"></activity>
         <activity android:name=".view.UpdateProfileActivity" />
-        <activity android:name=".view.ChangePasswordActivity" >
-
-        </activity>
-        <activity android:name=".view.WithdrawActivity">
-
-        </activity>
+        <activity android:name=".view.ChangePasswordActivity"></activity>
+        <activity android:name=".view.WithdrawActivity"></activity>
+        <activity android:name=".view.DepositActivity"></activity>
     </application>
 
 </manifest>

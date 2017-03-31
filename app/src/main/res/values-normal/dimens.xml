@@ -233,4 +233,16 @@
 
     <dimen name="button_width_verify_password">300dp</dimen>
     <!-- End -->
+
+    <!-- Deposit Screen Portrait-->
+    <dimen name="text_view_text_size_deposit_portrait">30sp</dimen>
+
+    <dimen name="spinner_width_deposit_portrait">250dp</dimen>
+    <dimen name="spinner_height_deposit_portrait">30dp</dimen>
+    <dimen name="spinner_margin_top_deposit_portrait">30dp</dimen>
+
+    <dimen name="button_margin_top_deposit_portrait">40dp</dimen>
+    <dimen name="button_text_size_deposit_portrait">20sp</dimen>
+    <dimen name="button_width_deposit_portrait">250dp</dimen>
+    <!-- End -->
 </resources>

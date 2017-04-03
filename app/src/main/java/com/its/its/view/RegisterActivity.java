@@ -15,9 +15,10 @@ import android.widget.Toast;
 import com.its.its.R;
 import com.its.its.model.http.CommonRequest;
 import com.its.its.model.tasks.RegisterTask;
+import com.its.its.presenter.interactor.RegisterInterface;
 import com.its.its.presenter.security.EncryptDecrypt;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity implements RegisterInterface {
 
     EditText edtUsername_Register, edtPassword_Register, edtRetypePass_Register,
             edtPhone_Register, edtEmail_Register, edtFullname_Register;
@@ -49,32 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
         btnJoin_Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                username_reg = edtUsername_Register.getText().toString();
-                password_reg = edtPassword_Register.getText().toString();
-                retypePass_reg = edtRetypePass_Register.getText().toString();
-                phone_reg = edtPhone_Register.getText().toString();
-                email_reg = edtEmail_Register.getText().toString();
-                fullname_reg = edtFullname_Register.getText().toString();
-
-                //Get the Android device ID.
-                TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
-                String deviceId = telephonyManager.getDeviceId();
-                Log.d("ID ", deviceId);
-
-                if(validation()){
-                    new RegisterTask(RegisterActivity.this)
-                            .execute(
-                                    CommonRequest.link + "users",
-                                    EncryptDecrypt.encrypt(username_reg, getResources().getString(R.string.khoa)),
-                                    EncryptDecrypt.encrypt(password_reg, getResources().getString(R.string.khoa)),
-                                    EncryptDecrypt.encrypt(phone_reg, getResources().getString(R.string.khoa)),
-                                    EncryptDecrypt.encrypt(email_reg, getResources().getString(R.string.khoa)),
-                                    EncryptDecrypt.encrypt(fullname_reg, getResources().getString(R.string.khoa)),
-                                    deviceId
-                            );
-                }else{
-                    Toast.makeText(RegisterActivity.this, getResources().getString(R.string.validate_empty_form), Toast.LENGTH_SHORT).show();
-                }
+                Register();
             }
         });
     }
@@ -129,5 +105,35 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
         return valid;
+    }
+
+    @Override
+    public void Register() {
+        username_reg = edtUsername_Register.getText().toString();
+        password_reg = edtPassword_Register.getText().toString();
+        retypePass_reg = edtRetypePass_Register.getText().toString();
+        phone_reg = edtPhone_Register.getText().toString();
+        email_reg = edtEmail_Register.getText().toString();
+        fullname_reg = edtFullname_Register.getText().toString();
+
+        //Get the Android device ID.
+        TelephonyManager telephonyManager = (TelephonyManager)getSystemService(Context.TELEPHONY_SERVICE);
+        String deviceId = telephonyManager.getDeviceId();
+        Log.d("ID ", deviceId);
+
+        if(validation()){
+            new RegisterTask(RegisterActivity.this)
+                    .execute(
+                            CommonRequest.link + "users",
+                            EncryptDecrypt.encrypt(username_reg, getResources().getString(R.string.khoa)),
+                            EncryptDecrypt.encrypt(password_reg, getResources().getString(R.string.khoa)),
+                            EncryptDecrypt.encrypt(phone_reg, getResources().getString(R.string.khoa)),
+                            EncryptDecrypt.encrypt(email_reg, getResources().getString(R.string.khoa)),
+                            EncryptDecrypt.encrypt(fullname_reg, getResources().getString(R.string.khoa)),
+                            deviceId
+                    );
+        }else{
+            Toast.makeText(RegisterActivity.this, getResources().getString(R.string.validate_empty_form), Toast.LENGTH_SHORT).show();
+        }
     }
 }

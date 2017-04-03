@@ -16,9 +16,10 @@ import android.widget.Toast;
 import com.its.its.R;
 import com.its.its.model.http.CommonRequest;
 import com.its.its.model.tasks.WithdrawTask;
+import com.its.its.presenter.interactor.WithdrawInterface;
 import com.its.its.presenter.security.EncryptDecrypt;
 
-public class WithdrawActivity extends AppCompatActivity {
+public class WithdrawActivity extends AppCompatActivity implements WithdrawInterface {
 
     String[] amountValues = {"10.000", "20.000", "50.000", "100.000", "200.000", "500.000"};
     Button btnWithdraw;
@@ -40,32 +41,7 @@ public class WithdrawActivity extends AppCompatActivity {
         btnWithdraw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                phoneReceiveExchange = edtPhoneReceiveExchangeWithdraw.getText().toString();
-                final Dialog dialog = new Dialog(WithdrawActivity.this);
-                dialog.setContentView(R.layout.activity_verify_password);
-                dialog.setTitle(getResources().getString(R.string.verify_password));
-                Button btnVerify = (Button) dialog.findViewById(R.id.btnVerify);
-                btnVerify.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        edtPasswordVerifyWithdraw = (EditText) dialog.findViewById(R.id.edtPasswordVerifyWithdraw);
-//                        Log.d("Amount ", amount);
-//                        Log.d("Phone ", phoneReceiveExchange);
-                        new WithdrawTask(WithdrawActivity.this, MainActivity.tvMoney).execute(
-                                CommonRequest.link + "withdraw?id=" + getIntent().getStringExtra("ID") +
-                                        "&amount=" + amount +
-                                        "&phoneRX=" + EncryptDecrypt.encrypt(
-                                                phoneReceiveExchange,
-                                                getResources().getString(R.string.khoa)) +
-                                        "&password=" + EncryptDecrypt.encrypt(
-                                                edtPasswordVerifyWithdraw.getText().toString(),
-                                                getResources().getString(R.string.khoa)),
-                                getIntent().getStringExtra("TOKEN")
-                        );
-                        dialog.dismiss();
-                    }
-                });
-                dialog.show();
+                Withdraw();
             }
         });
 
@@ -113,5 +89,35 @@ public class WithdrawActivity extends AppCompatActivity {
         spAmount.setAdapter(adapter);
 
         btnWithdraw = (Button) findViewById(R.id.btnWithdraw);
+    }
+
+    @Override
+    public void Withdraw() {
+        phoneReceiveExchange = edtPhoneReceiveExchangeWithdraw.getText().toString();
+        final Dialog dialog = new Dialog(WithdrawActivity.this);
+        dialog.setContentView(R.layout.activity_verify_password);
+        dialog.setTitle(getResources().getString(R.string.verify_password));
+        Button btnVerify = (Button) dialog.findViewById(R.id.btnVerify);
+        btnVerify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtPasswordVerifyWithdraw = (EditText) dialog.findViewById(R.id.edtPasswordVerifyWithdraw);
+//                        Log.d("Amount ", amount);
+//                        Log.d("Phone ", phoneReceiveExchange);
+                new WithdrawTask(WithdrawActivity.this, MainActivity.tvMoney).execute(
+                        CommonRequest.link + "withdraw?id=" + getIntent().getStringExtra("ID") +
+                                "&amount=" + amount +
+                                "&phoneRX=" + EncryptDecrypt.encrypt(
+                                phoneReceiveExchange,
+                                getResources().getString(R.string.khoa)) +
+                                "&password=" + EncryptDecrypt.encrypt(
+                                edtPasswordVerifyWithdraw.getText().toString(),
+                                getResources().getString(R.string.khoa)),
+                        getIntent().getStringExtra("TOKEN")
+                );
+                dialog.dismiss();
+            }
+        });
+        dialog.show();
     }
 }

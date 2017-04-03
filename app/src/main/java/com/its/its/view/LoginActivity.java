@@ -9,13 +9,14 @@ import android.widget.EditText;
 import com.its.its.R;
 import com.its.its.model.http.CommonRequest;
 import com.its.its.model.tasks.LoginTask;
+import com.its.its.presenter.interactor.LoginInterface;
 import com.its.its.presenter.security.EncryptDecrypt;
 
 /**
  * Created by Chinh Bui on 3/6/2017.
  */
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements LoginInterface{
 
     private EditText editUserName_Login, editPassword_Login;
     private Button btnPlay_Login;
@@ -42,17 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         btnPlay_Login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                username = editUserName_Login.getText().toString();
-                password = editPassword_Login.getText().toString();
-
-                if(validation()) {
-                    new LoginTask(LoginActivity.this)
-                            .execute(
-                                    CommonRequest.link + "users/login",
-                                    EncryptDecrypt.encrypt(username, getResources().getString(R.string.khoa)),
-                                    EncryptDecrypt.encrypt(password, getResources().getString(R.string.khoa))
-                            );
-                }
+                Login();
             }
         });
     }
@@ -71,5 +62,20 @@ public class LoginActivity extends AppCompatActivity {
             valid = false;
         }
         return valid;
+    }
+
+    @Override
+    public void Login() {
+        username = editUserName_Login.getText().toString();
+        password = editPassword_Login.getText().toString();
+
+        if(validation()) {
+            new LoginTask(LoginActivity.this)
+                    .execute(
+                            CommonRequest.link + "users/login",
+                            EncryptDecrypt.encrypt(username, getResources().getString(R.string.khoa)),
+                            EncryptDecrypt.encrypt(password, getResources().getString(R.string.khoa))
+                    );
+        }
     }
 }

@@ -10,9 +10,10 @@ import android.widget.Toast;
 import com.its.its.R;
 import com.its.its.model.http.CommonRequest;
 import com.its.its.model.tasks.UpdateProfileTask;
+import com.its.its.presenter.interactor.UpdateProfileInterface;
 import com.its.its.presenter.security.EncryptDecrypt;
 
-public class UpdateProfileActivity extends AppCompatActivity {
+public class UpdateProfileActivity extends AppCompatActivity implements UpdateProfileInterface{
     EditText edtFullname_Update, edtEmail_Update, edtPhone_Update;
     Button btnUpdate;
     private String fullname_update, email_update, phone_update;
@@ -39,21 +40,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fullname_update = edtFullname_Update.getText().toString();
-                email_update = edtEmail_Update.getText().toString();
-                phone_update = edtPhone_Update.getText().toString();
-
-                if(validation()) {
-                    new UpdateProfileTask(UpdateProfileActivity.this).execute(
-                            CommonRequest.link + "user/" + getIntent().getStringExtra("ID") +
-                                "/profile?email=" + EncryptDecrypt.encrypt(email_update, getResources().getString(R.string.khoa))+
-                                "&phone=" + EncryptDecrypt.encrypt(phone_update, getResources().getString(R.string.khoa)) +
-                                "&fullname=" + EncryptDecrypt.encrypt(fullname_update, getResources().getString(R.string.khoa)),
-                            getIntent().getStringExtra("TOKEN")
-                    );
-                }else{
-                    Toast.makeText(UpdateProfileActivity.this, getResources().getString(R.string.validate_empty_form), Toast.LENGTH_SHORT).show();
-                }
+                UpdateProfile();
             }
         });
     }
@@ -78,5 +65,24 @@ public class UpdateProfileActivity extends AppCompatActivity {
         }
 
         return valid;
+    }
+
+    @Override
+    public void UpdateProfile() {
+        fullname_update = edtFullname_Update.getText().toString();
+        email_update = edtEmail_Update.getText().toString();
+        phone_update = edtPhone_Update.getText().toString();
+
+        if(validation()) {
+            new UpdateProfileTask(UpdateProfileActivity.this).execute(
+                    CommonRequest.link + "user/" + getIntent().getStringExtra("ID") +
+                            "/profile?email=" + EncryptDecrypt.encrypt(email_update, getResources().getString(R.string.khoa))+
+                            "&phone=" + EncryptDecrypt.encrypt(phone_update, getResources().getString(R.string.khoa)) +
+                            "&fullname=" + EncryptDecrypt.encrypt(fullname_update, getResources().getString(R.string.khoa)),
+                    getIntent().getStringExtra("TOKEN")
+            );
+        }else{
+            Toast.makeText(UpdateProfileActivity.this, getResources().getString(R.string.validate_empty_form), Toast.LENGTH_SHORT).show();
+        }
     }
 }

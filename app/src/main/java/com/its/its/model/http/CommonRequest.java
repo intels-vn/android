@@ -29,6 +29,7 @@ public class CommonRequest {
     public static final String PUT = "PUT";
     public static final String DELETE = "DELETE";
 
+    //Open a connection and connect to server.
     public static HttpURLConnection sendRequest(String method, String api, Map<String, String> headers,
                                                 Map<String, String> bodies) throws IOException {
         HttpURLConnection connection = null;
@@ -38,34 +39,86 @@ public class CommonRequest {
             connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod(method);
 
-            for(String key : headers.keySet()){
-                if(key.equals("Content-Type")){
+            headerValidation(connection, method, headers, bodies);
+
+//            for(String key : headers.keySet()){
+//                if(key.equals("Content-Type")){
+//                    connection.setRequestProperty("Content-Type", headers.get("Content-Type"));
+////                    break;
+//                }
+//
+//                if(key.equals("Accept")){
+//                    connection.setRequestProperty("Accept", headers.get("Accept"));
+////                    break;
+//                }
+//
+//                if(key.equals("Authorization")){
+//                    connection.setRequestProperty("Authorization", headers.get("Authorization"));
+////                    break;
+//                }
+//
+//                if(key.equals("Localization")){
+//                    connection.setRequestProperty("Localization", headers.get("Localization"));
+////                    break;
+//                }
+//
+//                if(key.equals("DeviceId")) {
+//                    connection.setRequestProperty("DeviceId", headers.get("DeviceId"));
+////                    break;
+//                }
+//            }
+//
+//            if(!method.equals(GET) && bodies != null){
+//                connection.setDoOutput(true);
+//
+//                JSONObject object = new JSONObject(bodies);
+//                OutputStream outputStream = connection.getOutputStream();
+//                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+//                bufferedWriter.write(object.toString());
+//                bufferedWriter.flush();
+//                bufferedWriter.close();
+//                outputStream.close();
+//            }
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return connection;
+    }
+
+    //Validate the headers and methods.
+    private static void headerValidation(HttpURLConnection connection, String method, Map<String, String> headers,
+                                         Map<String, String> bodies) {
+        try {
+            for (String key : headers.keySet()) {
+                if (key.equals("Content-Type")) {
                     connection.setRequestProperty("Content-Type", headers.get("Content-Type"));
 //                    break;
                 }
 
-                if(key.equals("Accept")){
+                if (key.equals("Accept")) {
                     connection.setRequestProperty("Accept", headers.get("Accept"));
 //                    break;
                 }
 
-                if(key.equals("Authorization")){
+                if (key.equals("Authorization")) {
                     connection.setRequestProperty("Authorization", headers.get("Authorization"));
 //                    break;
                 }
 
-                if(key.equals("Localization")){
+                if (key.equals("Localization")) {
                     connection.setRequestProperty("Localization", headers.get("Localization"));
 //                    break;
                 }
 
-                if(key.equals("DeviceId")) {
+                if (key.equals("DeviceId")) {
                     connection.setRequestProperty("DeviceId", headers.get("DeviceId"));
 //                    break;
                 }
             }
 
-            if(!method.equals(GET) && bodies != null){
+            if (!method.equals(GET) && bodies != null) {
                 connection.setDoOutput(true);
 
                 JSONObject object = new JSONObject(bodies);
@@ -76,12 +129,9 @@ public class CommonRequest {
                 bufferedWriter.close();
                 outputStream.close();
             }
-
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
-        return connection;
     }
 
     public static InputStreamReader receiveResponse(String method, String api, HashMap<String, String> headers,
@@ -100,8 +150,6 @@ public class CommonRequest {
             default:
                 break;
         }
-
-
         return result;
     }
 }

@@ -23,7 +23,7 @@ import java.util.Map;
 
 public class CommonRequest {
 
-    public static final String link = "http://192.168.100.19:8080/Demo/";
+    public static final String link = "http://192.168.100.19:8080/backend/";
     public static final String GET = "GET";
     public static final String POST = "POST";
     public static final String PUT = "PUT";

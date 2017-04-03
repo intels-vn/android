@@ -97,6 +97,10 @@
     <string name="retype_new_password">Retype new password</string>
     <!-- End -->
 
+    <!-- Deposit Screen -->
+    <string name="deposit">Deposit</string>
+    <!-- End -->
+
     <!-- Server Request Success message -->
     <string name="logout_success">Logged out successful</string>
     <string name="profile_update_success">Updated successful</string>
